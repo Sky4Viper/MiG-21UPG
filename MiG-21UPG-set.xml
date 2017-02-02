@@ -1,0 +1,959 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<sim>
+    
+		<!-- Info -->
+    
+		<description>Mikoyan-Gurevich MiG-21 BISON (YASIM)</description>
+		<author>pjedvaj, Petar Jedvaj, David Culp, Raptor, Stuart Cassie, Gary Brown, Brendan Black and Tomaskom, Skydive</author>
+		<status>1.0.0</status>
+		<flight-model>yasim</flight-model>
+		<aero>MiG-21UPG-yasim</aero><!-- remove this line for FG versions earlier than 3.2 -->
+        <!--  <aero>Yak-130-yasimold</aero>  --><!-- uncomment this line for FG versions earlier than 3.2 -->
+		<rating>
+			<FDM type="int">3</FDM>
+			<systems type="int">1</systems>
+			<cockpit type="int">3</cockpit>
+			<model type="int">5</model>
+		</rating>
+    
+		<!-- System settings -->
+    
+		<startup>
+			<splash-texture>Aircraft/MiG-21UPG/Splash.png</splash-texture>
+		</startup>
+	
+		<model>
+			<path>Aircraft/MiG-21UPG/Models/MiG-21UPG.xml</path>
+			<hide-tanks type="int">0</hide-tanks>
+			<hide-lights type="int">1</hide-lights>	
+		</model>
+
+		<submodels>
+		     <serviceable type="bool">true</serviceable>
+         <path>Aircraft/MiG-21UPG/Submodels.xml</path>
+		</submodels>
+	
+		<sound>
+			<path>Aircraft/MiG-21UPG/Sounds/Sound.xml</path>
+		</sound>
+    
+		<systems>
+			<electrical>
+				<path>Aircraft/Generic/generic-electrical.xml</path>
+			</electrical>
+			<autopilot>
+				<path>Aircraft/MiG-21UPG/Systems/Autopilot.xml</path>
+			</autopilot>
+		</systems>
+	
+		<!--<fuel-fraction>1.0</fuel-fraction>-->
+    
+		<flaps>
+			<setting> 0.00 </setting>
+			<setting> 0.50 </setting>
+			<setting> 1.00 </setting>
+		</flaps>
+    
+		<!-- Head Up Display -->
+
+    <hud>
+      <path n="1">Aircraft/MiG-21UPG/Hud/hud.xml</path>
+      <visibility n="1">true</visibility>
+      <palette>
+        <color n="0">
+          <alpha type="float">0.85</alpha>
+          <antialiased type="bool">true</antialiased>
+          <brightness type="float">0.85</brightness>
+          <transparent type="bool">true</transparent>
+          <red type="float">0.38</red>
+          <green type="float">1.0</green>
+          <blue type="float">0.22</blue>
+        </color>
+        <color n="1">
+          <alpha type="float">0.85</alpha>
+          <antialiased type="bool">true</antialiased>
+          <brightness type="float">0.85</brightness>
+          <transparent type="bool">true</transparent>
+          <red type="float">1.0</red>
+          <green type="float">0.2</green>
+          <blue type="float">0.0</blue>
+        </color>
+      </palette>
+      <clipping>
+        <left type="double">-60</left>
+        <right type="double">60</right>
+        <top type="double">85</top>
+        <bottom type="double">-73</bottom>
+      </clipping>
+    </hud>
+    
+		<!-- View settings -->
+    
+		<virtual-cockpit archive="y">true</virtual-cockpit>
+	
+		<chase-distance-m type="double" archive="y">-20.0</chase-distance-m>
+
+    <view n="0">
+      <internal archive="y">true</internal>
+      <config>
+        <pitch-offset-deg>-12.0</pitch-offset-deg>
+        <x-offset-m archive="y"> 0.00</x-offset-m>
+        <y-offset-m archive="y"> 1.06</y-offset-m>
+        <z-offset-m archive="y">-3.30</z-offset-m>
+        <default-field-of-view-deg type="double">75</default-field-of-view-deg>
+      </config>
+    </view>
+    
+		<!-- Menu -->
+    
+		<menubar>
+			<default>
+				<menu n="100">
+					<label>MiG-21UPG</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Select Livery</label>
+						<binding>
+							<command>nasal</command>
+							<script>aircraft.livery.dialog.toggle()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Reload cannon</label>
+						<binding>
+							<command>nasal</command>
+							<script>cannon.reload()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Reload rockets</label>
+						<binding>
+							<command>nasal</command>
+							<script>rockets.reload()</script>
+						</binding>
+					</item>
+          <item>
+            <label>Reload dragchute</label>
+            <!--<binding>
+              <command>property-assign</command>
+              <property>controls/flight/chute_loaded</property>
+              <value type="int">1</value>
+            </binding>-->
+            <binding>
+              <command>nasal</command>
+              <script>dragchute.reload()</script>
+            </binding>
+          </item>
+					<item>
+						<label>Toggle ammo reports</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>/controls/armament/report-ammo</property>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+    
+		<!-- Help -->
+	  	
+		<help>
+			<title>MiG-21UPG</title>
+			<key>
+				<name>}</name>
+				<desc>Start up / Shut down engines</desc>
+			</key>
+      <key>
+        <name>s</name>
+        <desc>Toggle starter valves</desc>
+      </key>
+			<key>
+				<name>c</name>
+				<desc>Toggle canopy</desc>
+			</key>
+			<key>
+				<name>N/n</name>
+				<desc>Extend/Retract airbrake gradually</desc>
+			</key>
+      <key>
+        <name>Ctrl-b</name>
+        <desc>Toggle air brakes</desc>
+      </key>
+			<key>
+				<name>Shift-e</name>
+				<desc>Eject</desc>
+			</key>
+      <key>
+        <name>p</name>
+        <desc>Deploy drag parachute</desc>
+      </key>
+      <key>
+        <name>j</name>
+        <desc>Jettison drag parachute</desc>
+      </key>
+      <key>
+        <name>f</name>
+        <desc>Fire gun</desc>
+      </key>
+      <key>
+        <name>d</name>
+        <desc>Fire rockets</desc>
+      </key>
+      <key>
+        <name>q</name>
+        <desc>Deploy flares</desc>
+      </key>
+        
+			<line>Parking brake is on</line>
+		</help>
+    
+		<!-- Multiplayer -->
+		
+		<mp-systems>
+					<radar-enabled type="bool">true</radar-enabled>
+					<ecm-rwr-enabled type="bool">true</ecm-rwr-enabled>
+					<combat-enabled type="bool">true</combat-enabled>
+	  </mp-systems>
+    <!-- Multiplayer -->
+    
+		<multiplay>
+			<chat_display>1</chat_display>
+			<generic> 
+				<int n="0" alias="/sim/crashed" />
+				<!-- Beacon on -->
+				<int n="1" alias="/controls/lighting/beacon-switch" />
+				<!-- Landing lights on -->
+				<int n="2" alias="/controls/lighting/landing-lights-switch" />
+				<!-- Taxi light on -->
+				<int n="3" alias="/controls/lighting/taxi-light" />
+				<!-- Nav lights on -->
+				<int n="4" alias="/controls/lighting/nav-lights-switch" />
+				<!-- Engine status -->
+				<int n="5" alias="/engines/engine[0]/state" />
+        <int n="6" alias="/controls/flight/chute_deploy" />
+				<int n="7" alias="/sim/crashed" />
+				<int n="8" alias="/controls/armament/trigger-GSh-23" />
+        <int n="9" alias="/controls/armament/trigger-S-13" />
+				<float n="0" alias="/surface-positions/left-taileron-pos-norm"/>
+				<float n="1" alias="/surface-positions/right-taileron-pos-norm"/>
+				<float n="2" alias="/surface-positions/left-flap-pos-norm"/>
+				<float n="3" alias="/surface-positions/right-flap-pos-norm"/>
+				<float n="4" alias="/sim/model/nozzle-animation"/>
+        <float n="6" alias="/controls/flight/chute_jettisoned"/>
+				<float n="8" alias="/engines/engine[0]/afterburner" /> <!-- Reheat left engine -->
+			</generic>
+		</multiplay>
+	
+		<!--       Payload
+
+             (2)     (5)
+             5.L /-\ 6.R
+    __________|_/top\_|_____________
+    |     |     \___/     |    |
+    3.L   1.L     |      2.R  4.R
+    (0)   (1)   Center   (4)  (5)
+                 7.C
+                 (4)
+                 8.C
+                 (4)
+    -->
+
+    <weight n="0">
+			<name>Pylon.3</name>
+      <tank>6</tank>
+      <weight-lb>0</weight-lb>
+      <selected>none</selected>
+      <opt>
+        <name>none</name>
+        <lbs>0</lbs>
+      </opt>
+      <opt>
+        <name>R-73 missile</name>
+        <lbs>242</lbs>
+      </opt>
+      <opt>
+        <name>PTB-490 tank</name>
+        <lbs>154</lbs>
+        <gals>127</gals>
+      </opt>
+		</weight>	
+    
+		<weight n="1">
+			<name>Pylon.1</name>
+			<weight-lb>0</weight-lb>
+			<selected>none</selected>
+			<opt>
+				<name>none</name>
+				<lbs>0</lbs>
+			</opt>
+			<opt>
+				<name>R-77 missile</name>
+				<lbs>386</lbs>
+			</opt>
+      <opt>
+        <name>OFAB-250 bomb</name>
+        <lbs>590</lbs>
+      </opt>
+      <opt>
+        <name>UB-32 rockets</name>
+        <lbs>582</lbs>
+      </opt>
+		</weight>	
+    
+		<weight n="2">
+			<name>Pylon.5</name>
+			<weight-lb>0</weight-lb>
+			<selected>none</selected>
+			<opt>
+				<name>none</name>
+				<lbs>0</lbs>
+			</opt>
+      <opt>
+        <name>ECM pod left</name>
+        <lbs>100</lbs>
+      </opt>
+		</weight>	
+    
+		<weight n="3">
+			<name>Pylon.7</name>
+      <weight-lb>0</weight-lb>
+      <selected>none</selected>
+      <opt>
+        <name>none</name>
+        <lbs>0</lbs>
+      </opt>
+      <opt>
+        <name>GSh-23 gun</name>
+        <lbs>100</lbs>
+      </opt>
+		</weight>	
+    
+		<weight n="4">
+			<name>Pylon.8</name>
+      <tank>7</tank>
+      <weight-lb>0</weight-lb>
+      <selected>none</selected>
+      <opt>
+        <name>none</name>
+        <lbs>0</lbs>
+      </opt>
+      <opt>
+        <name>PTB-490 tank</name>
+        <lbs>154</lbs>
+        <gals>127</gals>
+      </opt>
+		</weight>	
+    
+		<weight n="5">
+			<name>Pylon.6</name>
+			<weight-lb>0</weight-lb>
+			<selected>none</selected>
+			<opt>
+				<name>none</name>
+				<lbs>0</lbs>
+			</opt>
+      <opt>
+        <name>ECM pod right</name>
+        <lbs>100</lbs>
+      </opt>
+		</weight>
+    
+		<weight n="6">
+			<name>Pylon.2</name>
+			<weight-lb>0</weight-lb>
+			<selected>none</selected>
+			<opt>
+				<name>none</name>
+				<lbs>0</lbs>
+			</opt>
+      <opt>
+        <name>R-77 missile</name>
+        <lbs>386</lbs>
+      </opt>
+      <opt>
+        <name>OFAB-250 bomb</name>
+        <lbs>590</lbs>
+      </opt>
+      <opt>
+        <name>UB-32 rockets</name>
+        <lbs>582</lbs>
+      </opt>
+		</weight>
+    
+		<weight n="7">
+			<name>Pylon.4</name>
+      <tank>8</tank>
+      <weight-lb>0</weight-lb>
+      <selected>none</selected>
+      <opt>
+        <name>none</name>
+        <lbs>0</lbs>
+      </opt>
+      <opt>
+        <name>R-73 missile</name>
+        <lbs>242</lbs>
+      </opt>
+      <opt>
+        <name>PTB-490 tank</name>
+        <lbs>154</lbs>
+        <gals>127</gals>
+      </opt>
+		</weight>
+    
+	
+	</sim>
+
+  <!-- Misc Settings -->
+
+  <controls>
+    <flight>
+      <flaps>0</flaps>
+      <elevator-trim>-0.16</elevator-trim>
+      <chute_deploy type="bool">false</chute_deploy>
+      <chute_jettisoned type="bool">false</chute_jettisoned>
+      <chute_loaded type="bool">true</chute_loaded>
+      <chute_extended type="bool">false</chute_extended>
+    </flight>
+    
+    <gear>
+      <brake-parking type="double">1</brake-parking>
+    </gear>
+    
+    <lighting>
+      <instruments-norm>0.3</instruments-norm>
+    </lighting>
+ 
+		<armament>
+			<trigger>0</trigger>
+			<trigger1>0</trigger1>
+			<trigger2>0</trigger2>
+			<station n="0">
+				<release type="bool">false</release>
+			</station>
+			<station n="1">
+				<release type="bool">false</release>
+			</station>
+			<station n="2">
+				<release type="bool">false</release>
+			</station>
+			<station n="3">
+				<release type="bool">false</release>
+			</station>
+			<station n="4">
+				<release type="bool">false</release>
+			</station>
+			<station n="5">
+				<release type="bool">false</release>
+			</station>
+			<station n="6">
+				<release type="bool">false</release>
+			</station>
+			<station n="7">
+				<release type="bool">false</release>
+			</station>
+      <station n="8">
+        <release type="bool">false</release>
+      </station>
+      <gunsight>
+        <power-on type="bool">true</power-on>
+        <intensity type="double">0.3</intensity>
+      </gunsight>
+		</armament>
+		
+	</controls>
+
+	<consumables>
+		<fuel>
+      <tank n="0">
+        <tank-num type="int">0</tank-num>
+        <level-gal_us archive="y">85.33</level-gal_us>
+      </tank>
+      <tank n="1">
+        <tank-num type="int">1</tank-num>
+        <level-gal_us archive="y">85.33</level-gal_us>
+      </tank>
+      <tank n="2">
+        <tank-num type="int">2</tank-num>
+        <level-gal_us archive="y">85.33</level-gal_us>
+      </tank>
+      <tank n="3">
+        <tank-num type="int">3</tank-num>
+        <level-gal_us archive="y">85.33</level-gal_us>
+      </tank>
+      <tank n="4">
+        <tank-num type="int">4</tank-num>
+        <level-gal_us archive="y">85.33</level-gal_us>
+      </tank>
+      <tank n="5">
+        <tank-num type="int">5</tank-num>
+        <level-gal_us archive="y">85.33</level-gal_us>
+      </tank>
+      
+			<tank n="6">
+				<name>Left-DropTank</name>
+				<selected type="bool">false</selected>
+			</tank>
+			<tank n="7">
+				<name>Centre-DropTank</name>
+				<selected type="bool">false</selected>
+			</tank>
+			<tank n="8">
+				<name>Right-DropTank</name>
+				<selected type="bool">false</selected>
+			</tank>
+		</fuel>
+	</consumables>
+
+    
+	<!-- Keyboard shortcuts -->
+
+	<input>
+		<keyboard>
+  
+			<!--<key n="125">
+				<name>}</name>
+				<desc>Engine autostart</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						#Yak-130.engines.engine1.autostart();
+						#settimer( func { Yak-130.engines.engine2.autostart(); }, 12 );
+						yasimengines.autostart();		 
+					</script>
+               
+				</binding>
+			</key>-->
+       
+			<key n="78">
+				<name>N</name>
+				<desc>Extend speedbrake</desc>
+				<binding>
+					<command>property-adjust</command>
+					<property>/controls/flight/speedbrake</property>
+					<step type="double">0.2</step>
+					<min type="double">0</min>
+					<max type="double">1</max>
+				</binding>
+			</key>
+
+      <key n="81">
+        <name>Shift-Q</name>
+        <desc>Fuel cut off</desc>
+        <binding>
+          <condition>
+            <property>/sim/input/selected/engine[0]</property>
+          </condition>
+          <command>property-toggle</command>
+          <property>/controls/engines/engine[0]/cutoff</property>
+        </binding>
+      </key>
+       
+			<key n="99">
+				<name>c</name>
+				<desc>Toggle canopy</desc>
+				<binding>
+					<command>nasal</command>
+					<script>canopy.canopy_switch(2)</script>
+				</binding>
+			</key>
+       
+			<key n="100">
+				<name>d</name>
+				<desc>Fire rockets</desc>
+				<binding>
+					<command>nasal</command>
+					<script>guns.fire_Rocket()</script>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>nasal</command>
+						<script>guns.stop_Rocket()</script>
+					</binding>
+				</mod-up>
+			</key>
+			
+			<key n="101">
+				<name>Shift-E</name>
+				<desc>Eject</desc>
+				<binding>
+					<command>nasal</command>
+					<script>Eject.eject();</script>
+				</binding>
+			</key>
+       
+			<key n="102">
+				<name>f</name>
+				<desc>Fire gun</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/armament/trigger</property>
+					<value>true</value>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>property-assign</command>
+						<property>controls/armament/trigger</property>
+						<value>false</value>
+					</binding>
+				</mod-up>
+			</key>
+
+      <key n="106">
+        <name>j</name>
+        <desc>jettison braking parachute</desc>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/flight/chute_deploy</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/flight/chute_jettisoned</property>
+          <value type="bool">1</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/flight/chute_loaded</property>
+          <value type="bool">0</value>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-assign</command>
+            <property>controls/flight/chute_jettisoned</property>
+            <value type="bool">0</value>
+          </binding>
+        </mod-up>
+      </key>
+       
+			<key n="110">
+				<name>n</name>
+				<desc>Retract speedbrake</desc>
+				<binding>
+					<command>property-adjust</command>
+					<property>/controls/flight/speedbrake</property>
+					<step type="double">-0.2</step>
+					<min type="double">0</min>
+					<max type="double">1</max>
+				</binding>
+			</key>
+
+      <key n="112">
+        <name>p</name>
+        <desc>Deploy braking parachute</desc>
+        <binding>
+          <condition>
+            <property>controls/flight/chute_loaded</property>
+          </condition>
+          <command>property-assign</command>
+          <property>controls/flight/chute_deploy</property>
+          <value type="bool">1</value>
+        </binding>
+      </key>
+       
+			<key n="113">
+				<name>Ctrl-q</name>
+				<desc>Deploy countermeasures</desc>
+				<binding>
+					<command>nasal</command>
+					<script>guns.fire_FL()</script>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>nasal</command>
+						<script>guns.stop_FL()</script>
+					</binding>
+				</mod-up>
+			</key>
+
+      <key n="115">
+        <name>s</name>
+        <desc>Toggle starter valves</desc>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/engines/engine[0]/starter</property>
+        </binding>
+        <!--<binding>
+          <command>property-toggle</command>
+          <property>controls/engines/engine[1]/starter</property>
+        </binding>-->
+        <mod-up>
+          <binding>
+            <command>null</command>
+          </binding>
+        </mod-up>
+      </key>
+
+      <key n="125">
+        <name>}</name>
+        <desc>Engine Autostart</desc>
+        <binding>
+          <command>nasal</command>
+          <script>engines.engine1.autostart();</script>
+        </binding>
+      </key>
+
+		</keyboard>
+	</input>
+    
+	<!-- Instrumentation -->
+    
+	<instrumentation>
+
+    <path>Aircraft/MiG-21UPG/Systems/instrumentation.xml</path>    
+        
+		<transponder>
+			<inputs>
+				<serviceable type="bool">true</serviceable>
+			</inputs>
+		</transponder>
+        
+		<nav n="0">
+			<serviceable type="bool">1</serviceable>
+		</nav>
+        
+		<nav n="1">
+			<serviceable type="bool">1</serviceable>
+		</nav>
+        
+		<comm n="0">
+			<serviceable type="bool">1</serviceable>
+		</comm>
+        
+		<comm n="1">
+			<serviceable type="bool">1</serviceable>
+		</comm>
+        
+		<airspeed-indicator>
+			<limit-indicated-speed-kt type="double">280</limit-indicated-speed-kt>	
+			<index n="0" type="double">95</index>
+			<index n="1" type="double">145</index>
+		</airspeed-indicator>
+        
+		<g-meter>
+			<g-max archive="y" type="double">1</g-max>
+			<g-min archive="y" type="double">1</g-min>
+		</g-meter>
+        
+		<radar>
+			<range type="int" archive="y">20</range>
+			<range-factor type="double" archive="n">0.001888</range-factor>
+			<minimized type="bool" archive="y">false</minimized>
+			<selected type="int">3</selected>
+			<enabled type="bool">true</enabled>
+			<az-field type="double">120</az-field>
+			<range type="double">150</range>
+			<range-selected type="double">50</range-selected>
+			<radar2-range type="double">150</radar2-range>
+			<display-rdr type="bool">true</display-rdr>
+			<radar-standby type="int">3</radar-standby>
+			<mode>
+				<rws type="bool">true</rws>
+				<tws-auto type="bool">false</tws-auto>
+			</mode>
+		</radar>
+        
+		<radar2>
+			<sweep-width-m type="double">0.0844</sweep-width-m>
+			<range-width-m type="double">0.0846</range-width-m>
+			<radius-ppi-display-m type="double">0.0846</radius-ppi-display-m>
+			<hud-eye-dist-m type="double">0.766</hud-eye-dist-m>
+			<hud-radius-m type="double">0.071</hud-radius-m>
+			<hud-vertical-offset-m type="double">-0.025</hud-vertical-offset-m>
+		</radar2>
+        
+		<rwr>
+			<display-lighting-intens type="double">0.4</display-lighting-intens>
+			<symbology-lighting-intens type="double">1</symbology-lighting-intens>
+		</rwr>
+        
+		<terrain-radar>
+			<hi-elev>
+				<alt-ft type="double">-9999.9</alt-ft>
+				<lat-deg type="double">-9999.9</lat-deg>
+				<lon-deg type="double">-9999.9</lon-deg>
+				<dist-m type="double">-9999.9</dist-m>
+				<collision-status type="string">initialised</collision-status>
+			</hi-elev>
+			<settings>
+				<mode type="string">extend</mode>
+				<state type="string">off</state>
+				<range-m type="double">2500</range-m>
+				<step-m type="double">250</step-m>
+				<max-climb-rate-fps type="double">120</max-climb-rate-fps>
+				<hi-elev-markers type="bool">false</hi-elev-markers>
+			</settings>
+		</terrain-radar>
+        
+		<efis>
+			<ecam>
+				<display-mode type="string">FUEL</display-mode>
+			</ecam>
+			<nd>
+				<display-mode type="string">VOR</display-mode>
+				<display-mode-knob type="int">2</display-mode-knob>
+				<display-range type="int">40</display-range>
+			</nd>
+			<input>
+				<vor-adf-1 type="int">1</vor-adf-1>
+				<vor-adf-2 type="int">1</vor-adf-2>
+				<CSTR type="bool">1</CSTR>
+				<WPT type="bool">1</WPT>
+				<VORD type="bool">1</VORD>
+				<NDB type="bool">1</NDB>
+				<ARPT type="bool">1</ARPT>
+				<WX type="bool">1</WX>
+				<TERR type="bool">1</TERR>
+				<TRAF type="bool">1</TRAF>
+				<taxi type="bool">1</taxi>
+			</input>
+		</efis>
+        
+	</instrumentation>
+
+  <engines>
+    <engine n="0">
+      <running>false</running>
+    </engine>
+  </engines>
+    
+	<!-- Effects -->
+    
+	<environment>
+		<turbulence>
+			<use-cloud-turbulence>true</use-cloud-turbulence>
+		</turbulence>
+	</environment>
+	
+	<gear>
+		<gear n="0">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+			<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+		</gear>
+		
+		<gear n="1">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+		</gear>
+		
+		<gear n="2">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+		</gear>
+	</gear>
+    
+	<!-- Nasal scripts -->
+
+	<nasal>
+    
+		<MiG-21UPG>    
+			<file>Aircraft/MiG-21UPG/Nasal/hud.nas</file>
+			<file>Aircraft/MiG-21UPG/Nasal/liveries.nas</file>
+			<file>Aircraft/MiG-21UPG/Nasal/refuel.nas</file>
+			<file>Aircraft/MiG-21UPG/Nasal/explode.nas</file>
+		</MiG-21UPG>
+		
+		<fuel>
+      <file>Aircraft/MiG-21UPG/Nasal/fuel.nas</file>
+    </fuel>
+    
+		<dmesw>
+			<file>Aircraft/MiG-21UPG/Nasal/dmesw.nas</file>
+		</dmesw>
+    
+		<terrain-map>        
+			<file>Aircraft/MiG-21UPG/Nasal/terrain-map.nas</file>        
+		</terrain-map>
+    
+		<lights>
+			<file>Aircraft/MiG-21UPG/Nasal/lights.nas</file>
+		</lights>
+    
+		<eno>
+			<file>Aircraft/MiG-21UPG/Nasal/eno.nas</file>
+		</eno>
+    
+		<maintenance>
+			<file>Aircraft/MiG-21UPG/Nasal/maintenance.nas</file>
+		</maintenance>
+
+    <!--<engines>
+      <file>Aircraft/MiG-21UPG/Nasal/generic-yasim-engine.nas</file>
+    </engines>-->
+
+    <engines>
+      <file>Aircraft/MiG-21UPG/Nasal/generic-yasim-engine.nas</file>
+      <script>
+        var engine1 = engines.Jet.new(0, 0, 0.01, 5.21, 3, 5, 1, 6);
+        setlistener("sim/signals/fdm-initialized", func
+        {
+        engine1.init();
+        }, 0, 0);
+      </script>
+     </engines>
+        
+		<canopy>
+			<file>Aircraft/MiG-21UPG/Nasal/canopy.nas</file>
+		</canopy>
+		
+		<Eject>
+			<file>Aircraft/MiG-21UPG/Nasal/eject.nas</file>
+		</Eject>
+    
+		<tyresmoke>
+			<file>Aircraft/MiG-21UPG/Nasal/tyresmoke.nas</file>
+		</tyresmoke>
+		
+	  <payload>
+			<file>Aircraft/MiG-21UPG/Nasal/Payload.nas</file>
+		</payload>
+		
+		<guns>
+			<file>Aircraft/MiG-21UPG/Nasal/weapons.nas</file>
+		</guns>
+		
+		<cannon>
+			<file>Aircraft/MiG-21UPG/Nasal/cannon.nas</file>
+		</cannon>
+		
+		<rockets>
+			<file>Aircraft/MiG-21UPG/Nasal/rockets.nas</file>
+		</rockets>
+
+    <dragchute>
+      <file>Aircraft/MiG-21UPG/Nasal/dragchute.nas</file>
+    </dragchute>
+    
+		<m877>
+			<file>Aircraft/Instruments-3d/clock/m877/M877.nas</file>
+		</m877>
+    
+		<radardist>
+			<file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
+		</radardist>
+    
+		<radar>
+			<file>Aircraft/MiG-21UPG/Nasal/radar.nas</file> 
+		</radar>
+    
+		<radar2>
+			<file>Aircraft/MiG-21UPG/Nasal/radar2.nas</file>
+		</radar2>
+		
+		<MpEncode>
+			<file>Aircraft/MiG-21UPG/Nasal/MpEncode.nas</file>
+		</MpEncode>
+
+    <!--<su27>
+			<file>Aircraft/MiG-21UPG/Nasal/SU-27.nas</file>
+		</su27>-->
+    
+	</nasal>
+
+</PropertyList>
