@@ -11,7 +11,7 @@
 		<status>1.0.0</status>
 		<flight-model>yasim</flight-model>
 		<aero>MiG-21UPG-yasim</aero><!-- remove this line for FG versions earlier than 3.2 -->
-        <!--  <aero>Yak-130-yasimold</aero>  --><!-- uncomment this line for FG versions earlier than 3.2 -->
+
 		<rating>
 			<FDM type="int">3</FDM>
 			<systems type="int">1</systems>
@@ -137,11 +137,6 @@
 					</item>
           <item>
             <label>Reload dragchute</label>
-            <!--<binding>
-              <command>property-assign</command>
-              <property>controls/flight/chute_loaded</property>
-              <value type="int">1</value>
-            </binding>-->
             <binding>
               <command>nasal</command>
               <script>dragchute.reload()</script>
@@ -254,9 +249,9 @@
     __________|_/top\_|_____________
     |     |     \___/     |    |
     3.L   1.L     |      2.R  4.R
-    (0)   (1)   Center   (4)  (5)
+    (0)   (1)   Center   (6)  (7)
                  7.C
-                 (4)
+                 (3)
                  8.C
                  (4)
     -->
@@ -512,20 +507,6 @@
 
 	<input>
 		<keyboard>
-  
-			<!--<key n="125">
-				<name>}</name>
-				<desc>Engine autostart</desc>
-				<binding>
-					<command>nasal</command>
-					<script>
-						#Yak-130.engines.engine1.autostart();
-						#settimer( func { Yak-130.engines.engine2.autostart(); }, 12 );
-						yasimengines.autostart();		 
-					</script>
-               
-				</binding>
-			</key>-->
        
 			<key n="78">
 				<name>N</name>
@@ -675,10 +656,6 @@
           <command>property-toggle</command>
           <property>controls/engines/engine[0]/starter</property>
         </binding>
-        <!--<binding>
-          <command>property-toggle</command>
-          <property>controls/engines/engine[1]/starter</property>
-        </binding>-->
         <mod-up>
           <binding>
             <command>null</command>
@@ -883,10 +860,6 @@
 			<file>Aircraft/MiG-21UPG/Nasal/maintenance.nas</file>
 		</maintenance>
 
-    <!--<engines>
-      <file>Aircraft/MiG-21UPG/Nasal/generic-yasim-engine.nas</file>
-    </engines>-->
-
     <engines>
       <file>Aircraft/MiG-21UPG/Nasal/generic-yasim-engine.nas</file>
       <script>
@@ -949,10 +922,6 @@
 		<MpEncode>
 			<file>Aircraft/MiG-21UPG/Nasal/MpEncode.nas</file>
 		</MpEncode>
-
-    <!--<su27>
-			<file>Aircraft/MiG-21UPG/Nasal/SU-27.nas</file>
-		</su27>-->
     
 	</nasal>
 
