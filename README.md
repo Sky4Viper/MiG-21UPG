@@ -3,11 +3,19 @@ Aircraft for Flightgear (also known as MiG-21-93 and MiG-21Bison) upgraded versi
 There isn't much information about it, therefore a lot of aspects are highly speculative. Anyway I think it is an interesting aicraft that deserves some attention.
 Original MiG-21bis I decided to use as a base was released by pjedvaj http://fguk.eu/index.php/hangar/download/7-military-jets/101-mikoyan-gurevich-mig-21bis
 
-sources:
+Sources:
+
 Payload: http://www.airwar.ru/image/idop/fighter/mig21-93/mig21-93-1.gif
+
 Views: http://www.airwar.ru/image/idop/fighter/mig21-93/mig21-93-2.gif
+
 Cockpit: http://www.airwar.ru/image/idop/fighter/mig21-93/mig21-93-9.jpg
+
 Armament: http://www.airwar.ru/image/idop/fighter/mig21-93/mig21-93-10.jpg
+
+Cutout: https://forums.eagle.ru/attachment.php?attachmentid=118049&d=1432875892
+
+
 
 MiG-21-93 Upgrade
 The high performance of the MiG-21 aircraft, which is the most popular supersonic fighter in the world, enables to effectively solve a wide range of flight missions even today.
