@@ -86,7 +86,7 @@
 	
 	<model>
 		<name>flare-trail</name>
-		<path>Aircraft/Yak-130/Models/Effects/Flare/Flare-Trail.xml</path>
+		<path>Aircraft/MiG-21UPG/Models/Effects/Flare/Flare-Trail.xml</path>
 		<offsets>
 			<x-m>0.0</x-m>
 			<y-m>0.0</y-m>
@@ -96,7 +96,7 @@
 	
 	<model>
 		<name>flare-smoke</name>
-		<path>Aircraft/Yak-130/Models/Effects/Flare/Flare-Smoke.xml</path>
+		<path>Aircraft/MiG-21UPG/Models/Effects/Flare/Flare-Smoke.xml</path>
 		<offsets>
 			<x-m>0.0</x-m>
 			<y-m>0.0</y-m>
