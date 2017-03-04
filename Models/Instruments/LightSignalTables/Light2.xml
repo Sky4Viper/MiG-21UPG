@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>Light2.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>light1_on</object-name>
+    <emission>
+      <red>1.6</red>
+      <green>0</green>
+      <blue>0</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>light2_on</object-name>
+    <object-name>light3_on</object-name>
+    <object-name>light4_on</object-name>
+    <emission>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>0</red>
+      <green>1.6</green>
+      <blue>0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light1_on</object-name>
+    <condition>
+      <or>
+        <and>
+          <property>instrumentation/nav/dme-in-range</property>
+          <less-than>
+            <property>instrumentation/dme/indicated-distance-nm</property>
+            <value>3.0</value>
+          </less-than>
+        </and>
+        <property>mig21/controls/buttons/lightstest2</property>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light2_on</object-name>
+    <condition>
+      <or>
+        <property>mig21/controls/buttons/lightstest2</property>
+        <equals>
+          <property>gear/gear[0]/position-norm</property>
+          <value>1.0</value>
+        </equals>
+        <not>
+          <property>controls/power/cone</property>
+        </not>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light3_on</object-name>
+    <condition>
+      <or>
+        <property>mig21/controls/buttons/lightstest2</property>
+        <less-than>
+          <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+          <value>243</value>
+        </less-than>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light4_on</object-name>
+    <condition>
+      <or>
+        <property>mig21/controls/buttons/lightstest2</property>
+        <and>
+          <equals>
+            <property>/controls/flight/elevator-trim</property>
+            <value>0.0</value>
+          </equals>
+          <equals>
+            <property>/controls/flight/rudder-trim</property>
+            <value>0.0</value>
+          </equals>
+          <equals>
+            <property>/controls/flight/aileron-trim</property>
+            <value>0.0</value>
+          </equals>
+        </and>  
+      </or> 
+    </condition>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>knob1</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>mig21/controls/buttons/lightstest2</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+	<path>MFD-2.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>Buttons</object-name>
+    <emission>
+      <red>0.045</red>
+      <green>0.025</green>
+      <blue>0.015</blue>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>20</max-m>
+	</animation>
+    
+	<model>
+		<name>radar</name>
+		<path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/MFD-2radar.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-offset>0</pitch-offset>
+		</offsets>
+	</model>
+  
+	<model>
+		<path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/MFD-2terrain.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-offset>0</pitch-offset>
+		</offsets>
+	</model>
+  
+
+</PropertyList>

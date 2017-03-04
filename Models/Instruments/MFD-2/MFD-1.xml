@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+	<path>MFD-1.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>Buttons</object-name>
+    <emission>
+      <red>0.045</red>
+      <green>0.025</green>
+      <blue>0.015</blue>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>20</max-m>
+	</animation>
+    
+	<model>
+		<name>radar</name>
+		<path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/MFD-1radar.xml</path>
+		<offsets>
+			<x-m>0.008</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-offset>0</pitch-offset>
+		</offsets>
+	</model>
+  
+	<model>
+		<path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/MFD-2terrain.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-offset>0</pitch-offset>
+		</offsets>
+	</model>
+  
+  <!--<model>
+    <name>MFD-Screen</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/Center-mfd/Old/MFD3d.xml</path>
+    <condition>
+      <and>
+        --><!--<equals>
+          <property>/instrumentation/efis/Mode</property>
+          <value>OLD</value>
+        </equals>--><!--
+        <greater-than>
+          <property>/systems/electrical/volts</property>
+          <value>12</value>
+        </greater-than>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>0.0115</x-m>
+      <y-m>0.000</y-m>
+      <z-m>-0.015</z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>scale</type>
+    <object-name>MFD-Screen</object-name>
+    <condition>
+      <greater-than>
+        <property>/systems/electrical/volts</property>
+        <value>12</value>
+      </greater-than>
+    </condition>
+    <x-offset>1.00</x-offset>
+    <y-offset>0.90</y-offset>
+    <z-offset>0.87</z-offset>
+  </animation>-->
+  
+
+</PropertyList>

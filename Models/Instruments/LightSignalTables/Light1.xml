@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>Light1.ac</path>
+
+    <!--<animation>
+        <type>material</type>
+        <object-name>button1</object-name>
+        <object-name>button2</object-name>
+        <object-name>button3</object-name>
+        <object-name>button4</object-name>
+        <object-name>button5</object-name>
+        <object-name>button6</object-name>
+        <object-name>button7</object-name>
+        <object-name>button8</object-name>
+        <object-name>button9</object-name>
+        <object-name>button10</object-name>
+        <object-name>button11</object-name>
+        <object-name>button12</object-name>
+        <emission>
+            <red>0.6</red>
+            <green>0.3</green>
+            <blue>0.3</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission> 
+    </animation>-->
+
+  <animation>
+    <type>material</type>
+    <object-name>light_on_1</object-name>
+    <object-name>light_on_2</object-name>
+    <object-name>light_on_3</object-name>
+    <object-name>light_on_4</object-name>
+    <object-name>light_on_5</object-name>
+    <object-name>light_on_6</object-name>
+    <object-name>light_on_7</object-name>
+    <object-name>light_on_8</object-name>
+    <object-name>light_on_9</object-name>
+    <object-name>light_on_10</object-name>
+    <object-name>light_on_11</object-name>
+    <object-name>light_on_12</object-name>
+    <emission>
+      <red>0</red>
+      <green>1.6</green>
+      <blue>0</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light_on_1</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[0]/selected</property>
+          <value>UB-32 rockets</value>
+        </equals>
+        <equals>
+          <property>controls/armament/rocketsLeft</property>
+          <value>0</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light_on_2</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[1]/selected</property>
+          <value>UB-32 rockets</value>
+        </equals>
+        <equals>
+          <property>controls/armament/rocketsLeft</property>
+          <value>0</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light_on_3</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[6]/selected</property>
+          <value>UB-32 rockets</value>
+        </equals>
+        <equals>
+          <property>controls/armament/rocketsLeft</property>
+          <value>0</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light_on_4</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[7]/selected</property>
+          <value>UB-32 rockets</value>
+        </equals>
+        <equals>
+          <property>controls/armament/rocketsLeft</property>
+          <value>0</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light_on_5</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[0]/selected</property>
+          <value>PTB-490 tank</value>
+        </equals>
+        <equals>
+          <property>sim/weight[7]/selected</property>
+          <value>PTB-490 tank</value>
+        </equals>
+        <equals>
+          <property>consumables/fuel/tank[6]/level-lbs</property>
+          <value>0</value>
+        </equals>
+        <equals>
+          <property>consumables/fuel/tank[8]/level-lbs</property>
+          <value>0</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light_on_6</object-name>
+    <condition>
+        <not-equals>
+          <property>sim/weight[1]/selected</property>
+          <value>none</value>
+        </not-equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light_on_7</object-name>
+    <condition>
+      <not-equals>
+        <property>sim/weight[6]/selected</property>
+        <value>none</value>
+      </not-equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light_on_9</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[4]/selected</property>
+          <value>PTB-490 tank</value>
+        </equals>
+        <equals>
+          <property>consumables/fuel/tank[7]/level-lbs</property>
+          <value>0</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light_on_10</object-name>
+    <condition>
+      <not-equals>
+        <property>sim/weight[0]/selected</property>
+        <value>none</value>
+      </not-equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light_on_11</object-name>
+    <condition>
+      <not-equals>
+        <property>sim/weight[7]/selected</property>
+        <value>none</value>
+      </not-equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light_on_8</object-name>
+    <condition>
+      <equals>
+        <property>sim/weight[2]/selected</property>
+        <value>ECM pod left</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>light_on_12</object-name>
+    <condition>
+      <equals>
+        <property>sim/weight[5]/selected</property>
+        <value>ECM pod right</value>
+      </equals>
+    </condition>
+  </animation>
+
+</PropertyList>
