@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<PropertyList>
+
+  <default>
+    <menu n="11">
+      <label>MiG-21 Bison</label>
+      <enabled type="bool">true</enabled>
+
+      <item n="0">
+        <label>Fast Config</label>
+        <name>config</name>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>config</dialog-name>
+        </binding>
+      </item>
+
+      <item n="1">
+        <label>ARC channel set up</label>
+        <name>ARK-19</name>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>ARK-19</dialog-name>
+        </binding>
+      </item>
+
+    </menu>
+  </default>
+
+</PropertyList>
