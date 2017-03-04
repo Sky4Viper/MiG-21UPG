@@ -1,5 +1,5 @@
 # MiG-21UPG
-This is a rework of pjedvaj's Mig-21bis. Currently only yasim is supported. There's still a lot of work left - electrical system, hydraulics, cockpit flood lights, radar and guided missiles. But there's already a lot of functioning swiches to press :). Not very accurate to be honest, it is more of a look a like concept. As well as me learning to code for flightgear. Have fun!
+This is a rework of pjedvaj's Mig-21bis. Currently only yasim is supported. There's still a lot of work left - electrical system, hydraulics, cockpit flood lights, radar and guided missiles. But there's already a lot of functioning swiches to press :). Not very accurate to be honest, it is more of a look alike concept. As well as me learning to code for flightgear. Have fun!
 
 Background
 
