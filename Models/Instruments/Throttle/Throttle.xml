@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>Throttle.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>lever</object-name>
+    <object-name>jato_btn_lid</object-name>
+    <object-name>jato_btn</object-name>
+    <emission>
+      <red>0.1</red>
+      <green>0.1</green>
+      <blue>0.1</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+
+  <animation>
+        <type>rotate</type>
+        <object-name>lever</object-name>
+        <property>controls/engines/engine[1]/throttle</property>
+        <factor>-55</factor>
+        <center>
+            <x-m>-3.59</x-m>
+            <y-m>-0.30</y-m>
+            <z-m> 0.41</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>jato_btn_lid</object-name>
+    <property>mig21/controls/switchcover3</property>
+    <factor>-110</factor>
+    <center>
+      <x-m>-3.64765</x-m>
+      <y-m>-0.26279</y-m>
+      <z-m>0.45382</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>jato_btn</object-name>
+    <property>mig21/controls/jato_jettison</property>
+    <factor>-0.003</factor>
+    <center>
+      <x-m>1.29928</x-m>
+      <y-m>0.89561</y-m>
+      <z-m>-1.74792</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>jato_btn_lid</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>mig21/controls/switchcover3</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>jato_btn</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>mig21/controls/jato_jettison</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>
