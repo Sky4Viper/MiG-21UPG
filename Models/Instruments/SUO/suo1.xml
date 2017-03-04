@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>suo1.ac</path>
+
+ <animation>
+  <type>material</type>
+   <object-name>ma_sw1</object-name>
+   <object-name>arm-switch2</object-name>
+   <object-name>arm-switch3</object-name>
+   <object-name>arm-switch4</object-name>
+   <object-name>arm-switch5</object-name>
+   <object-name>sw-housing</object-name>
+   <object-name>screws</object-name>
+   <object-name>jet-btn-lid</object-name>
+   <object-name>jet-btn</object-name>
+   <object-name>delay-knob</object-name>
+   <emission>
+     <red>0.2</red>
+     <green>0.2</green>
+     <blue>0.2</blue>
+     <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission>
+ </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>ma_sw_light</object-name>
+    <emission>
+      <red>0.9</red>
+      <green>0</green>
+      <blue>0</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>ma_sw_light</object-name>
+    <condition>
+      <property>controls/armament/masterarm</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ma_sw1</object-name>
+    <object-name>ma_sw_light</object-name>
+    <property>controls/armament/masterarm</property>
+    <offset-deg>20</offset-deg>
+    <factor>-40</factor>
+    <center>
+      <x-m> 0.00818</x-m>
+      <y-m>-0.03008</y-m>
+      <z-m>-0.01459</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>arm-switch2</object-name>
+    <property>controls/armament/selectedweapon</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>1</ind><dep>-20</dep></entry>
+      <entry><ind>2</ind><dep>20</dep></entry>
+      <entry><ind>3</ind><dep>20</dep></entry>
+      <entry><ind>4</ind><dep>20</dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.00818</x-m>
+      <y-m>-0.03050</y-m>
+      <z-m> 0.01491</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>arm-switch3</object-name>
+    <property>controls/armament/selectedweapon</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>1</ind><dep>0</dep></entry>
+      <entry><ind>2</ind><dep>-20</dep></entry>
+      <entry><ind>3</ind><dep>-20</dep></entry>
+      <entry><ind>4</ind><dep>20</dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.00818</x-m>
+      <y-m>-0.03050</y-m>
+      <z-m> 0.01491</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>arm-switch5</object-name>
+    <property>controls/armament/selectedweapon</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>1</ind><dep>0</dep></entry>
+      <entry><ind>2</ind><dep>20</dep></entry>
+      <entry><ind>3</ind><dep>-20</dep></entry>
+      <entry><ind>4</ind><dep>-20</dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.00818</x-m>
+      <y-m>-0.01125</y-m>
+      <z-m>-0.01674</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>delay-knob</object-name>
+    <property>controls/armament/selectedweapon</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>-90</dep></entry>
+      <entry><ind>1</ind><dep>-45</dep></entry>
+      <entry><ind>2</ind><dep>-45</dep></entry>
+      <entry><ind>3</ind><dep>-90</dep></entry>
+      <entry><ind>4</ind><dep>-90</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>0.01134</x-m>
+      <y-m>0.01887</y-m>
+      <z-m>0.01316</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>jet-btn-lid</object-name>
+    <property>mig21/controls/switchcover1</property>
+    <factor>-110</factor>
+    <center>
+      <x-m> 0.01379</x-m>
+      <y-m> 0.02005</y-m>
+      <z-m>-0.02306</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>ma_sw1</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/armament/masterarm</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm-switch2</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/armament/selectedweapon</property>
+        <step>1</step>
+        <min>0.0</min>
+        <max>2</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/hud/hudmode</property>
+        <step>1</step>
+        <min>0.0</min>
+        <max>2</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm-switch3</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/armament/selectedweapon</property>
+        <step>1</step>
+        <min>3</min>
+        <max>5</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/hud/hudmode</property>
+        <step>1</step>
+        <min>3</min>
+        <max>5</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>suo.select_station()</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>arm-switch5</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/armament/selectedweapon</property>
+        <step>1</step>
+        <min>2</min>
+        <max>4</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/hud/hudmode</property>
+        <step>1</step>
+        <min>2</min>
+        <max>4</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>suo.select_station()</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>jet-btn-lid</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>mig21/controls/switchcover1</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>jet-btn</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>suo.emergency_jettison()</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Label text (needs ajustment) -->
+
+  <text>
+    <name>LabelText</name>
+    <type type="string">literal</type>
+    <text type="string">Weapons Control Panel</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.07</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m> 0.00</x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.06 </z-m>
+      <!--<heading-deg>90</heading-deg>-->
+    </offsets>
+  </text>
+
+  <animation>
+    <type>material</type>
+    <object-name>LabelText</object-name>
+    <emission>
+      <red>1.0</red>
+      <green>0.8</green>
+      <blue>0.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LabelText</object-name>
+    <condition>
+      <property>/sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+</PropertyList>

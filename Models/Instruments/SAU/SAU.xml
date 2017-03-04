@@ -1,0 +1,1007 @@
+<?xml version="1.0"?>
+<!--
+_______________________________________________________________________________
+Made from KAP140 Two Axis with Altitude Preselect autopilot instrument.
+
+3D version started 2007 by Ron Jensen, wino@jentronics.com.
+Based on 2D version started 2004 by Roy Vegard Ovesen, rvovesen@tiscali.no.
+
+This is an instrument configuration file for the open-source flight
+simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
+FlightGear property list defining the instrument's animations and actions.
+
+Actions are hotspots on the instrument that will respond to a mouse
+click.  Actions always modify the values of properties, either by
+adjusting them, toggling them, or swaping them with other
+properties' values.
+-->
+<PropertyList>
+  <name>SAU</name>
+  <path>SAU.ac</path>
+<!-- Annunciators -->
+  <animation>
+    <type>select</type>
+    <object-name>pitch-axis-fail</object-name>
+    <name>Pitch Axis Failure</name>
+    <condition>
+      <property>/autopilot/SAU/annunciators/pitchfail</property>
+      <value type="bool">true</value>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>roll-axis-fail</object-name>
+    <name>Roll Axis Failure</name>
+    <condition>
+      <property>/autopilot/SAU/annunciators/rollfail</property>
+      <value type="bool">true</value>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>ap-ann</object-name>
+    <name>AP Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/ap-arm</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>rol-ann</object-name>
+    <name>ROL Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/rol</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>hdg-ann</object-name>
+    <name>HDG Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/hdg/state</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>nav-ann</object-name>
+    <name>NAV Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/nav</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>apr-ann</object-name>
+    <name>APR Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/apr</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>tfr-arm-ann</object-name>
+    <name>TFR ARM Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/tfr-arm</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>nav-arm-ann</object-name>
+    <name>NAV ARM Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/nav-arm</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>apr-arm-ann</object-name>
+    <name>APR-ARM Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/apr-arm</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>rev-ann</object-name>
+    <name>REV Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/rev</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>rev-arm-ann</object-name>
+    <name>REV-ARM Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/rev-arm</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>vs-ann</object-name>
+    <name>VS Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/vs</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>alt-ann</object-name>
+    <name>ALT Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/alt-arm</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>ralt-ann</object-name>
+    <name>ALT Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/tfr-arm</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>att-arm-ann</object-name>
+    <name>ATT-ARM Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/att-arm</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>alt-arm-ann</object-name>
+    <name>ALT-ARM Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/alt-arm</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>alert-ann</object-name>
+    <name>ALERT Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/alt-alert/state</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>gs-ann</object-name>
+    <name>GS Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/gs</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>gs-arm-ann</object-name>
+    <name>GS-ARM Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/gs-arm</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>pt-ann</object-name>
+    <name>Pitch trim annunciator</name>
+    <condition>
+      <or>
+        <and>
+          <equals>
+            <property>/autopilot/SAU/annunciators/pt-up</property>
+            <value type="bool">true</value>
+          </equals>
+        </and>
+        <and>
+          <equals>
+            <property>/autopilot/SAU/annunciators/pt-dn</property>
+            <value type="bool">true</value>
+          </equals>
+        </and>
+      </or>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>pt-up-ann</object-name>
+    <name>Pitch trim up annunciator</name>
+    <condition>
+      <and>
+        <equals>
+          <property>/autopilot/SAU/annunciators/pt-up</property>
+          <value type="bool">true</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>pt-down-ann</object-name>
+    <name>Pitch trim down annunciator</name>
+    <condition>
+      <and>
+        <equals>
+          <property>/autopilot/SAU/annunciators/pt-dn</property>
+          <value type="bool">true</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+  
+<!-- vs-setting -->
+  <animation>
+    <type>select</type>
+    <object-name>fpm-ann</object-name>
+    <name>FPM Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/vs-number</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>vs-minus</object-name>
+    <object-name>vs-digit2-minus</object-name>
+    <object-name>vs-digit3-minus</object-name>
+    <object-name>vs-digit4-minus</object-name>
+    <object-name>vs-digit5-minus</object-name>
+    <condition>
+          <property>/autopilot/SAU/annunciators/test</property>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>vs-digit2</object-name>
+    <object-name>vs-digit3</object-name>
+    <object-name>vs-digit4</object-name>
+    <object-name>vs-digit5</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>/autopilot/SAU/annunciators/vs-number</property>
+          <value type="bool">true</value>
+        </equals>
+        <!--<greater-than-equals>
+          <property>/autopilot/KAP140/settings/target-pressure-rate-fpm</property>
+          <value>-1.0</value>
+        </greater-than-equals>-->
+      </and>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>vs-digit5</object-name>
+    <property>autopilot/internal/vert-speed-fpm</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <bias>0.5</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>vs-digit4</object-name>
+    <property>autopilot/internal/vert-speed-fpm</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <bias>0.5</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>vs-digit3</object-name>
+    <property>autopilot/internal/vert-speed-fpm</property>
+    <factor>0.001</factor>
+    <step>100</step>
+    <bias>0.5</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>vs-digit2</object-name>
+    <property>autopilot/internal/vert-speed-fpm</property>
+    <factor>0.0001</factor>
+    <step>1000</step>
+    <bias>0.5</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>vs-digit5-minus</object-name>
+    <property>autopilot/internal/vert-speed-fpm</property>
+    <factor>-0.1</factor>
+    <step>1</step>
+    <bias>0.5</bias>    
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>vs-digit4-minus</object-name>
+    <property>autopilot/internal/vert-speed-fpm</property>
+    <factor>-0.01</factor>
+    <step>10</step>
+    <bias>9.5</bias>    
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>vs-digit3-minus</object-name>
+    <property>autopilot/internal/vert-speed-fpm</property>
+    <factor>-0.001</factor>
+    <step>100</step>
+    <bias>99.5</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>vs-digit2-minus</object-name>
+    <property>autopilot/internal/vert-speed-fpm</property>
+    <factor>-0.0001</factor>
+    <step>1000</step>
+    <bias>999.5</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- alt-setting -->
+  <animation>
+    <type>select</type>
+    <object-name>alt-digits</object-name>
+    <object-name>ft-ann</object-name>
+    <name>FT Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/alt-number</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>textranslate</type>
+    <object-name>alt-digit1</object-name>
+    <!--<property>autopilot/settings/target-agl-ft</property>-->
+    <property>autopilot/SAU/settings/target-alt-ft</property>
+    <factor>0.00001</factor>
+    <step>10000</step>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>alt-digit2</object-name>
+    <!--<property>autopilot/settings/target-agl-ft</property>-->
+    <property>autopilot/SAU/settings/target-alt-ft</property>
+    <factor>0.0001</factor>
+    <step>1000</step>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>alt-digit3</object-name>
+    <!--<property>autopilot/settings/target-agl-ft</property>-->
+    <property>autopilot/SAU/settings/target-alt-ft</property>
+    <factor>0.001</factor>
+    <step>100</step>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>alt-digit4</object-name>
+    <!--<property>autopilot/settings/target-agl-ft</property>-->
+    <property>autopilot/SAU/settings/target-alt-ft</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>alt-digit5</object-name>
+    <!--<property>autopilot/settings/target-agl-ft</property>-->
+    <property>autopilot/SAU/settings/target-alt-ft</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- baro-setting-hpa -->
+  
+  <animation>
+    <type>select</type>
+    <object-name>hpa-digits</object-name>
+    <object-name>hpa-ann</object-name>
+    <name>hPa Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/bs-hpa-number</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>hpa-digit2</object-name>
+    <property>/autopilot/SAU/settings/baro-setting-hpa</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <bias>0.0005</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>hpa-digit3</object-name>
+    <property>/autopilot/SAU/settings/baro-setting-hpa</property>
+    <factor>1</factor>
+    <step>0.1</step>
+    <bias>0.0005</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>hpa-digit3</object-name>
+    <property>/autopilot/SAU/settings/baro-setting-hpa</property>
+    <factor>10</factor>
+    <step>0.01</step>
+    <bias>0.0005</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>hpa-digit4</object-name>
+    <property>/autopilot/SAU/settings/baro-setting-hpa</property>
+    <factor>100</factor>
+    <step>0.001</step>
+    <bias>0.0005</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+<!--
+    <name>Baro Setting hPa number</name>
+    <condition>
+      <equals>
+        <property>/autopilot/KAP140/annunciators/bs-hpa-number</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+    <chunk>
+      <type>number-value</type>
+      <property>/autopilot/KAP140/settings/baro-setting-hpa</property>
+      <scale>1</scale>
+      <format>%01.3f</format>
+    </chunk>
+-->
+<!-- baro-setting-inhg -->
+  <animation>
+    <type>select</type>
+    <object-name>inhg-digits</object-name>
+    <object-name>hg-ann</object-name>
+    <object-name>in-ann</object-name>
+    <name>IN HG Anunciator</name>
+    <condition>
+      <equals>
+        <property>/autopilot/SAU/annunciators/bs-inhg-number</property>
+        <value type="bool">true</value>
+      </equals>
+    </condition>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>inhg-digit2</object-name>
+    <property>/autopilot/SAU/settings/baro-setting-inhg</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <bias>0.005</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>inhg-digit3</object-name>
+    <property>/autopilot/SAU/settings/baro-setting-inhg</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <bias>0.005</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>inhg-digit4</object-name>
+    <property>/autopilot/SAU/settings/baro-setting-inhg</property>
+    <factor>1</factor>
+    <step>0.1</step>
+    <bias>0.005</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>inhg-digit5</object-name>
+    <property>/autopilot/SAU/settings/baro-setting-inhg</property>
+    <factor>10</factor>
+    <step>0.01</step>
+    <bias>0.005</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+<!-- Actions -->
+  <animation>
+    <type>pick</type>
+    <object-name>ap-btn</object-name>
+    <action>
+      <name>AP Button</name>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>sau.apBtn();</script>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>att-btn</object-name>
+    <action>
+      <name>ATT Button</name>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>sau.attBtn();</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>alt-btn</object-name>
+    <action>
+      <name>ALT Button</name>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>
+          sau.altBtn();
+        </script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>tfr-btn</object-name>
+    <action>
+      <name>TFR Button</name>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>
+          sau.tfrBtn();
+        </script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>nav-btn</object-name>
+    <action>
+      <name>NAV Button</name>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>
+          sau.navBtn();
+        </script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>apr-btn</object-name>
+    <action>
+      <name>APR Button</name>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>
+      sau.aprBtn();
+     </script>
+      </binding>
+    </action>
+  </animation>
+  
+  
+  
+  <!--<animation>
+    <type>pick</type>
+    <object-name>rev-btn</object-name>
+    <action>
+      <name>REV Button</name>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>
+      sau.revButton();
+     </script>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>dn-btn</object-name>
+    <action>
+      <name>DN Button</name>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>
+      sau.downButton();
+     </script>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>up-btn</object-name>
+    <action>
+      <name>UP Button</name>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>
+      sau.upButton();
+     </script>
+      </binding>
+    </action>
+  </animation>-->
+  <!--<animation>
+    <type>pick</type>
+    <object-name>arm-btn</object-name>
+    <action>
+      <name>ARM Button</name>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>
+      sau.armButton();
+     </script>
+      </binding>
+    </action>
+  </animation>-->
+  <!--<animation>
+    <type>pick</type>
+    <object-name>baro-btn</object-name>
+    <action>
+      <name>BARO Button</name>
+      <button>0</button>
+      <repeatable type="bool">false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+      sau.baroButtonPress();
+     </script>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>nasal</command>
+          <script>
+       sau.baroButtonRelease();
+      </script>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>-->
+  
+  <animation>
+    <type>pick</type>
+    <object-name>knob-inner</object-name>
+    <action>
+      <name>Knob small down</name>
+      <button>3</button>
+      <binding>
+        <command>nasal</command>
+        <script>sau.knobSmallDown();</script>
+      </binding>
+    </action>
+    <action>
+      <name>Knob small up</name>
+      <button>4</button>
+      <binding>
+        <command>nasal</command>
+        <script>sau.knobSmallUp();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <!--<animation>
+    <type>pick</type>
+    <object-name>knob-outer</object-name>
+    <action>
+      <name>Knob large down</name>
+      <button>3</button>
+      <binding>
+        <command>nasal</command>
+        <script>sau.knobLargeDown();</script>
+      </binding>
+    </action>
+    <action>
+      <name>Knob large up</name>
+      <button>4</button>
+      <binding>
+        <command>nasal</command>
+        <script>sau.knobLargeUp();</script>
+      </binding>
+    </action>
+  </animation>-->
+
+  <animation>
+    <type>pick</type>
+    <object-name>knob-left</object-name>
+    <action>
+      <name>Knob small down</name>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>sau.knobSmallDown();</script>
+      </binding>
+    </action>
+    <action>
+      <name>Knob large down</name>
+      <button>1</button>
+      <binding>
+        <command>nasal</command>
+        <script>sau.knobLargeDown();</script>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>knob-right</object-name>
+    <action>
+      <name>Knob small up</name>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>sau.knobSmallUp();</script>
+      </binding>
+    </action>
+    <action>
+      <name>Knob large up</name>
+      <button>1</button>
+      <binding>
+        <command>nasal</command>
+        <script>sau.knobLargeUp();</script>
+      </binding>
+    </action>
+  </animation>
+
+
+  
+  <animation>
+    <type>material</type>
+    <object-name>base</object-name>
+    <object-name>knob-inner</object-name>
+    <emission>
+      <red>0.75</red>
+      <green>0.25</green>
+      <blue>0.10</blue>
+      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>buttons</object-name>
+    <emission>
+      <red>0.045</red>
+      <green>0.025</green>
+      <blue>0.015</blue>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <!-- Label text (needs ajustment) -->
+
+  <text>
+    <name>LabelText</name>
+    <type type="string">literal</type>
+    <text type="string">Autopilot</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.07</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m> 0.008</x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+    </offsets>
+  </text>
+
+  <animation>
+    <type>material</type>
+    <object-name>LabelText</object-name>
+    <emission>
+      <red>1.0</red>
+      <green>0.8</green>
+      <blue>0.0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LabelText</object-name>
+    <condition>
+      <property>/sim/panel-hotspots</property>
+    </condition>
+  </animation>
+  
+</PropertyList>

@@ -1,0 +1,945 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>Stick.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>RUS</object-name>
+    <object-name>RUS.Trigger1</object-name>
+    <object-name>RUS.StrobMarker</object-name>
+    <object-name>RUS.OtklSAU</object-name>
+    <object-name>RUS.Trim</object-name>
+    <object-name>RUS.PrivGor</object-name>
+    <object-name>RUS.Zo</object-name>
+    <object-name>RUS.Zapros</object-name>
+    <object-name>RUS.SAUt</object-name>
+    <object-name>RUS.RTK</object-name>
+    <object-name>RUS.RST</object-name>
+    <object-name>RUS.RTKs</object-name>
+    <object-name>RUS.P1</object-name>
+    <object-name>RUS.P2</object-name>
+    <object-name>RUS.P3</object-name>
+    <object-name>RUS.P4</object-name>
+    <object-name>RUS.P5</object-name>
+    <object-name>RUS.P6</object-name>
+    <emission>
+      <red>0.2</red>
+      <green>0.2</green>
+      <blue>0.2</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+    <!--<texture-prop>mig29/systems/cockpitlighting/texture5</texture-prop>-->
+  </animation>
+
+  <!-- Ручка Управления Самолётом -->
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS</object-name>
+    <object-name>RUS.OtklSAU</object-name>
+    <object-name>RUS.PrivGor</object-name>
+    <object-name>RUS.PrivGorOn</object-name>
+    <object-name>RUS.RST</object-name>
+    <object-name>RUS.RTK</object-name>
+    <object-name>RUS.RTKs</object-name>
+    <object-name>RUS.RTKsa</object-name>
+    <object-name>RUS.SAUt</object-name>
+    <object-name>RUS.StrobMarker</object-name>
+    <object-name>RUS.Trim</object-name>
+    <object-name>RUS.Trigger1</object-name>
+    <object-name>RUS.Zapros</object-name>
+    <object-name>RUS.Zo</object-name>
+    <property>controls/flight/elevator</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep> 23.0</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep>-11.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.810</x-m>
+      <y-m> 0.000</y-m>
+      <z-m> 0.181</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS</object-name>
+    <object-name>RUS.OtklSAU</object-name>
+    <object-name>RUS.PrivGor</object-name>
+    <object-name>RUS.PrivGorOn</object-name>
+    <object-name>RUS.RST</object-name>
+    <object-name>RUS.RTK</object-name>
+    <object-name>RUS.RTKs</object-name>
+    <object-name>RUS.RTKsa</object-name>
+    <object-name>RUS.SAUt</object-name>
+    <object-name>RUS.StrobMarker</object-name>
+    <object-name>RUS.Trim</object-name>
+    <object-name>RUS.Trigger1</object-name>
+    <object-name>RUS.Zapros</object-name>
+    <object-name>RUS.Zo</object-name>
+    <object-name>RUS.cz1</object-name>
+    <object-name>RUS.cz2</object-name>
+    <object-name>RUS.cz3</object-name>
+    <object-name>RUS.cz4</object-name>
+    <object-name>RUS.cz5</object-name>
+    <object-name>RUS.cz6</object-name>
+    <object-name>RUS.cz7</object-name>
+    <object-name>RUS.cz8</object-name>
+    <object-name>RUS.cz9</object-name>
+    <object-name>RUS.cz10</object-name>
+    <object-name>RUS.cz11</object-name>
+    <object-name>RUS.cz12</object-name>
+    <object-name>RUS.cz13</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-15.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 15.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.810</x-m>
+      <y-m> 0.000</y-m>
+      <z-m> 0.181</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+
+  <!--<animation>
+    <type>translate</type>
+    <object-name>RUS.OtklSAU</object-name>
+    <property>mig29/controls/SAU/vrSAU</property>
+    <factor>0.00148672</factor>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>RUS.OtklSAU</object-name>
+    <property>mig29/controls/SAU/vrSAU</property>
+    <factor>0.000547232</factor>
+    <axis>
+      <x> 0</x>
+      <y>-1</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>RUS.OtklSAU</object-name>
+    <property>mig29/controls/SAU/vrSAU</property>
+    <factor>0.000261088</factor>
+    <axis>
+      <x> 0</x>
+      <y> 0</y>
+      <z>-1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>RUS.PrivGorOn</object-name>
+    <condition>
+      <and>
+        <greater-than>
+          <property>mig29/instrumentation/electrical/v27</property>
+          <value>18</value>
+        </greater-than>
+        <equals>
+          <property>fdm/jsbsim/ap/control/PrivGor</property>
+          <value>1</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS.Trim</object-name>
+    <property>mig29/controls/flight/elevator-trim</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-10.0</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 10.0</dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x1-m>-3.81415</x1-m>
+      <y1-m>-0.006533</y1-m>
+      <z1-m> 0.70380</z1-m>
+      <x2-m>-3.81599</x2-m>
+      <y2-m>-0.001459</y2-m>
+      <z2-m> 0.70380</z2-m>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS.Trim</object-name>
+    <property>mig29/controls/flight/aileron-trim</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-10.0</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 10.0</dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x1-m>-3.81463</x1-m>
+      <y1-m>-0.003836</y1-m>
+      <z1-m> 0.70114</z1-m>
+      <x2-m>-3.81551</x2-m>
+      <y2-m>-0.004156</y2-m>
+      <z2-m> 0.70646</z2-m>
+    </axis>
+  </animation>-->
+
+  <!--<animation>
+    <type>pick</type>
+    <object-name>RUS.cz2</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/flight/elevator-trim</property>
+        <step>-0.02</step>
+        <min>-1</min>
+        <max> 1</max>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>mig29/controls/flight/elevator-trim</property>
+        <value>-1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>mig29/controls/flight/elevator-trim</property>
+          <value>0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>RUS.cz4</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/flight/elevator-trim</property>
+        <step>0.02</step>
+        <min>-1</min>
+        <max> 1</max>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>mig29/controls/flight/elevator-trim</property>
+        <value>1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>mig29/controls/flight/elevator-trim</property>
+          <value>0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>RUS.cz5</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/flight/aileron-trim</property>
+        <step>-0.02</step>
+        <min>-1</min>
+        <max> 1</max>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>mig29/controls/flight/aileron-trim</property>
+        <value>-1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>mig29/controls/flight/aileron-trim</property>
+          <value>0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>RUS.cz3</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/flight/aileron-trim</property>
+        <step>0.02</step>
+        <min>-1</min>
+        <max> 1</max>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>mig29/controls/flight/aileron-trim</property>
+        <value>1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>mig29/controls/flight/aileron-trim</property>
+          <value>0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>RUS.cz1</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>mig29/controls/SAU/vrSAU</property>
+        <value>1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>mig29/controls/SAU/vrSAU</property>
+          <value>0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>RUS.cz6</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>mig29/controls/SAU/PrivGor</property>
+        <value>1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>mig29/controls/SAU/PrivGor</property>
+          <value>0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>RUS.cz7</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>mig29/controls/SUV/strob-v</property>
+        <step>-0.02</step>
+        <min>-1</min>
+        <max> 1</max>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>mig29/controls/SUV/strob-va</property>
+        <value>-1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>mig29/controls/SUV/strob-va</property>
+          <value>0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>RUS.cz8</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>mig29/controls/SUV/strob-v</property>
+        <step>0.02</step>
+        <min>-1</min>
+        <max> 1</max>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>mig29/controls/SUV/strob-va</property>
+        <value>1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>mig29/controls/SUV/strob-va</property>
+          <value>0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>RUS.cz9</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>mig29/controls/SUV/strob-h</property>
+        <step>-0.02</step>
+        <min>-1</min>
+        <max> 1</max>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>mig29/controls/SUV/strob-ha</property>
+        <value>-1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>mig29/controls/SUV/strob-ha</property>
+          <value>0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>RUS.cz10</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>mig29/controls/SUV/strob-h</property>
+        <step>0.02</step>
+        <min>-1</min>
+        <max> 1</max>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>mig29/controls/SUV/strob-ha</property>
+        <value>1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>mig29/controls/SUV/strob-ha</property>
+          <value>0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>RUS.cz11</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>mig29/controls/SRZ/zapros</property>
+        <value>1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>mig29/controls/SRZ/zapros</property>
+          <value>0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>RUS.cz12</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>weapon.PTB_jettison()</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>RUS.cz13</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>mig29/controls/SAU/KVRUS</property>
+      </binding>
+    </action>
+  </animation>-->
+
+  <!-- Анимация пыльника -->
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS.P1</object-name>
+    <property>controls/flight/elevator</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>  2.0</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> -1.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.810</x-m>
+      <y-m> 0.000</y-m>
+      <z-m> 0.181</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS.P1</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep> -1.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep>  1.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.810</x-m>
+      <y-m> 0.000</y-m>
+      <z-m> 0.181</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS.P2</object-name>
+    <property>controls/flight/elevator</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>  4.6</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> -2.3</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.810</x-m>
+      <y-m> 0.000</y-m>
+      <z-m> 0.181</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS.P2</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep> -3.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep>  3.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.810</x-m>
+      <y-m> 0.000</y-m>
+      <z-m> 0.181</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS.P3</object-name>
+    <property>controls/flight/elevator</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>  9.2</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> -4.6</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.810</x-m>
+      <y-m> 0.000</y-m>
+      <z-m> 0.181</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS.P3</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep> -7.0</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep>  7.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.810</x-m>
+      <y-m> 0.000</y-m>
+      <z-m> 0.181</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS.P4</object-name>
+    <property>controls/flight/elevator</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep> 13.8</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> -6.9</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.810</x-m>
+      <y-m> 0.000</y-m>
+      <z-m> 0.181</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS.P4</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-10.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 10.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.810</x-m>
+      <y-m> 0.000</y-m>
+      <z-m> 0.181</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS.P5</object-name>
+    <property>controls/flight/elevator</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep> 18.4</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> -9.2</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.810</x-m>
+      <y-m> 0.000</y-m>
+      <z-m> 0.181</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS.P5</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-14.0</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 14.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.810</x-m>
+      <y-m> 0.000</y-m>
+      <z-m> 0.181</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS.P6</object-name>
+    <property>controls/flight/elevator</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep> 23.0</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep>-11.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.810</x-m>
+      <y-m> 0.000</y-m>
+      <z-m> 0.181</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>RUS.P6</object-name>
+    <property>controls/flight/aileron</property>
+    <interpolation>
+      <entry>
+        <ind>-1.0</ind>
+        <dep>-17.5</dep>
+      </entry>
+      <entry>
+        <ind> 0.0</ind>
+        <dep>  0.0</dep>
+      </entry>
+      <entry>
+        <ind> 1.0</ind>
+        <dep> 17.5</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.810</x-m>
+      <y-m> 0.000</y-m>
+      <z-m> 0.181</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+  
+  <!--<animation>
+        <type>rotate</type>
+        <object-name>stick</object-name>
+        <property>controls/flight/elevator</property>
+        <factor>9</factor>
+        <center>
+            <x-m>0.03</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.10</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>stick</object-name>
+        <property>controls/flight/aileron</property>
+        <factor>9</factor>
+        <center>
+            <x-m>0.03</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.10</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>-->
+
+</PropertyList>
