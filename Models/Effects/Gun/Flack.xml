@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>Flack.ac</path>
+	
+	<animation>
+		<type>billboard</type>
+		<spherical>true</spherical>
+	</animation>
+
+</PropertyList>

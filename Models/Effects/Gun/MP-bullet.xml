@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+
+<particlesystem>
+  <name>MPbullet</name>
+  <texture>MP-bullet.png</texture>
+  <emissive>true</emissive>
+  <lighting>false</lighting>
+  
+
+  
+  <offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+    <pitch-deg>0</pitch-deg>
+    <roll-deg>0</roll-deg>
+  </offsets>
+
+  <attach>world</attach>
+  
+  <placer>
+    <type>point</type>
+  </placer>
+   
+  <shooter>
+    <theta-min-deg>-90</theta-min-deg>
+    <theta-max-deg>-90</theta-max-deg>
+    <phi-min-deg>0</phi-min-deg>
+    <phi-max-deg>0</phi-max-deg>
+    <speed-mps>
+      <value>715</value>
+      <spread>0</spread>
+    </speed-mps>
+    <rotation-speed>
+      <x-min-deg-sec>0</x-min-deg-sec>
+      <y-min-deg-sec>0</y-min-deg-sec>
+      <z-min-deg-sec>0</z-min-deg-sec>
+      <x-max-deg-sec>0</x-max-deg-sec>
+      <y-max-deg-sec>0</y-max-deg-sec>
+      <z-max-deg-sec>0</z-max-deg-sec>
+    </rotation-speed>
+  </shooter>
+   
+  <counter>
+    <particles-per-sec>
+      <value>11.7647</value>
+      <spread>0</spread>
+    </particles-per-sec>
+  </counter>
+   
+  <align>billboard</align>
+   
+  <particle>
+    <start>
+      <color>
+        <red>
+          <value>1</value>
+        </red>
+        <green>
+          <value>0.5</value>
+        </green>
+        <blue>
+          <value>0</value>
+        </blue>
+        <alpha>
+          <value>0.8</value>
+        </alpha>
+      </color>
+      <size>
+        <value>0.15</value>
+      </size>
+    </start>
+    <end>
+      <color>
+        <red>
+          <value>1</value>
+        </red>
+        <green>
+          <value>0.5</value>
+        </green>
+        <blue>
+          <value>0</value>
+        </blue>
+        <alpha>
+          <value>1</value>
+        </alpha>
+      </color>
+      <size>
+        <value>0.15</value>
+      </size>
+    </end>
+    <life-sec>
+      <value>2.8</value>
+    </life-sec>
+    <mass-kg>0.180</mass-kg>
+    <radius-m>0.01</radius-m>
+    
+  </particle>
+   
+  <program>
+    <fluid>water</fluid>
+    <gravity type="bool">true</gravity>
+    <wind type="bool">false</wind>
+  </program>
+   
+</particlesystem>
+  
+
+</PropertyList>

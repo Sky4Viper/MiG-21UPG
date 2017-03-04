@@ -1,0 +1,18 @@
+<PropertyList>
+
+    <path>Flack.ac</path>
+
+    <animation>
+        <type>billboard</type>
+        <spherical>true</spherical>
+    </animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>/sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>rect</object-name>
+  </effect>
+
+</PropertyList>

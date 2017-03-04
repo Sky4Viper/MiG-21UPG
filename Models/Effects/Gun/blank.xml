@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>blank.ac</path>
+
+  <animation>
+    <enable-hot type="bool">false</enable-hot>
+  </animation>
+
+
+
+</PropertyList>

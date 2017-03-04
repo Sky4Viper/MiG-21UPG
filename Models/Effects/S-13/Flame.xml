@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>Flame.ac</path>
+	
+	<animation>
+		<type>material</type>
+		<object-name>flame</object-name>
+    <object-name>flame_rf</object-name>
+		<emission>
+			<red>255</red>
+			<green>255</green>
+			<blue>254</blue>
+		</emission>
+	</animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>/sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>flame</object-name>
+    <object-name>flame_rf</object-name>
+  </effect>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flame_rf</object-name>
+    <property>/controls/armament/rocketsLeft</property>
+    <factor>360</factor>
+    <center>
+      <x-m>-1.78560</x-m>
+      <y-m>0.00506</y-m>
+      <z-m>0.00032</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+</PropertyList>

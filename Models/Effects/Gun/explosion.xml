@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <particlesystem>
+    <name>fire</name>
+    <type>normal</type>
+    <texture>explode.png</texture>
+
+    <emissive> true      </emissive>
+    <lighting> true      </lighting>
+    <align>    billboard </align>  <!-- billboard / fixed -->
+    <attach>   world     </attach> <!-- world / local-->
+
+    <placer>
+      <type> point </type> <!-- sector / segments / point -->
+    </placer>
+
+    <shooter>
+      <theta-min-deg>84</theta-min-deg>
+      <theta-max-deg>86</theta-max-deg>
+      <phi-min-deg>-1.5</phi-min-deg>
+      <phi-max-deg>1.5</phi-max-deg>
+      <speed-mps>
+        <value>2</value>
+        <spread>0</spread>
+      </speed-mps>
+      <rotation-speed>
+        <x-min-deg-sec>-65 </x-min-deg-sec>
+        <y-min-deg-sec>-65 </y-min-deg-sec>
+        <z-min-deg-sec>-65 </z-min-deg-sec>
+        <x-max-deg-sec> 65 </x-max-deg-sec>
+        <y-max-deg-sec> 65 </y-max-deg-sec>
+        <z-max-deg-sec> 65 </z-max-deg-sec>
+      </rotation-speed>
+    </shooter>
+
+    <counter>
+      <particles-per-sec>
+        <value>200</value>
+        <spread>0</spread>
+      </particles-per-sec>
+    </counter>
+      
+    <particle>
+      <start>
+        <color>
+          <red><value>   1.0 </value></red>
+          <green><value> 0.92 </value></green>
+          <blue><value>  0.35 </value></blue>
+          <alpha><value> 0.6 </value></alpha>
+        </color>
+        <size>
+          <value> 0.8 </value>
+        </size>
+      </start>
+        
+      <end>
+        <color>
+          <red><value>   0.75 </value></red>
+          <green><value> 0.65 </value></green>
+          <blue><value>  0.25 </value></blue>
+          <alpha><value> 0.15 </value></alpha>
+        </color>
+        <size>
+          <value> 10 </value>
+        </size>
+      </end>
+        
+      <life-sec>
+        <value> 0.2 </value>
+      </life-sec>
+        
+      <mass-kg>  0.001 </mass-kg>
+      <radius-m> 1.000 </radius-m>
+    </particle>
+      
+    <program>
+      <fluid>   air   </fluid>
+      <gravity> false </gravity>
+      <wind>    true  </wind>
+    </program>
+      
+  </particlesystem>
+
+</PropertyList>
+
