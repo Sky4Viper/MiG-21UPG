@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>fc.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>fc-panel</object-name>
+  <object-name>button1</object-name>
+  <object-name>button2</object-name>
+  <object-name>button3</object-name>
+  <!--<emission>
+   <red>  0.8</red>
+   <green>0.8</green>
+   <blue> 0.8</blue>
+   <factor-prop>mig29/systems/cockpitlighting/panel-norm</factor-prop>
+  </emission>-->
+   <emission>
+     <red>0.2</red>
+     <green>0.2</green>
+     <blue>0.2</blue>
+     <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission>
+ </animation>
+
+    <animation> 
+        <type>material</type>
+        <object-name>b3-lit</object-name>
+        <emission> 
+            <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+            <red>0</red>
+            <green>1.6</green>
+            <blue>0</blue>
+        </emission>
+    </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>b2-lit</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>1.6</red>
+      <green>1.6</green>
+      <blue>0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>b1-lit</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>1.6</red>
+      <green>0</green>
+      <blue>0</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>b1-lit</object-name>
+    <condition>
+      <equals>
+        <property>controls/flight/flaps</property>
+        <value>1.0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>b2-lit</object-name>
+    <condition>
+      <equals>
+        <property>controls/flight/flaps</property>
+        <value>0.5</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>b3-lit</object-name>
+    <condition>
+      <equals>
+        <property>controls/flight/flaps</property>
+        <value>0.0</value>
+      </equals>
+    </condition>
+  </animation>
+
+ <animation>
+  <type>translate</type>
+  <object-name>button3</object-name>
+  <property>controls/flight/flaps</property>
+   <interpolation>
+    <entry><ind>0</ind><dep>-0.0068</dep></entry>
+    <entry><ind>0.5</ind><dep> 0</dep></entry>
+    <entry><ind>1</ind><dep> 0</dep></entry>
+   </interpolation>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>button2</object-name>
+    <property>controls/flight/flaps</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.5</ind><dep>-0.0068</dep></entry>
+      <entry><ind>1</ind><dep>0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>button1</object-name>
+    <property>controls/flight/flaps</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.5</ind><dep>0</dep></entry>
+      <entry><ind>1</ind><dep>-0.0068</dep></entry>
+    </interpolation>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+ <!--<animation>
+  <type>pick</type>
+  <object-name>gc.cz1</object-name>
+  <visible>false</visible>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+    <command>property-toggle</command>
+    <property>controls/gear/gear-down</property>
+    </binding>
+  </action>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>gc.case</object-name>
+  <object-name>gc.sbase</object-name>
+  <object-name>gc.stick</object-name>
+  <property>mig29/systems/cockpitlighting/texturep</property>
+  <factor>0.5</factor>
+  <step>1</step>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>-->
+
+  <animation>
+    <type>pick</type>
+    <object-name>fc.cz1</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/flight/flaps</property>
+        <value type="double">1</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>fc.cz2</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/flight/flaps</property>
+        <value type="double">0.5</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>fc.cz3</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/flight/flaps</property>
+        <value type="double">0.0</value>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>

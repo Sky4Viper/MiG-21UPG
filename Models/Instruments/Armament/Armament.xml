@@ -1,0 +1,350 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>Armament.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>face</object-name>
+        <emission>
+          <red>1.1</red>
+          <green>0.3</green>
+          <blue>0.1</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission> 
+    </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>weapon1</object-name>
+    <object-name>weapon2</object-name>
+    <object-name>weapon3</object-name>
+    <object-name>weapon4</object-name>
+    <object-name>weapon5</object-name>
+    <object-name>weapon6</object-name>
+    <emission>
+      <red>0</red>
+      <green>1.6</green>
+      <blue>0</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>weapon1y</object-name>
+    <object-name>weapon2y</object-name>
+    <object-name>weapon3y</object-name>
+    <object-name>weapon4y</object-name>
+    <object-name>weapon5y</object-name>
+    <object-name>weapon6y</object-name>
+    <emission>
+      <red>1.6</red>
+      <green>1.6</green>
+      <blue>0</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>masterarm</object-name>
+    <condition>
+      <equals>
+      <property>controls/armament/masterarm</property>
+        <value>0</value>
+      </equals>
+    </condition>
+    <emission>
+      <red>1.6</red>
+      <green>1.6</green>
+      <blue>0</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>masterarm</object-name>
+    <condition>
+      <equals>
+        <property>controls/armament/masterarm</property>
+        <value>1</value>
+      </equals>
+    </condition>
+    <emission>
+      <red>1.6</red>
+      <green>0</green>
+      <blue>0</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>arm-glass</object-name>
+  </animation>
+    
+	<animation>
+		<type>select</type>
+		<object-name>weapon1</object-name>
+		<condition>
+      <or>
+        <and>
+          <not-equals>
+            <property>sim/weight[0]/selected</property>
+            <value>none</value>
+          </not-equals>
+          <not-equals>
+            <property>sim/weight[0]/selected</property>
+            <value>PTB-490 tank</value>
+          </not-equals>
+        </and>
+        <and>
+          <equals>
+            <property>sim/weight[0]/selected</property>
+            <value>PTB-490 tank</value>
+          </equals>
+          <not-equals>
+            <property>consumables/fuel/tank[6]/level-lbs</property>
+            <value>0</value>
+          </not-equals>
+        </and>
+      </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>weapon2</object-name>
+    <condition>
+    <and>
+      <not-equals>
+        <property>sim/weight[6]/selected</property>
+        <value>none</value>
+      </not-equals>
+      <not-equals>
+        <property>controls/armament/rocketsLeft</property>
+        <value>0</value>
+      </not-equals>
+    </and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>weapon3</object-name>
+		<condition>
+      <and>
+      <not-equals>
+        <property>sim/weight[3]/selected</property>
+        <value>none</value>
+      </not-equals>
+      <not-equals>
+        <property>controls/armament/roundsLeft</property>
+        <value>0</value>
+      </not-equals>
+      </and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>weapon4</object-name>
+		<condition>
+      <and>
+        <not-equals>
+          <property>sim/weight[1]/selected</property>
+          <value>none</value>
+        </not-equals>
+        <not-equals>
+          <property>controls/armament/rocketsLeft</property>
+          <value>0</value>
+        </not-equals>
+      </and>
+		</condition>
+	</animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>weapon5</object-name>
+    <condition>
+      <or>
+        <and>
+          <not-equals>
+            <property>sim/weight[7]/selected</property>
+            <value>none</value>
+          </not-equals>
+          <not-equals>
+            <property>sim/weight[7]/selected</property>
+            <value>PTB-490 tank</value>
+          </not-equals>
+        </and>
+        <and>
+          <equals>
+            <property>sim/weight[7]/selected</property>
+            <value>PTB-490 tank</value>
+          </equals>
+          <not-equals>
+            <property>consumables/fuel/tank[8]/level-lbs</property>
+            <value>0</value>
+          </not-equals>
+        </and>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>weapon6</object-name>
+    <condition>
+      <and>
+        <not-equals>
+          <property>sim/weight[4]/selected</property>
+          <value>none</value>
+        </not-equals>
+        <not-equals>
+          <property>consumables/fuel/tank[7]/level-lbs</property>
+          <value>0</value>
+        </not-equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>weapon1y</object-name>
+    <condition>
+      <equals>
+        <property>sim/weight[0]/selected</property>
+        <value>PTB-490 tank</value>
+      </equals>
+        <equals>
+          <property>consumables/fuel/tank[6]/level-lbs</property>
+          <value>0</value>
+        </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>weapon2y</object-name>
+    <condition>
+      <not-equals>
+        <property>sim/weight[6]/selected</property>
+        <value>none</value>
+      </not-equals>
+      <equals>
+        <property>controls/armament/rocketsLeft</property>
+        <value>0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>weapon3y</object-name>
+    <condition>
+      <not-equals>
+        <property>sim/weight[3]/selected</property>
+        <value>none</value>
+      </not-equals>
+      <equals>
+        <property>controls/armament/roundsLeft</property>
+        <value>0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>weapon4y</object-name>
+    <condition>
+      <not-equals>
+        <property>sim/weight[1]/selected</property>
+        <value>none</value>
+      </not-equals>
+      <equals>
+        <property>controls/armament/rocketsLeft</property>
+        <value>0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>weapon5y</object-name>
+    <condition>
+        <equals>
+          <property>sim/weight[7]/selected</property>
+          <value>PTB-490 tank</value>
+        </equals>
+        <equals>
+          <property>consumables/fuel/tank[8]/level-lbs</property>
+          <value>0</value>
+        </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>weapon6y</object-name>
+    <condition>
+        <not-equals>
+          <property>sim/weight[4]/selected</property>
+          <value>none</value>
+        </not-equals>
+        <equals>
+          <property>consumables/fuel/tank[7]/level-lbs</property>
+          <value>0</value>
+        </equals>
+    </condition>
+  </animation>
+	
+<!-- Label text -->
+
+<text>
+	<name>LabelText</name>
+	<type type="string">literal</type>
+		<text type="string">Armament Station Indicator</text>
+	<draw-text type="bool">true</draw-text>
+	<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+	<axis-alignment>yz-plane</axis-alignment>
+	<max-height>0.2</max-height>
+	<max-width>0.07</max-width>
+	<font-resolution>
+		<width type="int">32</width>
+		<height type="int">32</height>
+	</font-resolution>
+	<alignment>center-center</alignment>
+	<offsets>
+		<x-m> 0.01</x-m>
+		<y-m> 0.0 </y-m>
+		<z-m> 0.0 </z-m>
+	</offsets>
+</text>
+
+<animation>
+	<type>material</type>
+		<object-name>LabelText</object-name>
+	<emission>
+		<red>1.0</red>
+		<green>0.8</green>
+		<blue>0.0</blue>
+	</emission>
+</animation>
+
+<animation>
+	<type>select</type>
+		<object-name>LabelText</object-name>
+	<condition>
+		<property>/sim/panel-hotspots</property>
+	</condition>
+</animation>
+
+</PropertyList>
