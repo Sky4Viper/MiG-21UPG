@@ -12,7 +12,7 @@ Original MiG-21bis I decided to use as a base was released by pjedvaj http://fgu
 
 Sources:
 
-Payload: http://www.airwar.ru/image/idop/fighter/mig21-93/mig21-93-1.gif
+Payload: [url]http://www.airwar.ru/image/idop/fighter/mig21-93/mig21-93-1.gif[/url]
 
 Views: http://www.airwar.ru/image/idop/fighter/mig21-93/mig21-93-2.gif
 
