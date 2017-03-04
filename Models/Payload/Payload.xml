@@ -1,0 +1,605 @@
+<PropertyList>
+
+  <model>
+    <path>Aircraft/MiG-21UPG/Models/Stores/Chute.xml</path>
+    <offsets>
+      <x-m>6.20</x-m>
+      <y-m>0.00</y-m>
+      <z-m>0.70</z-m>
+      <pitch-deg>0.00</pitch-deg>
+    </offsets>
+  </model>
+
+  <!--       Payload
+
+             (2)     (5)
+             5.L /-\ 6.R
+    __________|_/top\_|_____________
+    |     |     \___/     |    |
+    3.L   1.L     |      2.R  4.R
+    (0)   (1)   Center   (6)  (7)
+                 7.C
+                 (3)
+                 8.C
+                 (4)
+    -->
+
+	<!-- Pylon.3 L -->
+	
+	<model>
+		<name>P3-R-73</name>
+		<path>Aircraft/MiG-21UPG/Models/Payload/R-73L.ac</path>
+		<offsets>
+			<x-m> 1.13</x-m>
+			<y-m>-2.73</y-m>
+			<z-m>-0.37623</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P3-R-73</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>sim/weight[0]/payload-int</property>
+					<value>1</value>
+				</equals>
+				<!--><equals>
+					<property>controls/armament/station[7]/release</property>
+					<value>false</value>
+				</equals><-->
+			</and>
+		</condition>
+	</animation>
+
+  <model>
+    <name>P3-R-60</name>
+    <path>Aircraft/MiG-21UPG/Models/Payload/R-60L.ac</path>
+    <offsets>
+      <x-m>0.98346</x-m>
+      <y-m>-2.73201</y-m>
+      <z-m>-0.3711</z-m>
+      <roll-deg>0</roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>P3-R-60</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[0]/payload-int</property>
+          <value>2</value>
+        </equals>
+        <!--<equals>
+          <property>controls/armament/station[3]/release</property>
+          <value>false</value>
+        </equals>-->
+      </and>
+    </condition>
+  </animation>
+
+  <model>
+    <name>P3-PTB-490</name>
+    <path>Aircraft/MiG-21UPG/Models/Payload/PTB-490.ac</path>
+    <offsets>
+      <x-m> 1.54121</x-m>
+      <y-m>-2.73</y-m>
+      <z-m>-0.36730</z-m>
+      <roll-deg>-0.638</roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>P3-PTB-490</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[0]/payload-int</property>
+          <value>3</value>
+        </equals>
+        <!--><equals>
+					<property>controls/armament/station[3]/release</property>
+					<value>false</value>
+				</equals><-->
+      </and>
+    </condition>
+  </animation>
+
+	<!-- Pylon.1 L -->
+	
+	<model>
+		<name>P1-R-77</name>
+		<path>Aircraft/MiG-21UPG/Models/Payload/R-77L.ac</path>
+		<offsets>
+			<x-m>-0.42434</x-m>
+			<y-m>-2.10768</y-m>
+      <z-m>-0.42208</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P1-R-77</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>sim/weight[1]/payload-int</property>
+					<value>6</value>
+				</equals>
+				<!--><equals>
+					<property>controls/armament/station[6]/release</property>
+					<value>false</value>
+				</equals><-->
+			</and>
+		</condition>
+	</animation>
+
+  <model>
+    <name>P1-R-27</name>
+    <path>Aircraft/MiG-21UPG/Models/Payload/R-27RL.ac</path>
+    <offsets>
+      <x-m>-0.65196</x-m>
+      <y-m>-2.10666</y-m>
+      <z-m>-0.41859</z-m>
+      <roll-deg>0</roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>P1-R-27</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[1]/payload-int</property>
+          <value>9</value>
+        </equals>
+        <!--><equals>
+					<property>controls/armament/station[6]/release</property>
+					<value>false</value>
+				</equals><-->
+      </and>
+    </condition>
+  </animation>
+
+  <model>
+    <name>P1-FAB-250</name>
+    <path>Aircraft/MiG-21UPG/Models/Payload/OFAB-250-270.ac</path>
+    <offsets>
+      <x-m> 0.12</x-m>
+      <y-m>-2.11</y-m>
+      <z-m>-0.29</z-m>
+      <roll-deg>0</roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>P1-FAB-250</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[1]/payload-int</property>
+          <value>7</value>
+        </equals>
+        <equals>
+					<property>controls/armament/station[1]/release</property>
+					<value>false</value>
+				</equals>
+      </and>
+    </condition>
+  </animation>
+
+  <model>
+    <name>P1-FAB-500</name>
+    <path>Aircraft/MiG-21UPG/Models/Payload/FAB-500_M-62.ac</path>
+    <offsets>
+      <x-m> 0.12</x-m>
+      <y-m>-2.11</y-m>
+      <z-m>-0.33177</z-m>
+      <roll-deg>0</roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>P1-FAB-500</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[1]/payload-int</property>
+          <value>10</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[1]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <model>
+    <name>P1-UB-32</name>
+    <path>Aircraft/MiG-21UPG/Models/Payload/UB-32L.ac</path>
+    <offsets>
+      <x-m> 0.12</x-m>
+      <y-m>-2.11</y-m>
+      <z-m>-0.37</z-m>
+      <roll-deg>0</roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>P1-UB-32</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[1]/payload-int</property>
+          <value>8</value>
+        </equals>
+        <!--><equals>
+					<property>controls/armament/station[6]/release</property>
+					<value>false</value>
+				</equals><-->
+      </and>
+    </condition>
+  </animation>
+
+
+  <!-- Pylon.5 L -->
+
+  <model>
+    <name>P5-ECML</name>
+    <path>Aircraft/MiG-21UPG/Models/Payload/ECML.ac</path>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+      <roll-deg>0</roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>P5-ECML</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[2]/payload-int</property>
+          <value>5</value>
+        </equals>
+        <!--><equals>
+					<property>controls/armament/station[8]/release</property>
+					<value>false</value>
+				</equals><-->
+      </and>
+    </condition>
+  </animation>
+
+  <!-- Pylon.7 C -->
+
+  <model>
+    <name>P7-GSh-23</name>
+    <path>Aircraft/MiG-21UPG/Models/Payload/GSh-23.ac</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+      <roll-deg>0</roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>P7-GSh-23</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[3]/payload-int</property>
+          <value>4</value>
+        </equals>
+        <!--><equals>
+					<property>controls/armament/station[4]/release</property>
+					<value>false</value>
+				</equals><-->
+      </and>
+    </condition>
+  </animation>
+  
+	<!-- Pylon.8 C -->
+
+	<model>
+		<name>P8-PTB-490</name>
+		<path>Aircraft/MiG-21UPG/Models/Payload/PTB-490.ac</path>
+		<offsets>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.82594</z-m>
+			<roll-deg>-0.638</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P8-PTB-490</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>sim/weight[4]/payload-int</property>
+					<value>3</value>
+				</equals>
+				<!--><equals>
+					<property>controls/armament/station[5]/release</property>
+					<value>false</value>
+				</equals><-->
+			</and>
+		</condition>
+	</animation>
+
+  <!-- Pylon.6 R -->
+
+  <model>
+    <name>P6-ECMR</name>
+    <path>Aircraft/MiG-21UPG/Models/Payload/ECMR.ac</path>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+      <roll-deg>0</roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>P6-ECMR</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[5]/payload-int</property>
+          <value>5</value>
+        </equals>
+        <!--><equals>
+					<property>controls/armament/station[0]/release</property>
+					<value>false</value>
+				</equals><-->
+      </and>
+    </condition>
+  </animation>
+				
+	<!-- Pylon.2 R -->
+	
+	<model>
+		<name>P2-R-77</name>
+		<path>Aircraft/MiG-21UPG/Models/Payload/R-77R.ac</path>
+		<offsets>
+      <x-m>-0.42434</x-m>
+      <y-m>2.10768</y-m>
+      <z-m>-0.42208</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P2-R-77</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>sim/weight[6]/payload-int</property>
+					<value>6</value>
+				</equals>
+				<!--><equals>
+					<property>controls/armament/station[2]/release</property>
+					<value>false</value>
+				</equals><-->
+			</and>
+		</condition>
+	</animation>
+
+  <model>
+    <name>P2-R-27</name>
+    <path>Aircraft/MiG-21UPG/Models/Payload/R-27RR.ac</path>
+    <offsets>
+      <x-m>-0.65196</x-m>
+      <y-m>2.10666</y-m>
+      <z-m>-0.41859</z-m>
+      <roll-deg>0</roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>P2-R-27</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[6]/payload-int</property>
+          <value>9</value>
+        </equals>
+        <!--><equals>
+					<property>controls/armament/station[2]/release</property>
+					<value>false</value>
+				</equals><-->
+      </and>
+    </condition>
+  </animation>
+
+  <model>
+    <name>P2-FAB-250</name>
+    <path>Aircraft/MiG-21UPG/Models/Payload/OFAB-250-270.ac</path>
+    <offsets>
+      <x-m> 0.12</x-m>
+      <y-m> 2.11</y-m>
+      <z-m>-0.29</z-m>
+      <roll-deg>0</roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>P2-FAB-250</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[1]/payload-int</property>
+          <value>7</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[2]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <model>
+    <name>P2-FAB-500</name>
+    <path>Aircraft/MiG-21UPG/Models/Payload/FAB-500_M-62.ac</path>
+    <offsets>
+      <x-m> 0.12</x-m>
+      <y-m> 2.11</y-m>
+      <z-m>-0.33177</z-m>
+      <roll-deg>0</roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>P2-FAB-500</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[1]/payload-int</property>
+          <value>10</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[2]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
+  <model>
+    <name>P2-UB-32</name>
+    <path>Aircraft/MiG-21UPG/Models/Payload/UB-32R.ac</path>
+    <offsets>
+      <x-m> 0.12</x-m>
+      <y-m> 2.11</y-m>
+      <z-m>-0.37</z-m>
+      <roll-deg>0</roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>P2-UB-32</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[1]/payload-int</property>
+          <value>8</value>
+        </equals>
+        <!--><equals>
+					<property>controls/armament/station[6]/release</property>
+					<value>false</value>
+				</equals><-->
+      </and>
+    </condition>
+  </animation>
+				
+	<!-- Pylon.4 R -->
+	
+	<model>
+		<name>P4-R-73</name>
+		<path>Aircraft/MiG-21UPG/Models/Payload/R-73R.ac</path>
+		<offsets>
+      <x-m> 1.13</x-m>
+      <y-m> 2.73</y-m>
+      <z-m>-0.37623</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>P4-R-73</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>sim/weight[7]/payload-int</property>
+					<value>1</value>
+				</equals>
+				<!--><equals>
+					<property>controls/armament/station[1]/release</property>
+					<value>false</value>
+				</equals><-->
+			</and>
+		</condition>
+	</animation>
+
+  <model>
+    <name>P4-R-60</name>
+    <path>Aircraft/MiG-21UPG/Models/Payload/R-60R.ac</path>
+    <offsets>
+      <x-m>0.98346</x-m>
+      <y-m>2.73201</y-m>
+      <z-m>-0.3711</z-m>
+      <roll-deg>0</roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>P4-R-60</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[7]/payload-int</property>
+          <value>2</value>
+        </equals>
+        <!--<equals>
+          <property>controls/armament/station[4]/release</property>
+          <value>false</value>
+        </equals>-->
+      </and>
+    </condition>
+  </animation>
+
+  <model>
+    <name>P4-PTB-490</name>
+    <path>Aircraft/MiG-21UPG/Models/Payload/PTB-490.ac</path>
+    <offsets>
+      <x-m> 1.54121</x-m>
+      <y-m> 2.73</y-m>
+      <z-m>-0.36730</z-m>
+      <roll-deg>-0.638</roll-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>P4-PTB-490</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[7]/payload-int</property>
+          <value>3</value>
+        </equals>
+        <!--><equals>
+					<property>controls/armament/station[3]/release</property>
+					<value>false</value>
+				</equals><-->
+      </and>
+    </condition>
+  </animation>			
+
+	
+</PropertyList>

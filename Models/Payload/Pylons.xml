@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>pylons.ac</path>
+
+  <!--<nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/MiG-21UPG/Models/Liveries");
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>-->
+ 
+  
+ <!--<animation>
+   <type>material</type>
+    <object-name>Station1</object-name>
+    <object-name>Station2</object-name>
+    <object-name>Station3</object-name>
+    <object-name>Station4</object-name>
+    <object-name>Station5</object-name>
+    <object-name>BD3</object-name>
+    <object-name>APU-470-L</object-name>
+    <object-name>APU-470-R</object-name>
+    <object-name>APU-73-L</object-name>
+    <object-name>APU-73-R</object-name>
+    <object-name>APU-60-L</object-name>
+    <object-name>APU-60-R</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>Aircraft/MiG-21UPG/Models/Liveries/Default.dds</texture>
+  </animation>-->
+
+  <!--<effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>Station1</object-name>
+    <object-name>Station2</object-name>
+    <object-name>Station3</object-name>
+    <object-name>Station4</object-name>
+    <object-name>Station5</object-name>
+  </effect>-->
+
+<!--outboard left -->
+  <animation>
+    <type>select</type>
+    <object-name>Station1</object-name>      
+    <condition>
+      <or>
+        <property>controls/armament/station[3]/m1release</property>
+        <property>controls/armament/station[3]/m2release</property>
+        <property>controls/armament/station[3]/tjettison</property>
+        <not-equals>
+          <property>sim/weight[0]/selected</property>
+          <value>none</value>
+        </not-equals>
+      </or>
+    </condition>
+  </animation>
+
+
+  <!--inboard right -->
+  <animation>
+    <type>select</type>
+    <object-name>Station2</object-name>      
+    <condition>
+      <or>
+        <property>controls/armament/station[2]/release</property>
+        <property>controls/armament/station[2]/m1release</property>
+        <property>controls/armament/station[2]/m2release</property>
+        <not-equals>
+          <property>sim/weight[6]/selected</property>
+          <value>none</value>
+        </not-equals>
+      </or>
+    </condition>
+  </animation>
+  
+  <!--center-->
+  <animation>
+    <type>select</type>
+    <object-name>Station3</object-name>      
+    <condition>
+      <or>
+        <property>controls/armament/station[0]/tjettison</property>
+        <not-equals>
+          <property>sim/weight[4]/selected</property>
+          <value>none</value>
+        </not-equals>
+      </or>
+    </condition>
+  </animation>
+
+  <!--inboard left-->
+  <animation>
+    <type>select</type>
+    <object-name>Station4</object-name>      
+    <condition>
+      <or>
+        <property>controls/armament/station[1]/release</property>
+        <property>controls/armament/station[1]/m1release</property>
+        <property>controls/armament/station[1]/m2release</property>
+        <not-equals>
+          <property>sim/weight[1]/selected</property>
+          <value>none</value>
+        </not-equals>
+      </or>
+    </condition>
+  </animation>
+  
+  
+  <!--outboard right-->
+  <animation>
+    <type>select</type>
+    <object-name>Station5</object-name>      
+    <condition>
+      <or>
+        <property>controls/armament/station[4]/m1release</property>
+        <property>controls/armament/station[4]/m2release</property>
+        <property>controls/armament/station[4]/tjettison</property>
+        <not-equals>
+          <property>sim/weight[7]/selected</property>
+          <value>none</value>
+        </not-equals>
+      </or>
+    </condition>
+  </animation>
+
+  
+
+  <animation>
+    <type>select</type>
+    <object-name>BD3</object-name>
+    <condition>
+      <or>
+        <property>controls/armament/station[1]/release</property>
+        <equals>
+          <property>sim/weight[1]/selected</property>
+          <value>FAB-250 bomb</value>
+        </equals>
+        <equals>
+          <property>sim/weight[1]/selected</property>
+          <value>FAB-500 bomb</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>APU-470-L</object-name>
+    <condition>
+      <or>
+        <property>controls/armament/station[1]/m1release</property>
+        <property>controls/armament/station[1]/m2release</property>
+        <property>controls/armament/station[1]/m1jettison</property>
+        <property>controls/armament/station[1]/m2jettison</property>
+        <equals>
+          <property>sim/weight[1]/payload-int</property>
+          <value>6</value>
+        </equals>
+        <equals>
+          <property>sim/weight[1]/payload-int</property>
+          <value>9</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>APU-470-R</object-name>
+    <condition>
+      <or>
+        <property>controls/armament/station[2]/m1release</property>
+        <property>controls/armament/station[2]/m2release</property>
+        <property>controls/armament/station[2]/m1jettison</property>
+        <property>controls/armament/station[2]/m2jettison</property>
+        <equals>
+          <property>sim/weight[6]/payload-int</property>
+          <value>6</value>
+        </equals>
+        <equals>
+          <property>sim/weight[6]/payload-int</property>
+          <value>9</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>APU-73-L</object-name>
+    <condition>
+      <or>
+        <property>controls/armament/station[3]/m2release</property>
+        <property>controls/armament/station[3]/m2jettison</property>
+        <equals>
+          <property>sim/weight[0]/payload-int</property>
+          <value>1</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>APU-73-R</object-name>
+    <condition>
+      <or>
+        <property>controls/armament/station[4]/m2release</property>
+        <property>controls/armament/station[4]/m2jettison</property>
+        <equals>
+          <property>sim/weight[7]/payload-int</property>
+          <value>1</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>APU-60-L</object-name>
+    <condition>
+      <or>
+        <property>controls/armament/station[3]/m1release</property>
+        <property>controls/armament/station[3]/m1jettison</property>
+        <equals>
+          <property>sim/weight[0]/payload-int</property>
+          <value>2</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>APU-60-R</object-name>
+    <condition>
+      <or>
+        <property>controls/armament/station[4]/m1release</property>
+        <property>controls/armament/station[4]/m1jettison</property>
+        <equals>
+          <property>sim/weight[7]/payload-int</property>
+          <value>2</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+  
+</PropertyList>

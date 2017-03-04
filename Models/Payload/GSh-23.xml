@@ -1,0 +1,22 @@
+<PropertyList>
+
+    <path>GSh-23.ac</path>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>12000</max-m>
+    </animation>
+
+  <animation>
+    <object-name>gsh-23</object-name>
+    <object-name>barrels</object-name>
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>gsh-23</object-name>
+    <object-name>barrels</object-name>
+  </effect>
+
+</PropertyList>
