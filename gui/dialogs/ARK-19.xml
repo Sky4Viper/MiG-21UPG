@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <name>ARK-19</name>
+ <layout>vbox</layout>
+ <resizable>false</resizable>
+
+<group>
+ <layout>hbox</layout>
+
+  <text>
+   <label>ARK-19 frequencies tuning dialog</label>
+  </text>
+
+</group>
+
+<group>
+ <layout>hbox</layout>
+
+  <text>
+   <label>Channel 1</label>
+  </text>
+
+  <input>
+   <name>input-first-channel</name>
+   <stretch>false</stretch>
+   <pref-width>50</pref-width>
+   <property>mig21upg/instrumentation/ARK-19/channel-1</property>
+  </input>
+
+</group>
+
+<group>
+ <layout>hbox</layout>
+
+  <text>
+   <label>Channel 2</label>
+  </text>
+
+  <input>
+   <name>input-second-channel</name>
+   <stretch>false</stretch>
+   <pref-width>50</pref-width>
+   <property>mig21upg/instrumentation/ARK-19/channel-2</property>
+  </input>
+
+</group>
+
+<group>
+ <layout>hbox</layout>
+
+  <text>
+   <label>Channel 3</label>
+  </text>
+
+  <input>
+   <name>input-three-channel</name>
+   <stretch>false</stretch>
+   <pref-width>50</pref-width>
+   <property>mig21upg/instrumentation/ARK-19/channel-3</property>
+  </input>
+
+</group>
+
+<group>
+ <layout>hbox</layout>
+
+  <text>
+   <label>Channel 4</label>
+  </text>
+
+  <input>
+   <name>input-four-channel</name>
+   <stretch>false</stretch>
+   <pref-width>50</pref-width>
+   <property>mig21upg/instrumentation/ARK-19/channel-4</property>
+  </input>
+
+</group>
+
+  <group>
+    <layout>hbox</layout>
+
+    <text>
+      <label>Channel 5</label>
+    </text>
+
+    <input>
+      <name>input-four-channel</name>
+      <stretch>false</stretch>
+      <pref-width>50</pref-width>
+      <property>mig21upg/instrumentation/ARK-19/channel-4</property>
+    </input>
+
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+
+    <text>
+      <label>Channel 6</label>
+    </text>
+
+    <input>
+      <name>input-four-channel</name>
+      <stretch>false</stretch>
+      <pref-width>50</pref-width>
+      <property>mig21upg/instrumentation/ARK-19/channel-4</property>
+    </input>
+
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+
+    <text>
+      <label>Channel 7</label>
+    </text>
+
+    <input>
+      <name>input-four-channel</name>
+      <stretch>false</stretch>
+      <pref-width>50</pref-width>
+      <property>mig21upg/instrumentation/ARK-19/channel-4</property>
+    </input>
+
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+
+    <text>
+      <label>Channel 8</label>
+    </text>
+
+    <input>
+      <name>input-four-channel</name>
+      <stretch>false</stretch>
+      <pref-width>50</pref-width>
+      <property>mig21upg/instrumentation/ARK-19/channel-4</property>
+    </input>
+
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+
+    <text>
+      <label>Channel 9</label>
+    </text>
+
+    <input>
+      <name>input-four-channel</name>
+      <stretch>false</stretch>
+      <pref-width>50</pref-width>
+      <property>mig21upg/instrumentation/ARK-19/channel-4</property>
+    </input>
+
+  </group>
+
+<group>
+ <layout>hbox</layout>
+
+  <button>
+   <legend>Apply</legend>
+   <equal>true</equal>
+   <default>true</default>
+   <binding>
+    <command>dialog-apply</command>
+   </binding>
+   <binding>
+    <command>dialog-close</command>
+   </binding>
+  </button>
+
+  <button>
+   <legend>Close</legend>
+   <equal>true</equal>
+   <default>true</default>
+   <binding>
+    <command>dialog-close</command>
+   </binding>
+  </button>
+
+</group>
+
+</PropertyList>
