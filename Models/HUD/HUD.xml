@@ -15,7 +15,7 @@
         </condition>
         <object-name>HUD.Glass</object-name>
         <object-name>Projector</object-name>
-      <object-name>Indicators-glass</object-name>
+      <object-name>hud_indic_glass</object-name>
     </effect>
 	
 	<!-- Glass shader -->
@@ -26,14 +26,13 @@
         <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
 		    <object-name>HUD.Glass</object-name>
         <object-name>Projector</object-name>
-        <object-name>Indicators-glass</object-name>
+        <object-name>hud_indic_glass</object-name>
     </animation>
     
 	<animation>
 		<type>noshadow</type>
 		<object-name>HUD.Glass</object-name>
     <object-name>Projector</object-name>
-    <object-name>Indicators-glass</object-name>
 	</animation>
 
   <animation>
@@ -107,7 +106,7 @@
         </emission> 
     </animation>
 
-  <animation>
+  <!--<animation>
     <type>pick</type>
     <object-name>selectbtn</object-name>
     <visible>true</visible>
@@ -139,7 +138,7 @@
         </condition>
       </binding>
     </action>
-  </animation>
+  </animation>-->
     
     <text>
         <name>comm1-label</name>
