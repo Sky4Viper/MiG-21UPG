@@ -51,8 +51,18 @@ var fuelTanks = func {
 		if(levelDropPort == nil) { levelDropPort = 0; }
 		var levelDropCentr = getprop("consumables/fuel/tank[7]/level-gal_us");
 		if(levelDropCentr == nil) { levelDropCentr = 0; }
-		var wingtanks = getprop("sim/weight[0]/weight-lb") + getprop("sim/weight[7]/weight-lb");
-		var centertank = getprop("sim/weight[4]/weight-lb");
+		var levelWingStbd = getprop("consumables/fuel/tank[5]/level-gal_us");
+		if(levelWingStbd == nil) { levelDropWingStbd = 0; }
+		var levelWingPort = getprop("consumables/fuel/tank[4]/level-gal_us");
+		if(levelWingPort == nil) { levelDropWingPort = 0; }
+		var levelIntCentr3 = getprop("consumables/fuel/tank[3]/level-gal_us");
+		if(levelIntCentr3 == nil) { levelIntCentr3 = 0; }
+		var levelIntCentr1 = getprop("consumables/fuel/tank[1]/level-gal_us");
+		if(levelIntCentr1 == nil) { levelIntCentr1 = 0; }
+		var levelIntCentr0 = getprop("consumables/fuel/tank[0]/level-gal_us");
+		if(levelIntCentr0 == nil) { levelIntCentr0 = 0; }
+		var wingdroptanks = getprop("sim/weight[0]/weight-lb") + getprop("sim/weight[7]/weight-lb");
+		var centerdroptank = getprop("sim/weight[4]/weight-lb");
 		if (getprop("sim/freeze/fuel")) { return registerTimer(fuelTanks); }
 		if (getprop("systems/refuel/contact")) {return registerTimer(fuelTanks); }
 	
@@ -62,13 +72,19 @@ var fuelTanks = func {
 				f.getNode("selected", 1).setBoolValue(0);
 				}
 			}
-	# wingtanks	
+	# wingdroptanks	
 	if (levelDropStbd > 0 and levelDropPort > 0) { 
 		setprop("consumables/fuel/tank[8]/selected", 1);
 		setprop("consumables/fuel/tank[6]/selected", 1);
-	# centreline
+	# centerdroptank
 	} elsif (levelDropCentr > 0) {
 		setprop("consumables/fuel/tank[7]/selected", 1);
+	# wing internal
+	} elsif (levelWingStbd > 0 and levelWingPort > 0) { 
+		setprop("consumables/fuel/tank[4]/selected", 1);
+		setprop("consumables/fuel/tank[5]/selected", 1);
+	} elsif (levelIntCentr3 > 0) { 
+		setprop("consumables/fuel/tank[3]/selected", 1);
 	# internal: not ordered yet
 	} else {
 			foreach(f; fueltanks) {
