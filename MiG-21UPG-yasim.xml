@@ -191,10 +191,10 @@ Ceiling: 57750 Ft 17000 M
 
   <!-- gear -->
   <!-- nose -->
-  <gear x="4.1" y="0" z="-1.44"
+  <gear x="4.1" y="0" z="-1.48"
         retract-time="8"
         compression="0.8"
-        spring="0.8"
+        spring="0.78"
         damp="1">
     <control-input axis="/controls/flight/rudder" control="STEER" square="true"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -203,10 +203,10 @@ Ceiling: 57750 Ft 17000 M
   </gear>
 
   <!-- left main -->
-  <gear x="-0.7" y="1.5" z="-1.41"
+  <gear x="-0.7" y="1.5" z="-1.34"
         retract-time="8"
-        compression="0.8"
-        spring="0.87"
+        compression="0.76"
+        spring="0.9"
         damp="1">
     <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE" />
@@ -217,10 +217,10 @@ Ceiling: 57750 Ft 17000 M
   </gear>
 
   <!-- right main -->
-  <gear x="-0.7" y="-1.5" z="-1.41"
+  <gear x="-0.7" y="-1.5" z="-1.34"
         retract-time="8"
-        compression="0.8"
-        spring="0.87"
+        compression="0.76"
+        spring="0.9"
         damp="1">
     <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE" />
@@ -235,12 +235,12 @@ Ceiling: 57750 Ft 17000 M
  http://www.topedge.com/panels/aircraft/sites/kraft/fuel.htm
  -->
 
-  <tank x="2.4" y="0" z="0" jet="true" capacity="928.4"/>
-  <tank x="1.6" y="0" z="0.3" jet="true" capacity="928.4"/>
-  <tank x="0.8" y="0" z="0" jet="true" capacity="778.4"/>
-  <tank x="0" y="0" z="0.3" jet="true" capacity="778.4"/>
-  <tank x="0.5" y="1.5" z="0" jet="true" capacity="778.4"/>
-  <tank x="0.5" y="-1.5" z="0" jet="true" capacity="778.4"/>
+  <tank x="2.4" y="0" z="0" jet="true" capacity="203.2"/>
+  <tank x="1.6" y="0" z="0.3" jet="true" capacity="203.2"/>
+  <tank x="0.8" y="0" z="0" jet="true" capacity="203.2"/>
+  <tank x="0" y="0" z="0.3" jet="true" capacity="1132"/>
+  <tank x="0.5" y="1.5" z="0" jet="true" capacity="1480.4"/>
+  <tank x="0.5" y="-1.5" z="0" jet="true" capacity="1480.4"/>
 
   
 <!-- Drop tanks, 127gal capacity each -->
@@ -248,25 +248,35 @@ Ceiling: 57750 Ft 17000 M
 <tank x="0" y="0" z="-0.7" jet="true" capacity="127"/>
 <tank x="-1.23" y="-2.7" z="-0.2" jet="true" capacity="127"/>
 
-  <ballast x="4" y="0" z="0" mass ="3300"/>
-  <!-- <ballast x="-8.0" y="0" z="-0.75" mass ="-1500"/>
--->
+
+<!-- Cockpit and radar -->
+<ballast x="5.52" y="0" z="0.23" mass="500"/>
+
+<!-- Pilot -->
+<ballast x="3.4" y="0" z="0.37" mass="400"/>
+
+<!-- Avionics -->
+<ballast x="2.4" y="0" z="0.54" mass="500"/>
+
+<!-- Trim -->
+<ballast x="4" y="0" z="0" mass ="2720"/>
+
    
 <!-- External loads -->
 
 <!-- Left  -->  
-<weight x="-1.23" y="2.7" z="-0.2" size="0.25" mass-prop="sim/weight[0]/weight-lb"/>
-<weight x="0.32" y="2.1" z="-0.2" size="0.55" mass-prop="sim/weight[1]/weight-lb"/>
-<weight x="-1.48" y="0.65" z="0.38" size="0.25" mass-prop="sim/weight[2]/weight-lb"/>
+<weight x="-1.23" y="2.7" z="-0.2" size="0.2" mass-prop="sim/weight[0]/weight-lb"/>
+<weight x="0.32" y="2.1" z="-0.2" size="0.3" mass-prop="sim/weight[1]/weight-lb"/>
+<weight x="-1.48" y="0.65" z="0.38" size="0.15" mass-prop="sim/weight[2]/weight-lb"/>
 
 <!-- Centre -->
 <weight x="1.6" y="0" z="-0.55" size="0.5" mass-prop="sim/weight[3]/weight-lb"/>
 <weight x="0" y="0" z="-0.75" size="0.7" mass-prop="sim/weight[4]/weight-lb"/>
 
 <!-- Right -->
-<weight x="-1.48" y="-0.65" z="0.38" size="0.25" mass-prop="sim/weight[5]/weight-lb"/>
-<weight x="0.32" y="-2.1" z="-0.2" size="0.55" mass-prop="sim/weight[6]/weight-lb"/>
-<weight x="-1.23" y="-2.7" z="-0.2" size="0.25" mass-prop="sim/weight[7]/weight-lb"/>
+<weight x="-1.48" y="-0.65" z="0.38" size="0.15" mass-prop="sim/weight[5]/weight-lb"/>
+<weight x="0.32" y="-2.1" z="-0.2" size="0.3" mass-prop="sim/weight[6]/weight-lb"/>
+<weight x="-1.23" y="-2.7" z="-0.2" size="0.2" mass-prop="sim/weight[7]/weight-lb"/>
 
 
 </airplane>
