@@ -10,7 +10,9 @@ Aircraft for Flightgear (also known as MiG-21-93 and MiG-21Bison) upgraded versi
 There isn't much information about it, therefore a lot of aspects are highly speculative. Anyway I think it is an interesting aicraft that deserves some attention.
 Original MiG-21bis I decided to use as a base was released by pjedvaj http://fguk.eu/index.php/hangar/download/7-military-jets/101-mikoyan-gurevich-mig-21bis
 
-Sources:
+Reference Sources:
+
+<a href='https://postimg.cc/CdfJmkqh' target='_blank'><img src='https://i.postimg.cc/CdfJmkqh/115900-45431330-Mig21-Cutaway.jpg' border='0' alt='115900-45431330-Mig21-Cutaway'/></a>
 
 Payload: http://www.airwar.ru/image/idop/fighter/mig21-93/mig21-93-1.gif
 
