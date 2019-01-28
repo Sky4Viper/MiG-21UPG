@@ -1,6 +1,6 @@
 # MiG-21UPG
 
-<a href='https://postimg.org/image/n3xuvkhhh/' target='_blank'><img src='https://s2.postimg.org/n3xuvkhhh/fgfs_screen_164.png' border='0' alt='postimage'/></a>
+<a href='https://postimg.cc/HVtPL3SS' target='_blank'><img src='https://i.postimg.cc/HVtPL3SS/fgfs-screen-619.png' border='0' alt='fgfs-screen-619'/></a>
 
 This is a rework of pjedvaj's Mig-21bis. Currently only yasim is supported. There's still a lot of work left - electrical system, hydraulics, cockpit flood lights, radar and guided missiles. But there's already a lot of functioning swiches to press :). Not very accurate to be honest, it is more of a look alike concept. As well as me learning to code for flightgear. Have fun!
 
@@ -77,3 +77,7 @@ The first four MIG-21-93 fighters of the Indian Air Force, modernised with the a
 According to the existing plans, 125 MIGs which form the basis of India's Air Force will be modernised step by step by the year of 2004. Besides the improved engines of Russian make, French and Israeli avionics is being installed on the fighters. The installation of the Russian multifunctional radar system Kopyo which simultaneously fixes eight targets and picks two most dangerous ones for an attack is the main element of the modernisation. The contract to the tune of 340 million dollars was signed by the two governments back in 1996. Under it, the specialists of the Russian enterprise MAPO-MIG have fully modernised two fighters at the Sokol plant in Nizhni Novgorod.
 
 Experimental examples of the MiG-21UPG tactical fighter, intended for the Indian air force, successfully completed flight test and evaluation trials in 2001. Earlier referred to as the MiG-21-93 and later called the Bison, the UPG is a major upgrade of the long-serving MiG-21bis. This new variant, ordered by the Indian air force, differs from the "bis" in having a modern Phazotron-NfIR Kopyo multimode radar enabling use of state-of-the-art, air-to-air and air-to-surface missiles. Over 120 MiG-21bis could be eventually upgraded to the UPG standard in India under help from RSK MiG, Phazotron-NUR and Sokol aircraft plant of Nizhny Novgorod.
+
+Screenshots
+
+<a href='https://postimg.cc/ZWB3Q5yr' target='_blank'><img src='https://i.postimg.cc/ZWB3Q5yr/fgfs-screen-627.png' border='0' alt='fgfs-screen-627'/></a> <a href='https://postimg.cc/7CtFZXLv' target='_blank'><img src='https://i.postimg.cc/7CtFZXLv/fgfs-screen-609.png' border='0' alt='fgfs-screen-609'/></a> <a href='https://postimg.cc/BXt18npd' target='_blank'><img src='https://i.postimg.cc/BXt18npd/fgfs-screen-608.png' border='0' alt='fgfs-screen-608'/></a> <a href='https://postimg.cc/jw5JzqKw' target='_blank'><img src='https://i.postimg.cc/jw5JzqKw/fgfs-screen-545.png' border='0' alt='fgfs-screen-545'/></a>
