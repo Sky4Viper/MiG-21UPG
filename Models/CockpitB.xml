@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+    <path>CockpitB.ac</path>
+    
+	<!-- Submodels -->
+
+	<model>
+		<name>Pilot</name>
+    <path>Aircraft/MiG-21UPG/Models/Pilot/new/PilotB.xml</path>
+		<offsets>
+			<x-m>-3.41672</x-m>
+			<y-m>0.00</y-m>
+			<z-m>0.56187</z-m>
+			<pitch-deg>10.0</pitch-deg>
+		</offsets>
+		<condition>
+			<not>
+				<property>/sim/current-view/internal</property>
+			</not>
+		</condition>
+	</model>
+
+  <model>
+    <name>ILS</name>
+    <path>Aircraft/MiG-21UPG/Models/HUD/HUD2.xml</path>
+    <offsets>
+      <x-m>-4.00425</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.97868</z-m>
+      <pitch-deg>-4</pitch-deg>
+    </offsets>
+  </model>
+
+	<model>
+		<name>Panel</name>
+		<path>Aircraft/MiG-21UPG/Models/PanelB.xml</path>
+	</model>
+
+  <model>
+    <name>Stick</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/Stick/Stick.xml</path>
+    <offsets>
+      <x-m> 0.05498</x-m>
+      <y-m> 0.00</y-m>
+      <z-m>-0.12566</z-m>
+    </offsets>
+  </model>
+  
+  <!--<model>
+		<name>Seat</name>
+		<path>Aircraft/MiG-21UPG/Models/Seat/Seat.xml</path>
+	</model>-->
+
+  <!--<animation>
+    <type>material</type>
+    <object-name>panel</object-name>
+    <object-name>panel2</object-name>
+    <emission>
+      <red>0.1</red>
+      <green>0.1</green>
+      <blue>0.1</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>-->
+
+
+</PropertyList>

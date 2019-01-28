@@ -1,0 +1,568 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>10</max-m>
+    </animation>
+
+    <!--<model>
+        <name>Stick</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/Stick/Stick.xml</path>
+        <offsets>
+            <x-m> 0.05498</x-m>
+            <y-m> 0.00</y-m>
+            <z-m>-0.12566</z-m>
+        </offsets>
+    </model>-->
+    
+    <model>
+        <name>Throttle</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/Throttle/Throttle.xml</path>
+        <offsets>
+            <x-m> 0.00</x-m>
+            <y-m>-0.005</y-m>
+            <z-m>-0.0081</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Pedals</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/Pedals/Pedals.xml</path>
+        <offsets>
+            <x-m>-4.15</x-m>
+            <y-m> 0.00</y-m>
+            <z-m> 0.17</z-m>
+        </offsets>
+    </model>
+
+  <model>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/MFD-1.xml</path>
+    <offsets>
+      <x-m>-3.88693</x-m>
+      <y-m>0.09311</y-m>
+      <z-m>0.67595</z-m>
+      <pitch-deg>-4.901</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/SAU/SAU.xml</path>
+    <!--<path>Aircraft/MiG-21UPG/Models/Instruments/Autopilot/ap-panel.xml</path>-->
+    <!--<path>Aircraft/MiG-21UPG/Models/Instruments/kap140/Autopilot.xml</path>-->
+    <offsets>
+      <x-m>-3.89322</x-m>
+      <y-m>0.10672</y-m>
+      <z-m>0.53679</z-m>
+      <pitch-deg>-4.901</pitch-deg>
+    </offsets>
+  </model>
+    
+    <model>
+        <name>Flaps</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/Flaps/Flaps.xml</path>
+        <offsets>
+            <pitch-deg>-90</pitch-deg>
+            <x-m>-3.71933</x-m>
+            <y-m>-0.29627</y-m>
+            <z-m> 0.4209</z-m>
+        </offsets>
+    </model>
+   
+  <model>
+    <name>Attitude Indicator</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/KPP/KPP.xml</path>
+    <offsets>
+      <!--<x-m>-3.90284</x-m>-->
+      <x-m>-3.89318</x-m>
+      <y-m>-0.1548</y-m>
+      <z-m> 0.7183</z-m>
+      <pitch-deg>-4.901</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Nav Indicator</name>
+    <!--<path>Aircraft/MiG-21UPG/Models/Instruments/HI/HI.xml</path>-->
+    <path>Aircraft/MiG-21UPG/Models/Instruments/PNP-72-12/PNP-72-12.xml</path>
+    <!--<path>Aircraft/MiG-21UPG/Models/Instruments/HSI/hsi.xml</path>-->
+    <offsets>
+      <x-m>-3.885</x-m>
+      <y-m>-0.1597</y-m>
+      <z-m> 0.6052</z-m>
+      <pitch-deg>-4.963</pitch-deg>
+    </offsets>
+  </model>
+    
+    <model>
+        <name>Clock</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/Clock/Clock.xml</path>
+      <offsets>
+        <heading-deg>21.2</heading-deg>
+        <x-m>-3.834</x-m>
+        <y-m>-0.30128</y-m>
+        <z-m> 0.71663</z-m>
+      </offsets>
+    </model>
+    
+    <model>
+        <name>DA-200 Combo VSI and TC Indicator</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/VSI/VSI.xml</path>
+        <offsets>
+            <x-m>-3.91167</x-m>
+            <y-m>-0.05097</y-m>
+            <z-m> 0.71625</z-m>
+            <pitch-deg>-4.901</pitch-deg>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>Voltmeter and Ampmeter</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/Volt/Volt.xml</path>
+        <offsets>
+          <x-m>-3.9607</x-m>
+          <y-m> 0.2432</y-m>
+          <z-m> 0.7582</z-m>
+          <pitch-deg>-4.901</pitch-deg>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>Air Speed Indicator</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/ASI/ASI.xml</path>
+        <offsets>
+            <x-m>-3.90125</x-m>
+            <y-m>-0.2497</y-m>
+            <z-m> 0.7224</z-m>
+            <pitch-deg>-4.901</pitch-deg>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>Altimeter</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/ALT/ALT.xml</path>
+        <offsets>
+            <x-m>-3.90629</x-m>
+            <y-m>-0.2497</y-m>
+            <z-m> 0.64832</z-m>
+            <pitch-deg>-4.901</pitch-deg>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>PSV-UM Radio Altimeter Alert Switch</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/PSVUM/PSVUM.xml</path>
+        <offsets>
+            <pitch-deg>-4.901</pitch-deg>
+            <x-m>-3.9041</x-m>
+            <y-m>-0.2497</y-m>
+            <z-m>0.57472</z-m>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>Cabin Pressure Indicator</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/UVPD/UVPD.xml</path>
+      <offsets>
+        <pitch-deg>-4.901</pitch-deg>
+        <x-m>-3.95796</x-m>
+        <y-m>-0.06617</y-m>
+        <z-m>0.31548</z-m>
+      </offsets>
+    </model>
+
+  <!--<model>
+    <name>Air Manometer</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/MV-12/MV-12.xml</path>
+    <offsets>
+      <pitch-deg>-9.952</pitch-deg>
+      <x-m>-3.95796</x-m>
+      <y-m>0.06817</y-m>
+      <z-m>0.31548</z-m>
+    </offsets>
+  </model>-->
+
+  <model>
+    <name>Air Manometer</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/MV-12/MV-12.xml</path>
+    <offsets>
+      <pitch-deg>-4.901</pitch-deg>
+      <x-m>-3.93260</x-m>
+      <y-m>-0.06617</y-m>
+      <z-m>0.17464</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Air Manometer 2</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/MV-12/MV-12.xml</path>
+    <offsets>
+      <heading-deg>90</heading-deg>
+      <x-m>-3.24556</x-m>
+      <y-m>-0.36721</y-m>
+      <z-m>0.5785</z-m>
+    </offsets>
+  </model>
+    
+    <model>
+        <name>Armament Station Indicator</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/Armament/Armament.xml</path>
+      <offsets>
+        <pitch-deg>-9.952</pitch-deg>
+        <x-m>-3.95796</x-m>
+        <y-m>0.06317</y-m>
+        <z-m>0.31548</z-m>
+      </offsets>
+    </model>
+    
+    <model>
+        <name>Doubled Tachometer</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/Tachometer/Tachometer.xml</path>
+        <offsets>
+          <x-m>-3.90459</x-m>
+          <y-m> 0.22559</y-m>
+          <z-m> 0.71582</z-m>
+          <pitch-deg>-4.901</pitch-deg>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>Jet Pipe Temperature</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/JPT/JPT.xml</path>
+        <offsets>
+          <x-m>-3.89524</x-m>
+          <y-m> 0.24072</y-m>
+          <z-m> 0.60546</z-m>
+          <pitch-deg>-4.901</pitch-deg>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>Fuel Indicator</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/Fuel/Fuel.xml</path>
+        <offsets>
+            <x-m>-3.88</x-m>
+            <y-m> 0.24072</y-m>
+            <z-m> 0.50618</z-m>
+            <pitch-deg>-4.901</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+      <name>UPES-3 Conus Indicator</name>
+      <path>Aircraft/MiG-21UPG/Models/Instruments/UPES/UPES.xml</path>
+        <offsets>
+            <x-m>-3.92316</x-m>
+            <y-m>-0.14924</y-m>
+            <z-m> 0.83565</z-m>
+            <pitch-deg>-4.901</pitch-deg>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>Angle Of Attack</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/UAP-7/UAP-7.xml</path>
+        <offsets>
+            <x-m>-3.95685</x-m>
+            <y-m> -0.1794</y-m>
+            <z-m> 0.8539</z-m>
+        </offsets>
+    </model>
+
+  <model>
+    <name>Oil Pressure indicator</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/Oil/Oil.xml</path>
+    <offsets>
+      <pitch-deg>-90</pitch-deg>
+      <x-m>-3.8213</x-m>
+      <y-m> 0.3048</y-m>
+      <z-m> 0.4209</z-m>
+    </offsets>
+  </model>
+    
+    <model>
+        <name>Doubled Main Hydraulic Manometer</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/U2-250/U2-250.xml</path>
+        <offsets>
+            <pitch-deg>-90</pitch-deg>
+          <x-m>-3.74035</x-m>
+          <y-m>0.30669</y-m>
+          <z-m>0.41289</z-m>
+        </offsets>
+    </model>
+    
+<!-- Not operational instruments -->
+
+    <model>
+        <name>IK-52 Indicator</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/IK-52/IK-52.xml</path>
+        <offsets>
+            <heading-deg>78.315</heading-deg>
+            <x-m>-3.88133</x-m>
+            <y-m>-0.35533</y-m>
+            <z-m> 0.58251</z-m>
+        </offsets>
+    </model>
+    
+    <!--<model>
+        <name>PPD1M Range Finder</name>
+        <path>Aircraft/MiG-21UPG_Bison/Models/Instruments/PPD1M/PPD1M.xml</path>
+        <offsets>
+            <heading-deg>-20</heading-deg>
+            <x-m>-3.9130</x-m>
+            <y-m> 0.1414</y-m>
+            <z-m> 0.9449</z-m>
+        </offsets>
+    </model>-->
+    
+    <!--<model>
+        <name>ARU-3G Indicator</name>
+        <path>Aircraft/MiG-21UPG_Bison/Models/Instruments/ARU/ARU.xml</path>
+        <offsets>
+            <heading-deg>10</heading-deg>
+            <x-m>-3.8958</x-m>
+            <y-m>-0.1678</y-m>
+            <z-m> 0.8586</z-m>
+        </offsets>
+    </model>-->
+    
+    <!--<model>
+        <name>Null Indicator</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/Null/Null.xml</path>
+        <offsets>
+            <x-m>-3.9587</x-m>
+            <y-m>-0.1737</y-m>
+            <z-m> 0.5268</z-m>
+        </offsets>
+    </model>-->
+    
+    <model>
+        <name>M-2000K Indicator</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/M-2000/M-2000.xml</path>
+        <offsets>
+          <heading-deg>78.315</heading-deg>
+          <x-m>-3.88133</x-m>
+          <y-m>-0.35533</y-m>
+          <z-m> 0.51251</z-m>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>Front Light Signal Table</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/LightSignalTables/Light1.xml</path>
+      <offsets>
+        <pitch-deg>-4.42</pitch-deg>
+        <x-m>-3.87959</x-m>
+        <y-m>0.028</y-m>
+        <z-m>0.33446</z-m>
+      </offsets>
+    </model>
+
+  <model>
+    <name>Front Left Light Signal Table</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/LightSignalTables/Light2.xml</path>
+    <offsets>
+      <x-m>-3.92031</x-m>
+      <y-m>-0.2009</y-m>
+      <z-m>0.81261</z-m>
+      <pitch-deg>-4.901</pitch-deg>
+    </offsets>
+  </model>
+    
+    <model>
+        <name>Right Light Signal Table</name>
+        <path>Aircraft/MiG-21UPG/Models/Instruments/LightSignalTables/Light3.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </offsets>
+    </model>
+
+  <model>
+    <name>RADIO MANAGEMENT UNIT</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/RMU/RMU1.xml</path>
+    <offsets>
+      <x-m>-3.90113</x-m>
+      <y-m>-0.05617</y-m>
+      <z-m>0.58752</z-m>
+      <pitch-deg>-5.132</pitch-deg>
+    </offsets>
+  </model>
+
+
+  <!--<model>
+    <name>EKRAN UNIT</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/UST/UST.xml</path>
+    <offsets>
+      <x-m>-3.96742</x-m>
+      <y-m>0.16704</y-m>
+      <z-m>0.87103</z-m>
+    </offsets>
+  </model>-->
+
+  <model>
+    <name>RWR</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/rwr/rwr.xml</path>
+    <offsets>
+      <x-m>-3.90256</x-m>
+      <y-m>0.14959</y-m>
+      <z-m>0.81706</z-m>
+      <pitch-deg>-4.963</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Landing Gear</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/Gear/Gear.xml</path>
+    <offsets>
+      <heading-deg>62.496</heading-deg>
+      <x-m>-3.87962</x-m>
+      <y-m>-0.33712</y-m>
+      <z-m> 0.45515</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Gear Control</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/gc/gc.xml</path>
+    <offsets>
+      <heading-deg>62.496</heading-deg>
+      <x-m>-3.88068</x-m>
+      <y-m>-0.33668</y-m>
+      <z-m> 0.53422</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Flaps Control</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/fc/fc.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Right Panel 1</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/rp1/rp1.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Canopy Lever</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/rp1/cnplvr1.xml</path>
+    <offsets>
+      <heading-deg>-12.087</heading-deg>
+      <x-m>0</x-m>
+      <y-m>-0.81419</y-m>
+      <z-m>-0.09796</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Parking Brake Lever</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/rp1/brklvr1.xml</path>
+    <offsets>
+      <x-m>0.13301</x-m>
+      <y-m>0.05501</y-m>
+      <z-m>0.28045</z-m>
+      <pitch-deg>-4.503</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Canopy Anti-Ice Lever</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/rp1/antiicelvr.xml</path>
+    <offsets>
+      <x-m>-3.92333</x-m>
+      <y-m>-0.10056</y-m>
+      <z-m>0.79614</z-m>
+      <pitch-deg>-4.483</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Drop Stores Buttons</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/rp1/drpbtn1.xml</path>
+    <offsets>
+      <pitch-deg>-4.899</pitch-deg>
+      <x-m>0.10142</x-m>
+      <y-m>0</y-m>
+      <z-m>0.34801</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Chute Deploy Button</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/rp1/chutedpl1.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Landing Lights Panel</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/rp1/lightpnl1.xml</path>
+    <offsets>
+      <x-m>-3.89105</x-m>
+      <y-m>-0.26008</y-m>
+      <z-m>0.47804</z-m>
+      <pitch-deg>-4.953</pitch-deg>
+    </offsets>
+  </model>
+
+
+  <model>
+    <name>Radio Panel</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/Radio/radiopnl.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.004</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>RSBN Panel</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/rp1/rsbnpnl.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model>
+  
+  
+  <model>
+    <name>Flare Control Panel</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/rp1/flp1.xml</path>
+    <offsets>
+      <x-m>-3.75735</x-m>
+      <y-m>0.36601</y-m>
+      <z-m>0.60563</z-m>
+      <heading-deg>-80</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Weapons Control Panel</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/SUO/suo1.xml</path>
+    <offsets>
+      <x-m>-3.89106</x-m>
+      <y-m>-0.1597</y-m>
+      <z-m> 0.47742</z-m>
+      <pitch-deg>-5</pitch-deg>
+    </offsets>
+  </model>
+
+</PropertyList>
