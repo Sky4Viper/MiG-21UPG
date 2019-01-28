@@ -121,5 +121,21 @@
       <script>fastload.Air2Ground5()</script>
     </binding>
   </button>
+  
+  <button>
+    <legend>AG6 (4xUB-32, 1xPTB-490)_________</legend>
+    <binding>
+      <command>nasal</command>
+      <script>fastload.Air2Ground6()</script>
+    </binding>
+  </button>
+
+  <button>
+    <legend>AG7 (2xUB-32, 2xFAB-250)_________</legend>
+    <binding>
+      <command>nasal</command>
+      <script>fastload.Air2Ground7()</script>
+    </binding>
+  </button>
 
 </PropertyList>
