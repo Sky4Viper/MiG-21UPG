@@ -4,13 +4,11 @@
 
 This is a rework of pjedvaj's Mig-21bis. Currently only yasim is supported. There's still a lot of work left - electrical system, hydraulics, cockpit flood lights, radar and guided missiles. But there's already a lot of functioning swiches to press :). Not very accurate to be honest, it is more of a look alike concept. As well as me learning to code for flightgear. Have fun!
 
-Background
-
-Aircraft for Flightgear (also known as MiG-21-93 and MiG-21Bison) upgraded version of MiG-21bis used by IAF
+This is an addon Aircraft for Flightgear. MIG-21UPG (also known as MiG-21-93 and MiG-21Bison) is an upgraded version of MiG-21bis used by IAF
 There isn't much information about it, therefore a lot of aspects are highly speculative. Anyway I think it is an interesting aicraft that deserves some attention.
 Original MiG-21bis I decided to use as a base was released by pjedvaj http://fguk.eu/index.php/hangar/download/7-military-jets/101-mikoyan-gurevich-mig-21bis
 
-Reference Sources:
+<b>Reference Sources:</b>
 
 <a href='https://postimg.cc/CdfJmkqh' target='_blank'><img src='https://i.postimg.cc/CdfJmkqh/115900-45431330-Mig21-Cutaway.jpg' border='0' alt='115900-45431330-Mig21-Cutaway'/></a>
 
@@ -25,6 +23,8 @@ Armament: http://www.airwar.ru/image/idop/fighter/mig21-93/mig21-93-10.jpg
 Cutout: https://forums.eagle.ru/attachment.php?attachmentid=118049&d=1432875892
 
 
+
+<b>Historical Background</b>
 
 MiG-21-93 Upgrade
 The high performance of the MiG-21 aircraft, which is the most popular supersonic fighter in the world, enables to effectively solve a wide range of flight missions even today.
@@ -82,6 +82,6 @@ According to the existing plans, 125 MIGs which form the basis of India's Air Fo
 
 Experimental examples of the MiG-21UPG tactical fighter, intended for the Indian air force, successfully completed flight test and evaluation trials in 2001. Earlier referred to as the MiG-21-93 and later called the Bison, the UPG is a major upgrade of the long-serving MiG-21bis. This new variant, ordered by the Indian air force, differs from the "bis" in having a modern Phazotron-NfIR Kopyo multimode radar enabling use of state-of-the-art, air-to-air and air-to-surface missiles. Over 120 MiG-21bis could be eventually upgraded to the UPG standard in India under help from RSK MiG, Phazotron-NUR and Sokol aircraft plant of Nizhny Novgorod.
 
-Screenshots
+<b>Screenshots</b>
 
 <a href='https://postimg.cc/HVtPL3SS' target='_blank'><img src='https://i.postimg.cc/HVtPL3SS/fgfs-screen-619.png' border='0' alt='fgfs-screen-619'/></a> <a href='https://postimg.cc/ZWB3Q5yr' target='_blank'><img src='https://i.postimg.cc/ZWB3Q5yr/fgfs-screen-627.png' border='0' alt='fgfs-screen-627'/></a> <a href='https://postimg.cc/7CtFZXLv' target='_blank'><img src='https://i.postimg.cc/7CtFZXLv/fgfs-screen-609.png' border='0' alt='fgfs-screen-609'/></a> <a href='https://postimg.cc/BXt18npd' target='_blank'><img src='https://i.postimg.cc/BXt18npd/fgfs-screen-608.png' border='0' alt='fgfs-screen-608'/></a> <a href='https://postimg.cc/jw5JzqKw' target='_blank'><img src='https://i.postimg.cc/jw5JzqKw/fgfs-screen-545.png' border='0' alt='fgfs-screen-545'/></a> <a href='https://postimg.cc/SjMBm6F5' target='_blank'><img src='https://i.postimg.cc/SjMBm6F5/fgfs-screen-573.png' border='0' alt='fgfs-screen-573'/></a> <a href='https://postimg.cc/3dwbdmPY' target='_blank'><img src='https://i.postimg.cc/3dwbdmPY/fgfs-screen-567.png' border='0' alt='fgfs-screen-567'/></a> <a href='https://postimg.cc/K1WXZJz6' target='_blank'><img src='https://i.postimg.cc/K1WXZJz6/fgfs-screen-597.png' border='0' alt='fgfs-screen-597'/></a>
