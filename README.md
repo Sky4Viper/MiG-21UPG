@@ -8,6 +8,8 @@ This is an addon Aircraft for Flightgear. MIG-21UPG (also known as MiG-21-93 and
 There isn't much information about it, therefore a lot of aspects are highly speculative. Anyway I think it is an interesting aicraft that deserves some attention.
 Original MiG-21bis I decided to use as a base was released by pjedvaj http://fguk.eu/index.php/hangar/download/7-military-jets/101-mikoyan-gurevich-mig-21bis
 
+
+
 <b>Reference Sources:</b>
 
 <a href='https://postimg.cc/CdfJmkqh' target='_blank'><img src='https://i.postimg.cc/CdfJmkqh/115900-45431330-Mig21-Cutaway.jpg' border='0' alt='115900-45431330-Mig21-Cutaway'/></a>
@@ -21,6 +23,8 @@ Cockpit: http://www.airwar.ru/image/idop/fighter/mig21-93/mig21-93-9.jpg
 Armament: http://www.airwar.ru/image/idop/fighter/mig21-93/mig21-93-10.jpg
 
 Cutout: https://forums.eagle.ru/attachment.php?attachmentid=118049&d=1432875892
+
+
 
 
 
@@ -81,6 +85,8 @@ The first four MIG-21-93 fighters of the Indian Air Force, modernised with the a
 According to the existing plans, 125 MIGs which form the basis of India's Air Force will be modernised step by step by the year of 2004. Besides the improved engines of Russian make, French and Israeli avionics is being installed on the fighters. The installation of the Russian multifunctional radar system Kopyo which simultaneously fixes eight targets and picks two most dangerous ones for an attack is the main element of the modernisation. The contract to the tune of 340 million dollars was signed by the two governments back in 1996. Under it, the specialists of the Russian enterprise MAPO-MIG have fully modernised two fighters at the Sokol plant in Nizhni Novgorod.
 
 Experimental examples of the MiG-21UPG tactical fighter, intended for the Indian air force, successfully completed flight test and evaluation trials in 2001. Earlier referred to as the MiG-21-93 and later called the Bison, the UPG is a major upgrade of the long-serving MiG-21bis. This new variant, ordered by the Indian air force, differs from the "bis" in having a modern Phazotron-NfIR Kopyo multimode radar enabling use of state-of-the-art, air-to-air and air-to-surface missiles. Over 120 MiG-21bis could be eventually upgraded to the UPG standard in India under help from RSK MiG, Phazotron-NUR and Sokol aircraft plant of Nizhny Novgorod.
+
+
 
 <b>Screenshots</b>
 
