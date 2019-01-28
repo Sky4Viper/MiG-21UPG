@@ -28,7 +28,7 @@ Cutout: https://forums.eagle.ru/attachment.php?attachmentid=118049&d=1432875892
 
 
 
-### Historical background
+## Historical background
 
 MiG-21-93 Upgrade
 The high performance of the MiG-21 aircraft, which is the most popular supersonic fighter in the world, enables to effectively solve a wide range of flight missions even today.
@@ -88,6 +88,6 @@ Experimental examples of the MiG-21UPG tactical fighter, intended for the Indian
 
 
 
-### In-game screenshots
+## In-game screenshots
 
 <a href='https://postimg.cc/HVtPL3SS' target='_blank'><img src='https://i.postimg.cc/HVtPL3SS/fgfs-screen-619.png' border='0' alt='fgfs-screen-619'/></a> <a href='https://postimg.cc/ZWB3Q5yr' target='_blank'><img src='https://i.postimg.cc/ZWB3Q5yr/fgfs-screen-627.png' border='0' alt='fgfs-screen-627'/></a> <a href='https://postimg.cc/7CtFZXLv' target='_blank'><img src='https://i.postimg.cc/7CtFZXLv/fgfs-screen-609.png' border='0' alt='fgfs-screen-609'/></a> <a href='https://postimg.cc/BXt18npd' target='_blank'><img src='https://i.postimg.cc/BXt18npd/fgfs-screen-608.png' border='0' alt='fgfs-screen-608'/></a> <a href='https://postimg.cc/jw5JzqKw' target='_blank'><img src='https://i.postimg.cc/jw5JzqKw/fgfs-screen-545.png' border='0' alt='fgfs-screen-545'/></a> <a href='https://postimg.cc/SjMBm6F5' target='_blank'><img src='https://i.postimg.cc/SjMBm6F5/fgfs-screen-573.png' border='0' alt='fgfs-screen-573'/></a> <a href='https://postimg.cc/3dwbdmPY' target='_blank'><img src='https://i.postimg.cc/3dwbdmPY/fgfs-screen-567.png' border='0' alt='fgfs-screen-567'/></a> <a href='https://postimg.cc/K1WXZJz6' target='_blank'><img src='https://i.postimg.cc/K1WXZJz6/fgfs-screen-597.png' border='0' alt='fgfs-screen-597'/></a>
