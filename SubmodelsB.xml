@@ -353,7 +353,7 @@
     <z-offset> 0.5225</z-offset>
 		<yaw-offset>90</yaw-offset>
 		<pitch-offset>75</pitch-offset>
-		<life>1</life>
+		<life>2.5</life>
 		<buoyancy>25</buoyancy>
 		<eda>1</eda>
 		<cd>0.2</cd>
@@ -375,7 +375,7 @@
 		<z-offset>  0.5225</z-offset>
 		<yaw-offset>-90</yaw-offset>
 		<pitch-offset>75</pitch-offset>
-		<life>1</life>
+		<life>2.5</life>
 		<buoyancy>25</buoyancy>
 		<eda>1</eda>
 		<cd>0.2</cd>
