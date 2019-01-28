@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+<path>HDpilot2.ac</path>
+
+ 
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>500</max-m>
+    </animation>
+
+	
+	 <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>PilotHelmet002</object-name>
+    <object-name>visor</object-name>
+  </animation>
+   
+   <effect>
+      <inherits-from>Effects/model-transparent</inherits-from>
+      <object-name>PilotHelmet002</object-name>
+     <object-name>visor</object-name>
+   </effect>
+
+  <animation>
+    <type>noshadow</type>
+      <object-name>visor</object-name>
+  </animation>
+	
+  <animation>
+    <name>head1</name>
+    <object-name>helmet</object-name>
+	  <object-name>head</object-name>
+    <!--<object-name>l-eye.001</object-name>-->
+    <object-name>l-eye</object-name>
+    <object-name>PILOT_1</object-name>
+    <!--<object-name>r-eye.001</object-name>-->
+    <object-name>r-eye</object-name>
+    <object-name>visor</object-name>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>head1</object-name>
+    <property>controls/flight/elevator</property>
+    <factor> -15 </factor> 
+    <center>
+      <x-m> 0.074 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.359 </z-m>
+    </center>
+    <axis>
+      <x> 0.000 </x>
+      <y> 1.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>head1</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>-25</factor>
+    <center>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.359 </z-m>
+    </center>
+    <axis>
+      <x> 0.000 </x>
+      <y> 0.000 </y>
+      <z> 1.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+     <object-name>head1</object-name>
+    <property>controls/flight/aileron</property>
+    <factor> -10.0</factor>
+    <center>
+      <x-m> 0.074 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.359 </z-m>
+    </center>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+  <!--<animation>
+    <type>translate</type>
+    <object-name>r-eye</object-name>
+    <object-name>l-eye</object-name>
+    <property>/accelerations/pilot/z-accel-fps_sec</property>
+    <condition>
+        <less-than>
+          --><!-- G load > 2.0 --><!--
+          <property>/accelerations/pilot/z-accel-fps_sec</property>
+          <value>-64.3481</value>
+        </less-than>
+    </condition>
+    <interpolation>
+      <entry><ind>-64</ind><dep>0</dep></entry>
+      <entry><ind>-96</ind><dep>-0.002</dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.074 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.359 </z-m>
+    </center>
+   <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+  </axis>
+  </animation>-->
+
+  <animation>
+    <type>select</type>
+    <object-name>r-eye</object-name>
+    <object-name>l-eye</object-name>
+    <condition>
+      <greater-than>
+        <!-- G load > 2.0 =-64.3481 -->
+        <property>/accelerations/pilot/z-accel-fps_sec</property>
+        <value>-90</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+	
+	
+</PropertyList>
+
