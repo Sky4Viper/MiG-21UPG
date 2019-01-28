@@ -1,0 +1,289 @@
+<PropertyList>
+    
+    <path>HUD2.ac</path>
+	
+	<!-- Glass shader -->
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+		    <object-name>HUD.Glass</object-name>
+        <object-name>Projector</object-name>
+        <object-name>hud_indic_glass</object-name>
+        <object-name>sunscreen</object-name>
+        <!--<object-name>hmsreflectors</object-name>-->
+    </animation>
+    
+	<animation>
+		<type>noshadow</type>
+		<object-name>HUD.Glass</object-name>
+    <object-name>Projector</object-name>
+	</animation>
+    
+     <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <condition>
+            <property>/sim/rendering/rembrandt/enabled</property>
+        </condition>
+       <object-name>HUD.Glass</object-name>
+       <object-name>Projector</object-name>
+       <object-name>hud_indic_glass</object-name>
+       <object-name>sunscreen</object-name>
+     </effect>
+
+  <animation>
+    <type>material</type>
+    <object-name>marm_sw</object-name>
+    <object-name>hud_sw1</object-name>
+    <object-name>hud_sw2</object-name>
+    <object-name>hud_bright_knob</object-name>
+    <emission>
+      <red>0.1</red>
+      <green>0.1</green>
+      <blue>0.1</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>hud_lights</object-name>
+    <emission>
+      <red>1.1</red>
+      <green>0.3</green>
+      <blue>0.1</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>marm_light_on</object-name>
+    <emission>
+      <red>0</red>
+      <green>1.6</green>
+      <blue>0</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>marm_light_off</object-name>
+    <emission>
+      <red>2.6</red>
+      <green>0.3</green>
+      <blue>0.1</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>marm_light_on</object-name>
+    <condition>
+      <equals>
+        <property>controls/armament/masterarm</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>marm_light_off</object-name>
+    <condition>
+      <equals>
+        <property>controls/armament/masterarm</property>
+        <value>0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>sunscreen</object-name>
+    <object-name>sunscreenarm</object-name>
+    <property>mig21/controls/hud/sunscreen</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>0.11365</x-m>
+      <y-m>-0.26279</y-m>
+      <z-m>0.02691</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>sunscreen</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>mig21/controls/hud/sunscreen</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>marm_sw</object-name>
+    <property>controls/armament/masterarm</property>
+    <offset-deg>20</offset-deg>
+    <factor>-40</factor>
+    <center>
+      <x-m>0.17677</x-m>
+      <y-m>-0.04464</y-m>
+      <z-m>-0.12964</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>hud_sw2</object-name>
+    <property>/sim/hud/current-color</property>
+    <offset-deg>20</offset-deg>
+    <factor>-40</factor>
+    <center>
+      <x-m>0.17949</x-m>
+      <y-m>0.04817</y-m>
+      <z-m>-0.12824</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>marm_sw</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/armament/masterarm</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>hud-marm-switch</tooltip-id>
+        <label>Master Arm</label>
+      </binding>
+    </hovered>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>hud_bright_knob</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>aircraft.HUD.cycle_brightness()</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>hud-brightness-knob</tooltip-id>
+        <label>Hud Brightness</label>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>hud_sw1</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/armament/selectedweapon</property>
+        <step>1</step>
+        <min>0.0</min>
+        <max>5</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/hud/hudmode</property>
+        <step>1</step>
+        <min>0.0</min>
+        <max>5</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>hud-mode-switch</tooltip-id>
+        <label>Hud Mode</label>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>hud_sw2</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/hud/current-color</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>hud-color-switch</tooltip-id>
+        <label>Hud Color</label>
+      </binding>
+    </hovered>
+  </animation>
+
+
+</PropertyList>
