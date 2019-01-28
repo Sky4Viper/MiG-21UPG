@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <sim>
+        <model>
+            <livery>
+                <name type="string">21-93 prototype (2001)</name>
+                <texture>Liveries/21-93-2.dds</texture>
+            </livery>
+            <livery-logo>
+                <texture>Liveries/21-93-2.dds</texture>
+            </livery-logo>
+        </model>
+    </sim>
+
+</PropertyList>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <sim>
+        <model>
+            <livery>
+                <name type="string">Russian VKS 32 (fictional)</name>
+                <texture>Liveries/VKS32.dds</texture>
+            </livery>
+            <livery-logo>
+                <texture>Liveries/VKS32.dds</texture>
+            </livery-logo>
+        </model>
+    </sim>
+
+</PropertyList>
