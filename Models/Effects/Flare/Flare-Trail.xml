@@ -4,7 +4,7 @@
 
 	<particlesystem>
 	
-		<name>flare-smoke</name>
+		<name>flare-trail</name>
 		<texture>FlareA.png</texture>
 		<emissive>true</emissive>
 		<lighting>false</lighting>
