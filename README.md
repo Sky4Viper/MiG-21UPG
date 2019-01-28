@@ -1,6 +1,6 @@
 # MiG-21UPG
 
-<a href='https://postimg.cc/HVtPL3SS' target='_blank'><img src='https://i.postimg.cc/HVtPL3SS/fgfs-screen-619.png' border='0' alt='fgfs-screen-619'/></a>
+<a href='https://postimg.cc/tnDjLWVg' target='_blank'><img src='https://i.postimg.cc/tnDjLWVg/Splash4.png' border='0' alt='Splash4'/></a>
 
 This is a rework of pjedvaj's Mig-21bis. Currently only yasim is supported. There's still a lot of work left - electrical system, hydraulics, cockpit flood lights, radar and guided missiles. But there's already a lot of functioning swiches to press :). Not very accurate to be honest, it is more of a look alike concept. As well as me learning to code for flightgear. Have fun!
 
