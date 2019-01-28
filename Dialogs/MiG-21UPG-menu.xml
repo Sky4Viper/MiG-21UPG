@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <PropertyList>
 
@@ -22,6 +22,24 @@
         <binding>
           <command>dialog-show</command>
           <dialog-name>ARK-19</dialog-name>
+        </binding>
+      </item>
+
+      <item n="2">
+        <label>PRMG channel set up</label>
+        <name>PRMG</name>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>PRMG</dialog-name>
+        </binding>
+      </item>
+      
+      <item n="3">
+        <label>RSBN channel set up</label>
+        <name>RSBN</name>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>RSBN</dialog-name>
         </binding>
       </item>
 
