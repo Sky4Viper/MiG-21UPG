@@ -32,27 +32,27 @@
    </engine>
 
    
-   <engine>
+<engine>
       <name>engine-start-outside</name>
       <mode>once</mode>
       <path>Aircraft/MiG-21UPG/Sounds/Samples/mig21startup.wav</path>
       <condition>
-<and>
-  <greater-than>  
-   <property>/engines/engine[0]/rpm</property>
-   <value>0.5</value>
-  </greater-than>
-  <or>
-  <not>
-   <property>/sim/current-view/internal</property>
-  </not>
-  <greater-than>
-    <property>canopy/position-norm</property>
-    <value>0</value>
-  </greater-than>
-  </or>
-</and>
-</condition>
+        <and>
+            <greater-than>  
+            <property>/engines/engine[0]/rpm</property>
+            <value>0.5</value>
+            </greater-than>
+          <or>
+            <not>
+            <property>/sim/current-view/internal</property>
+            </not>
+            <greater-than>
+            <property>sim/model/door-positions/canopy/position-norm</property>
+            <value>0</value>
+            </greater-than>
+          </or>
+        </and>
+      </condition>
       <volume>
         <property>engines/engine[0]/n2</property>
         <factor> 0.09 </factor>
@@ -62,12 +62,12 @@
       <pitch>
         <property>engines/engine[0]/n2</property>
         <factor> 0.01 </factor>
-	<min> 0.0 </min>
-	<max> 0.9 </max>
+	      <min> 0.0 </min>
+	      <max> 0.9 </max>
       </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
-    </engine>
+</engine>
 
 <engine>
       <name>turbine</name>
@@ -80,7 +80,7 @@
             <property>/sim/current-view/internal</property>
           </not>
           <greater-than>
-            <property>canopy/position-norm</property>
+            <property>sim/model/door-positions/canopy/position-norm</property>
             <value>0</value>
           </greater-than>
         </or>
@@ -102,12 +102,12 @@
       <pitch>
         <property>engines/engine/n2</property>
         <factor>0.01</factor>
-	<min>0</min>
-	<max>0.9</max>
+	      <min>0</min>
+	      <max>0.9</max>
       </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
-    </engine>
+</engine>
 
  
 		<jet>
@@ -129,17 +129,17 @@
 			<factor>0.2</factor>
 			</pitch>
 			<position>
-			<x> 5.185 </x>
+			<x> 3.14 </x>
 			<y>  0.0 </y>
-			<z>  0.0 </z>
+			<z> 0.29 </z>
 			</position>
 			<orientation>
 			<x>1.0</x>
 			<y>0.0</y>
 			<z>0.0</z>
-			<inner-angle>180.0</inner-angle>
-			<outer-angle>360.0</outer-angle>
-			<outer-gain>0.5</outer-gain>
+			<inner-angle>100.0</inner-angle>
+			<outer-angle>180.0</outer-angle>
+			<outer-gain>0.2</outer-gain>
 			</orientation>
 		</jet>
 		
@@ -149,18 +149,18 @@
       <mode>looped</mode>
       <condition>
         <property>engines/engine[0]/running</property>
-		<not>
+		    <not>
         	<property>/sim/current-view/internal</property>
-		<property>engines/engine/out-of-fuel</property>
-     	</not>
+		      <property>engines/engine/out-of-fuel</property>
+     	  </not>
       </condition>
        <position>
-    <x>18.6</x>
-	<y>0</y>
-	<z>2.37</z>
-   </position>
-   <orientation>
-	<x>1.0</x>
+        <x>18.6</x>
+	      <y>0</y>
+	      <z>0.29</z>
+      </position>
+    <orientation>
+	  <x>1.0</x>
     <y>0.0</y>
     <z>0</z>
     <inner-angle>35.0</inner-angle>
@@ -216,14 +216,16 @@
       <mode>looped</mode>
       <condition>
         <property>engines/engine[0]/running</property>
-		<not>
-        	<property>/sim/current-view/external</property>
-		<property>engines/engine/out-of-fuel</property>
-     	</not>
+        <property>/sim/current-view/internal</property>
       </condition>
+       <position>
+         <x> 1.16 </x>
+         <y>  0.0 </y>
+         <z> 0.29 </z>
+       </position>
       <volume>
         <property>engines/engine[0]/n2</property>
-        <factor type="double">0.0025</factor>
+        <factor type="double">0.003</factor>
       </volume>
       <pitch>
         <property>/engines/engine[0]/n2</property>
@@ -243,7 +245,7 @@
             <property>/sim/current-view/internal</property>
           </not>
           <greater-than>
-            <property>canopy/position-norm</property>
+            <property>sim/model/door-positions/canopy/position-norm</property>
             <value>0</value>
           </greater-than>
         </or>
@@ -302,7 +304,7 @@
             <property>/sim/current-view/internal</property>
           </not>
           <greater-than>
-            <property>canopy/position-norm</property>
+            <property>sim/model/door-positions/canopy/position-norm</property>
             <value>0</value>
           </greater-than>
         </or>
@@ -314,14 +316,20 @@
 			</not>
 			<property>/engines/engine[0]/running</property>
 			</condition>
-			<orientation>
-			<x> 0.0</x>
-			<y> 0.0</y>
-			<z> 180.0</z>
-			<inner-cone>50.0</inner-cone>
-			<outer-cone>180.0</outer-cone>
-			<outer-gain>0.5</outer-gain>
-			</orientation>
+      <position>
+        <x> 1.68 </x>
+        <y>  0.0 </y>
+        <z> 0.29 </z>
+      </position>
+      <orientation>
+        <!-- normalized vector -->
+        <x>-1.0</x><!-- +X = aft  -->
+        <y> 0.0</y><!-- +Y = left -->
+        <z> 0.0</z><!-- +Z = up   -->
+        <inner-angle>20.0</inner-angle>
+        <outer-angle>50.0</outer-angle>
+        <outer-gain>0.2</outer-gain>
+      </orientation>
 			<pitch>
 			<property>/engines/engine[0]/n1</property>
 			<offset>0.7</offset>
@@ -483,6 +491,61 @@
 			<factor>0.005</factor>
 			</pitch>
 		</buffet>
+
+    <rain>
+      <name>rain</name>
+      <mode>looped</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/rain.wav</path>
+      <type>avionics</type>
+      <condition>
+        <greater-than>
+          <property>/environment/rain-norm</property>
+          <value>0</value>
+        </greater-than>
+        <or>
+          <not>
+            <property>/sim/current-view/internal</property>
+          </not>
+          <greater-than>
+            <property>sim/model/door-positions/canopy/position-norm</property>
+            <value>0</value>
+          </greater-than>
+        </or>
+      </condition>
+      <volume>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.00075</factor>
+        <min>0.03</min>
+        <max>0.40</max>
+      </volume>
+    </rain>
+    
+    <rain-windshield>
+            <name>rain-windshield</name>
+            <mode>looped</mode>
+            <path>Aircraft/MiG-21UPG/Sounds/Samples/rain-windshield.wav</path>
+            <type>avionics</type>
+            <condition>
+                <and>
+                    <property>/sim/current-view/internal</property>
+                    <greater-than>
+                        <property>/environment/rain-norm</property>
+                        <value>0</value>
+                    </greater-than>
+                </and>
+            </condition>
+            <!--<position>
+                <x>-0.5</x>
+                <y>0.0</y>
+                <z>0.0</z>
+            </position>-->
+            <volume>
+                <property>velocities/airspeed-kt</property>
+                <factor>0.00075</factor>
+                <min>0.03</min>
+                <max>0.40</max>
+            </volume>
+        </rain-windshield>
 		
 <!-- Sonic boom -->
 	  
@@ -537,7 +600,7 @@
       <path>Aircraft/MiG-21UPG/Sounds/Samples/pullup.wav</path>
       <condition>
         <property>/sim/current-view/internal</property>
-        
+        <property>/controls/power/sound/pulup-alert</property>
         <less-than-equals>
           <property>position/altitude-agl-ft</property>
           <value>3000</value>
@@ -735,6 +798,7 @@
         <and>
           <property>/sim/current-view/internal</property>
           <property>controls/armament/masterarm</property>
+          <property>instrumentation/radar/lock</property>
           <equals>
             <property>controls/armament/selectedweapon</property>
             <value>4</value>
