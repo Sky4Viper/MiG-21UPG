@@ -7,7 +7,7 @@
 	<!-- Smoke -->
 	
 	<model>
-		<path>Aircraft/MiG-21UPG/Models/Effects/S-13/Smoke.xml</path>
+		<path>Aircraft/MiG-21UPG/Models/Effects/S-5/Smoke.xml</path>
 		<offsets>
 			<x-m>2</x-m>
 			<y-m>0</y-m>
