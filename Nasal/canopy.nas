@@ -1,40 +1,53 @@
-# used to the animation of the canopy switch and the canopy move
-# toggle keystroke or 2 position switch
+print("*** LOADING canopy.nas ... ***");
+################################################################################
+#
+#                    from m2005-5's DOORS SETTINGS
+#
+################################################################################
 
-var cnpy = aircraft.door.new("canopy", 10);
-var switch = props.globals.getNode("sim/model/doors/canopy/canopy-switch", 1);
-var pos = props.globals.getNode("canopy/position-norm", 1);
+canopy     = aircraft.door.new("/sim/model/door-positions/canopy",      2, 1);
 
 
-var canopy_switch = func(v) {
+# this function manages 3 positions of canopy : close, open and half-opened
+# it uses the function interpolate(property, target value, speed of animation)
+# witch allows to create an animation between different positions.
+# we have to use 4 different values to obtain a cycle :
+#
+#          d ----> half-opened (0.095) ----> d
+#          ^                                 |
+#          |                                 V
+#        opened (1)                       closed (0)
+#          ^                                 |
+#          |                                 V
+#          d <-- half-opened (0.1000) <----- d
+#
+var move_canopy = func()
+{
+    var position = getprop("/sim/model/door-positions/canopy/position-norm");
+    #print("DEBUG position : " ~ position) ;
+    
+    # let's check current position :
+    if(position <= 0.000)
+    {
+        # it's closed let's half open :
+        interpolate("/sim/model/door-positions/canopy/position-norm", 0.100, 2);
+    }
+    elsif(position > 0.098 and position <= 0.102)
+    {
+        # it's half-opened let's open :
+        interpolate("/sim/model/door-positions/canopy/position-norm", 1.000, 2);
+    }
+    elsif(position >= 1)
+    {
+        # it's opened let's half open :
+        interpolate("/sim/model/door-positions/canopy/position-norm", 0.095, 2);
+    }
+    else
+    {
+        # let's close :
+        interpolate("/sim/model/door-positions/canopy/position-norm", 0.000, 2);
+    }
 
-	var p = pos.getValue();
-
-	if (v == 2 ) {
-		if ( p < 1 ) {
-			v = 1;
-		} elsif ( p >= 1 ) {
-			v = -1;
-		}
-	}
-
-	if (v < 0) {
-		switch.setValue(1);
-		cnpy.close();
-
-	} elsif (v > 0) {
-		switch.setValue(3);
-		cnpy.open();
-
-	}
-}
-
-# fixes cockpit when use of ac_state.nas #####
-var cockpit_state = func {
-	var switch = getprop("sim/model/doors/canopy/canopy-switch");
-	if ( switch == 1 ) {
-		setprop("canopy/position-norm", 0);
-	}
 }
 
 

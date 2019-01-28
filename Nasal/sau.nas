@@ -18,9 +18,9 @@ var propLocks = props.globals.getNode(locks, 1);
 
 var lockAltHold   = propLocks.getNode("alt-hold", 1);
 var lockAprHold   = propLocks.getNode("apr-hold", 1);
-var lockGsHold    = propLocks.getNode("gs-hold", 1);
+var lockGsHold    = propLocks.getNode("gs1-hold", 1);
 var lockHdgHold   = propLocks.getNode("hdg-hold", 1);
-var lockNavHold   = propLocks.getNode("nav-hold", 1);
+var lockNavHold   = propLocks.getNode("nav1-hold", 1);
 var lockRevHold   = propLocks.getNode("rev-hold", 1);
 var lockRollAxis  = propLocks.getNode("roll-axis", 1);
 var lockPitchAxis = propLocks.getNode("pitch-axis", 1);
@@ -35,7 +35,7 @@ var settingTargetAglFt          = propSettings.getNode("target-agl-ft", 1);
 var propAnnunciators = props.globals.getNode(annunciators, 1);
 
 var annunciatorAp           = propAnnunciators.getNode("ap", 1);
-var annunciatorApArm           = propAnnunciators.getNode("ap-arm", 1);
+var annunciatorApArm        = propAnnunciators.getNode("ap-arm", 1);
 var annunciatorAtt          = propAnnunciators.getNode("att", 1);
 var annunciatorAttArm       = propAnnunciators.getNode("att-arm", 1);
 var annunciatorAlt          = propAnnunciators.getNode("alt", 1);
@@ -281,6 +281,7 @@ setprop("autopilot/locks/altitude", "agl-hold");
 setprop("autopilot/locks/heading", "");
 var altPreselect = getprop("/position/altitude-ft");
 setprop("autopilot/settings/target-agl-ft", altPreselect);
+setprop("autopilot/settings/target-follow-altitude-ft", altPreselect);
 settingTargetAltFt.setDoubleValue(altPreselect);
 
 annunciatorAlt.setBoolValue(1);
@@ -292,6 +293,7 @@ else{
 annunciatorTfrArm.setBoolValue(0);
 setprop("autopilot/locks/altitude", "");
 setprop("autopilot/settings/target-agl-ft", 0);
+setprop("autopilot/settings/target-follow-altitude-ft", 0);
 
 annunciatorAlt.setBoolValue(0);
 annunciatorAltNumber.setBoolValue(0);
@@ -303,7 +305,7 @@ var navBtn = func
 {
 if (getprop(power) < minVoltageLimit or getprop("controls/power/ap") == 0) { 
 return; }
-if (annunciatorNavArm.getValue() == 0){
+if (annunciatorNavArm.getValue() == 0 and getprop("autopilot/route-manager/active") == 1){
 ##screen.log.write("autopilot NAV ON! ", 1, 0.6, 0.1);
 annunciatorApArm.setBoolValue(0);
 annunciatorAttArm.setBoolValue(0);
@@ -311,10 +313,22 @@ annunciatorAltArm.setBoolValue(0);
 annunciatorTfrArm.setBoolValue(0);
 annunciatorNavArm.setBoolValue(1);
 annunciatorAprArm.setBoolValue(0);
+setprop("autopilot/locks/heading" , "true-heading-hold");
+}
+elsif (annunciatorNavArm.getValue() == 0 and getprop("autopilot/route-manager/active") != 1){
+##screen.log.write("autopilot NAV ON! ", 1, 0.6, 0.1);
+annunciatorApArm.setBoolValue(0);
+annunciatorAttArm.setBoolValue(0);
+annunciatorAltArm.setBoolValue(0);
+annunciatorTfrArm.setBoolValue(0);
+annunciatorNavArm.setBoolValue(1);
+annunciatorAprArm.setBoolValue(0);
+setprop("autopilot/locks/heading" , "nav1-hold");
 }
 else{
 ##screen.log.write("autopilot NAV OFF! ", 1, 0.6, 0.1);
 annunciatorNavArm.setBoolValue(0);
+setprop("autopilot/locks/heading" , "");
 }
 }
 
@@ -330,10 +344,26 @@ annunciatorAltArm.setBoolValue(0);
 annunciatorTfrArm.setBoolValue(0);
 annunciatorNavArm.setBoolValue(0);
 annunciatorAprArm.setBoolValue(1);
+#setprop("autopilot/locks/heading", "nav1-hold");
+setprop("autopilot/locks/heading" ,"apr-hold");
+#setprop("autopilot/locks/altitude","gs1-hold");
+setprop("autopilot/settings/target-altitude-ft",2800);
+setprop("autopilot/locks/altitude","altitude-hold");
+settingTargetAltFt.setDoubleValue(2800);
+annunciatorAltNumber.setBoolValue(1);
+gs_follow.start();
+
 }
 else{
 ##screen.log.write("autopilot APP OFF! ", 1, 0.6, 0.1);
 annunciatorAprArm.setBoolValue(0);
+annunciatorAltArm.setBoolValue(0);
+annunciatorVs.setBoolValue(0);
+setprop("autopilot/locks/heading" ,"");
+setprop("autopilot/locks/altitude","");
+annunciatorAltNumber.setBoolValue(0);
+#gs_follow.stop();
+#annunciatorVsNumber.setBoolValue(0);
 }
 }
 
@@ -394,4 +424,24 @@ screen.log.write("autopilot test10! ", 1, 0.6, 0.1);
 var L = setlistener(power, func {
   apPower();
   removelistener(L);
+});
+
+var gs_follow = maketimer(1, func(){
+	if (annunciatorAprArm.getValue() == 0 or getprop("autopilot/locks/heading") !="apr-hold"){
+	screen.log.write("Glide slope OFF", 1, 0.6, 0.1);
+	gs_follow.stop();
+	}
+	if (annunciatorAprArm.getValue() == 1 and getprop("/position/altitude-ft") <= 330){
+	annunciatorAprArm.setBoolValue(0);
+	annunciatorAltNumber.setBoolValue(0);
+	setprop("autopilot/locks/heading" ,"");
+	setprop("autopilot/locks/altitude","");
+	screen.log.write("Glide slope OFF", 1, 0.6, 0.1);
+	gs_follow.stop();
+	}
+    if (annunciatorAprArm.getValue() == 1 and getprop("autopilot/locks/heading") == "apr-hold" and getprop("instrumentation/nav/gs-in-range") == 1 and getprop("autopilot/locks/altitude") != "gs1-hold"){
+	setprop("autopilot/locks/altitude" ,"gs1-hold");
+	annunciatorAltNumber.setBoolValue(0);
+	screen.log.write("Glide slope ON", 1, 0.6, 0.1);
+	}
 });

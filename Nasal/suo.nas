@@ -45,17 +45,20 @@ if (triggerState == 0 and master_arm == 1 and selected_wpn == 1){
 setprop("/controls/armament/trigger0", 0);
 }
 
+#Air to Ground mode
+if (triggerState == 1 and master_arm == 1 and selected_wpn == 2){
 #Rockets
-if (triggerState == 1 and master_arm == 1 and selected_wpn == 2 and pylons12_powered == 1 and rktmsl_powered ==1 and pylon1_load == 8 and getprop("controls/armament/station[1]/release") == 0){
+if (rktmsl_powered ==1){
+if (pylons12_powered == 1 and (pylon1_load == 8 or pylon2_load == 8) and getprop("controls/armament/station[1]/release") == 0){
 setprop("/controls/armament/trigger1", 1);
 }
-
-if (triggerState == 0 and master_arm == 1 and selected_wpn == 2 and pylon1_load == 8 and getprop("controls/armament/station[1]/release") == 0){
-setprop("/controls/armament/trigger1", 0);
+if (pylons34_powered == 1 and (pylon3_load == 8 or pylon4_load == 8) and getprop("controls/armament/station[3]/release") == 0){
+setprop("/controls/armament/trigger1", 1);
 }
-
+}
 #Bombs
-if (triggerState and master_arm == 1 and selected_wpn == 2 and pylons12_powered == 1 and pylon1_load == 7 and pylon2_load == 7){
+if (rktmsl_powered !=1){
+if (pylons12_powered == 1 and pylon1_load == 7 and pylon2_load == 7){
 setprop("/controls/armament/trigger3", 1);
 setprop("controls/armament/station[1]/release", 1);
 setprop("controls/armament/station[2]/release", 1);
@@ -67,7 +70,7 @@ settimer(func {
 	setprop("controls/armament/sound/drop", 0);
 	}, 0.2);
 }
-if (triggerState and master_arm == 1 and selected_wpn == 2 and pylons12_powered == 1 and pylon1_load == 10 and pylon2_load == 10){
+if (pylons12_powered == 1 and pylon1_load == 10 and pylon2_load == 10){
 setprop("/controls/armament/trigger4", 1);
 setprop("controls/armament/station[1]/release", 1);
 setprop("controls/armament/station[2]/release", 1);
@@ -79,6 +82,38 @@ settimer(func {
 	setprop("controls/armament/sound/drop", 0);
 	}, 0.2);
 }
+}
+}
+
+if (triggerState == 0 and master_arm == 1 and selected_wpn == 2 and (pylon1_load == 8 or pylon2_load == 8 or pylon3_load == 8 or pylon4_load == 8)){
+setprop("/controls/armament/trigger1", 0);
+}
+
+##Bombs
+#if (triggerState and master_arm == 1 and selected_wpn == 2 and pylons12_powered == 1 and pylon1_load == 7 and pylon2_load == 7){
+#setprop("/controls/armament/trigger3", 1);
+#setprop("controls/armament/station[1]/release", 1);
+#setprop("controls/armament/station[2]/release", 1);
+#setprop("/sim/weight[1]/selected", "none");
+#setprop("/sim/weight[6]/selected", "none");
+#setprop("/sim/multiplay/generic/int[11]", 1);
+#setprop("controls/armament/sound/drop", 1);
+#settimer(func {
+#	setprop("controls/armament/sound/drop", 0);
+#	}, 0.2);
+#}
+#if (triggerState and master_arm == 1 and selected_wpn == 2 and pylons12_powered == 1 and pylon1_load == 10 and pylon2_load == 10){
+#setprop("/controls/armament/trigger4", 1);
+#setprop("controls/armament/station[1]/release", 1);
+#setprop("controls/armament/station[2]/release", 1);
+#setprop("/sim/weight[1]/selected", "none");
+#setprop("/sim/weight[6]/selected", "none");
+#setprop("/sim/multiplay/generic/int[11]", 1);
+#setprop("controls/armament/sound/drop", 1);
+#settimer(func {
+#	setprop("controls/armament/sound/drop", 0);
+#	}, 0.2);
+#}
 
 #Long range missiles
 
