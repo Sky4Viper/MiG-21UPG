@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+################################################################################
+#
+#                               GROUND EQUIPMENT MODEL
+#
+################################################################################
+
+changelog
+- 2019-01-27 : create
+
+-->
+<PropertyList>
+
+  <path>ground-equipment.ac</path>
+  <nopreview />
+
+  <!--
+================================================================================
+                                                             OBJECTS DECLARATION
+================================================================================
+  -->
+
+  <animation>
+    <type>material</type>
+    <object-name>ge-engine-cover</object-name>
+    <object-name>ge-cone-cover</object-name>
+    <object-name>ge-flags</object-name>
+    <object-name>ge-chokes</object-name>
+    <object-name>ge-ladder</object-name>
+    <object-name>ge-apu-box</object-name>
+    <object-name>ge-apu-cable</object-name>
+    <object-name>fuel-truck.base</object-name>
+    <object-name>fuel-truck.pipe</object-name>
+    <object-name>fuel-truck.tank</object-name>
+  </animation>
+
+  <!--
+================================================================================
+                                                         CONTROLS AND ANIMATIONS
+================================================================================
+  -->
+
+  <!-- ~~~~~~~~~~~~~~~~~~ engines covers + flags -->
+  <animation>
+    <type>select</type>
+    <object-name>ge-engine-cover</object-name>
+    <object-name>ge-cone-cover</object-name>
+    <object-name>ge-flags</object-name>
+    <condition>
+      <property>sim/model/ground-equipment-e</property>
+      <property>/gear/gear[2]/wow</property>
+      <not>
+        <property>/engines/engine/running</property>
+      </not>
+      <not>
+        <property>/controls/engines/engine[0]/starter</property>
+      </not>
+    </condition>
+  </animation>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ gears chocks -->
+  <animation>
+    <type>select</type>
+    <object-name>ge-chokes</object-name>
+    <condition>
+      <property>sim/model/ground-equipment-g</property>
+      <property>/gear/gear[2]/wow</property>
+      <property>controls/gear/brake-parking</property>
+      <or>
+        <less-than>
+          <property>velocities/groundspeed-kt</property>
+          <value>2</value>
+        </less-than>
+        <equals>
+          <property>engines/engine[0]/stopped</property>
+          <value type="int">1</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+  <!--<animation> --><!-- as the object touchs the ground, I had to add a translation --><!--
+    <type>translate</type>
+    <object-name>ge-chokes</object-name>
+    <offset-m>-.1</offset-m>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>-->
+
+  <!-- ~~~~~~~~~~~~~~~~~~ scale -->
+  <animation>
+    <type>select</type>
+    <object-name>ge-ladder</object-name>
+    <condition>
+      <property>sim/model/ground-equipment-s</property>
+      <property>/gear/gear[2]/wow</property>
+      <greater-than>
+        <property>sim/model/door-positions/canopy/position-norm</property>
+        <value>0</value>
+      </greater-than>
+      <or>
+        <less-than>
+          <property>velocities/groundspeed-kt</property>
+          <value>2</value>
+        </less-than>
+        <equals>
+          <property>engines/engine[0]/stopped</property>
+          <value type="int">1</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ external-power-unit -->
+  <animation>
+    <type>select</type>
+    <object-name>ge-apu-box</object-name>
+    <condition>
+      <property>sim/model/ground-equipment-p</property>
+      <property>/gear/gear[2]/wow</property>
+      <less-than>
+        <property>velocities/groundspeed-kt</property>
+        <value>2</value>
+      </less-than>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>ge-apu-cable</object-name>
+    <condition>
+      <property>sim/model/ground-equipment-p</property>
+      <property>/gear/gear[2]/wow</property>
+      <not>
+        <property>/engines/engine/running</property>
+      </not>
+      <less-than>
+        <property>velocities/groundspeed-kt</property>
+        <value>2</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ fuel-truck -->
+  <animation>
+    <type>select</type>
+    <object-name>fuel-truck.base</object-name>
+    <object-name>fuel-truck.pipe</object-name>
+    <object-name>fuel-truck.tank</object-name>
+    <condition>
+      <property>sim/model/ground-equipment-f</property>
+      <less-than>
+        <property>velocities/groundspeed-kt</property>
+        <value>2</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~ control fuel quantity -->
+  <!--<animation>
+    <type>pick</type>
+    <object-name>fuel-truck.tank</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>dialog-show</command>
+        <dialog-name>bourrasque-fuel</dialog-name>
+      </binding>
+    </action>
+  </animation>-->
+
+
+</PropertyList>
+
