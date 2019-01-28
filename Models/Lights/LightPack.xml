@@ -105,7 +105,7 @@
       <x-m>-4.4910</x-m>
       <y-m> 0</y-m>
       <z-m>-0.5637</z-m>
-      <pitch-deg>-1.5</pitch-deg>
+      <pitch-deg>-7.9</pitch-deg>
     </offsets>
   </model>
   <!-- front gear turning: include TaxiLight in the list of animated objects in the rotate animation of the gear in the top-level model XML file -->
