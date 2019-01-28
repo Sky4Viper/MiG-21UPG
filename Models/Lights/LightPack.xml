@@ -9,9 +9,9 @@
     <name>GreenLight</name>
     <path>Aircraft/MiG-21UPG/Models/Lights/GreenLight.xml</path>
     <offsets>
-        <x-m> 0.10</x-m>
-        <y-m> 2.38</y-m>
-        <z-m> 0.09</z-m>
+      <x-m> 0.733</x-m>
+      <y-m> 2.7818</y-m>
+      <z-m> 0.05445</z-m>
       <roll-deg>-90</roll-deg>
       <pitch-deg>-5</pitch-deg> <!-- due to roll, this tunes heading - I want it to point 5 deg more forward -->
     </offsets>
@@ -21,9 +21,9 @@
     <name>RedLight</name>
     <path>Aircraft/MiG-21UPG/Models/Lights/RedLight.xml</path>
     <offsets>
-        <x-m> 0.10</x-m>
-        <y-m>-2.38</y-m>
-        <z-m> 0.09</z-m>
+        <x-m> 0.733</x-m>
+        <y-m>-2.7818</y-m>
+        <z-m> 0.05445</z-m>
       <roll-deg>90</roll-deg>
       <pitch-deg>-5</pitch-deg> <!-- due to roll, this tunes heading - I want it to point 5 deg more forward -->
     </offsets>
@@ -32,18 +32,18 @@
   <!-- beacon -->
   <!-- bright red flashing light -->
   <!-- note: default orientation is up -->
-  <!--
+
   <model>
     <name>Beacon1</name>
-    <path>Aircraft/MiG-21bis/Models/Lights/Beacon.xml</path>
+    <path>Aircraft/MiG-21UPG/Models/Lights/Beacon.xml</path>
     <offsets>
-      <x-m>0.5584</x-m>
-      <y-m>0.0087</y-m>
-      <z-m>0.6006</z-m>
-      <pitch-deg>6</pitch-deg>
+      <x-m>6.09281</x-m>
+      <y-m>0</y-m>
+      <z-m>2.74401</z-m>
+      <pitch-deg>0</pitch-deg>
     </offsets>
   </model>
-  
+  <!-- 
   <model>
     <name>Beacon2</name>
     <path>Aircraft/MiG-21bis/Models/Lights/Beacon.xml</path>
@@ -175,9 +175,9 @@
     <name>WhiteLight</name>
     <path>Aircraft/MiG-21UPG/Models/Lights/WhiteLight.xml</path>
     <offsets>
-      <x-m>7.5770</x-m>
+      <x-m>6.9133</x-m>
       <y-m>0</y-m>
-      <z-m>2.7049</z-m>
+      <z-m>2.66873</z-m>
       <pitch-deg>93</pitch-deg>
     </offsets>
   </model>
