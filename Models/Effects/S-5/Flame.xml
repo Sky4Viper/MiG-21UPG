@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>Flame.ac</path>
+
+  <animation>
+    <type>select</type>
+    <object-name>Flame1</object-name>
+    <object-name>Flame2</object-name>
+    <object-name>Flame3</object-name>
+    <condition>
+      <property>sim/multiplay/generic/int[9]</property>
+    </condition>
+  </animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>Flame1</object-name>
+    <object-name>Flame2</object-name>
+    <object-name>Flame3</object-name>
+		<emission>
+			<red>255</red>
+			<green>255</green>
+			<blue>254</blue>
+		</emission>
+	</animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>/sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>Flame1</object-name>
+    <object-name>Flame2</object-name>
+    <object-name>Flame3</object-name>
+  </effect>
+
+  <!--<animation>
+    <type>scale</type>
+    <object-name>Flame1</object-name>
+    <object-name>Flame3</object-name>
+    <property>sim/multiplay/generic/int[9]</property>
+    <x-min>0.2</x-min>
+    <y-min>0.9</y-min>
+    <z-min>0.9</z-min>
+    <x-factor>1.8</x-factor>
+    <y-factor>0.0</y-factor>
+    <z-factor>0.0</z-factor>
+  </animation>-->
+
+  <animation>
+    <type>material</type>
+    <object-name>Flame1</object-name>
+    <object-name>Flame2</object-name>
+    <object-name>Flame3</object-name>
+    <emission>
+      <red>1</red>
+      <green-prop>sim/multiplay/generic/int[9]</green-prop>
+      <blue-prop>sim/multiplay/generic/int[9]</blue-prop>
+      <factor-prop>sim/multiplay/generic/int[9]</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+  <type>blend</type>
+  <object-name>Flame1</object-name>
+  <object-name>Flame3</object-name>
+  <property>sim/multiplay/generic/int[9]</property>
+  <factor>-0.6</factor>
+  <offset>1.0</offset>
+  <min>0.0</min>
+  <max>1.0</max>
+  </animation>
+
+</PropertyList>

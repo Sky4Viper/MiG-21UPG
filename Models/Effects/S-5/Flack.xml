@@ -1,0 +1,26 @@
+<PropertyList>
+
+    <path>Flack.ac</path>
+
+  <animation>
+    <type>select</type>
+    <object-name>rect</object-name>
+    <condition>
+      <property>sim/multiplay/generic/int[9]</property>
+    </condition>
+  </animation>
+
+    <animation>
+        <type>billboard</type>
+        <spherical>true</spherical>
+    </animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>/sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>rect</object-name>
+  </effect>
+
+</PropertyList>
