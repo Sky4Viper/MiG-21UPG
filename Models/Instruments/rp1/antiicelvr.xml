@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>antiicelvr.ac</path>
+
+ <animation>
+  <type>material</type>
+     <object-name>anti-ice-mount</object-name>
+     <object-name>anti-ice-lvr</object-name>
+   <emission>
+     <red>0.2</red>
+     <green>0.2</green>
+     <blue>0.2</blue>
+     <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission>
+ </animation>
+
+
+  <animation>
+    <type>translate</type>
+    <object-name>anti-ice-lvr</object-name>
+    <property>controls/ventilation/windshield-antiice-lever</property>
+    <factor>-0.08</factor>
+    <center>
+      <x-m>0.00475</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>anti-ice-lvr</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/ventilation/windshield-antiice-lever</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>canopy-anti-ice</tooltip-id>
+        <label>Canopy Anti Ice</label>
+      </binding>
+    </hovered>
+
+  </animation>
+
+</PropertyList>

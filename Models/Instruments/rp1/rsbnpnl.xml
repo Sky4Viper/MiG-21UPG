@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>rsbnpnl1.ac</path>
+
+ <animation>
+  <type>material</type>
+   <object-name>rsbn_test_btn</object-name>
+   <object-name>rsbn_switches</object-name>
+   <object-name>rsbn_volume_knob</object-name>
+   <object-name>rsbn_test_btn</object-name>
+   <object-name>rsbn_knob</object-name>
+   <object-name>prmg_knob</object-name>
+   <emission>
+     <red>0.2</red>
+     <green>0.2</green>
+     <blue>0.2</blue>
+     <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission>
+ </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>rsbn_sw_lights</object-name>
+    <object-name>nav_loc_light</object-name>
+    <object-name>lnd_loc_light</object-name>
+    <emission>
+      <red>0.1</red>
+      <green>0.9</green>
+      <blue>0.1</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <condition>
+      <property>/controls/power/rsbn</property>
+    </condition>
+    <object-name>rsbn_sw_lights</object-name>
+    <object-name>nav_id</object-name>
+    <object-name>land_id</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <condition>
+      <property>/controls/power/rsbn</property>
+      <property>/instrumentation/nav/gs-in-range</property>
+    </condition>
+    <object-name>lnd_loc_light</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <condition>
+      <property>/controls/power/rsbn</property>
+      <property>/instrumentation/nav/in-range</property>
+    </condition>
+    <object-name>nav_loc_light</object-name>
+  </animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>/sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>nav_id</object-name>
+    <object-name>land_id</object-name>
+  </effect>
+
+  <animation>
+    <type>material</type>
+    <object-name>nav_id</object-name>
+    <object-name>land_id</object-name>
+    <ambient>
+      <red>0.0</red>
+      <green>1.0</green>
+      <blue>0.0</blue>
+    </ambient>
+    <diffuse>
+      <red>0.0</red>
+      <green>0.1</green>
+      <blue>0.0</blue>
+    </diffuse>
+    <emission>
+      <red>0.3</red>
+      <green>0.8</green>
+      <blue>0.3</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rsbn_knob</object-name>
+    <property>/mig21upg/instrumentation/RSBN/channel</property>
+    <interpolation>
+      <entry>
+        <ind>0</ind>
+        <dep>0</dep>
+      </entry>
+      <entry>
+        <ind>8</ind>
+        <dep>275</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.52334</x-m>
+      <y-m>-0.35155</y-m>
+      <z-m>0.49469</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>prmg_knob</object-name>
+    <property>/mig21upg/instrumentation/PRMG/channel</property>
+    <interpolation>
+      <entry>
+        <ind>0</ind>
+        <dep>0</dep>
+      </entry>
+      <entry>
+        <ind>8</ind>
+        <dep>275</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.58892</x-m>
+      <y-m>-0.35155</y-m>
+      <z-m>0.49469</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>rsbn_knob</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/mig21upg/instrumentation/RSBN/channel</property>
+        <step>1</step>
+        <min>1</min>
+        <max>9</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+
+  <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>rsbn</tooltip-id>
+      <label>RSBN Channel Select</label>
+    </binding>
+  </hovered>
+
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>prmg_knob</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/mig21upg/instrumentation/PRMG/channel</property>
+        <step>1</step>
+        <min>1</min>
+        <max>9</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>prmg</tooltip-id>
+        <label>PRMG Channel Select</label>
+      </binding>
+    </hovered>
+
+  </animation>
+
+  <text>
+    <name>nav_id</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.005</character-size>
+    <offsets>
+      <x-m>-3.53055</x-m>
+      <y-m>-0.36425</y-m>
+      <z-m>0.520</z-m>
+      <heading-deg>90</heading-deg>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%3.2f</format>
+    <truncate type="bool">false</truncate>
+    <property>instrumentation/nav/frequencies/selected-mhz</property>
+    <draw-text type="bool">true</draw-text>
+    <alignment>left-top</alignment>
+  </text>
+
+  <text>
+    <name>land_id</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.005</character-size>
+    <offsets>
+      <x-m>-3.55827</x-m>
+      <y-m>-0.36425</y-m>
+      <z-m>0.520</z-m>
+      <heading-deg>90</heading-deg>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%3.2f</format>
+    <truncate type="bool">false</truncate>
+    <property>instrumentation/nav[0]/frequencies/standby-mhz</property>
+    <draw-text type="bool">true</draw-text>
+    <alignment>left-top</alignment>
+  </text>
+
+</PropertyList>

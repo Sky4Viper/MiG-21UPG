@@ -7,6 +7,7 @@
   <animation>
     <type>material</type>
     <object-name>digits</object-name>
+    <object-name>chanels</object-name>
     <emission>
       <red>1.1</red>
       <green>0.3</green>
@@ -51,9 +52,12 @@
   <animation>
     <type>select</type>
     <condition>
-      <property>/controls/power/radio</property>
+      <property>/controls/power/rsbn</property>
     </condition>
     <object-name>transponder_id</object-name>
+    <object-name>outside_t</object-name>
+    <object-name>chanels</object-name>
+    <!--<object-name>land_id</object-name>-->
   </animation>
 
   <effect>
@@ -62,11 +66,16 @@
       <property>/sim/rendering/rembrandt/enabled</property>
     </condition>
     <object-name>transponder_id</object-name>
+    <object-name>outside_t</object-name>
+    <!--<object-name>land_id</object-name>-->
   </effect>
 
   <animation>
     <type>material</type>
     <object-name>transponder_id</object-name>
+    <object-name>outside_t</object-name>
+    <!--<object-name>nav_id</object-name>-->
+    <!--<object-name>land_id</object-name>-->
     <ambient>
       <red>0.0</red>
       <green>1.0</green>
@@ -88,7 +97,7 @@
     <type>select</type>
     <object-name>light1</object-name>
     <condition>
-      <property>controls/power/arc</property>
+      <property>controls/power/radio</property>
     </condition>
   </animation>
 
@@ -425,6 +434,20 @@
   </animation>
 
   <animation>
+    <type>textranslate</type>
+    <object-name>chanels</object-name>
+    <property>/mig21upg/instrumentation/RSBN/channel</property>
+    <offset>-1</offset>
+    <factor>0.05</factor>
+    <step>1.0</step>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
     <type>pick</type>
     <object-name>chnl_sw_1</object-name>
     <visible>true</visible>
@@ -564,19 +587,118 @@
     <font>lcd.txf</font>
     <character-size type="double">0.005</character-size>
     <offsets>
-      <x-m>-3.76231</x-m>
-      <y-m>0.36132</y-m>
-      <z-m>0.51289</z-m>
-      <heading-deg>-90</heading-deg>
+      <x-m>-3.75831</x-m>
+      <y-m>0.35577</y-m>
+      <z-m>0.51089</z-m>
+      <heading-deg>-80</heading-deg>
     </offsets>
     <axis-alignment>yz-plane</axis-alignment>
     <type type="string">number-value</type>
-    <format type="string">%4.0f</format>
+    <format type="string">%+4.0f</format>
     <truncate type="bool">false</truncate>
-    <property>/instrumentation/transponder/id-code</property>
+    <!--<property>/instrumentation/transponder/id-code</property>-->
+    <property>/environment/aircraft-effects/temperature-inside-degC</property>
     <draw-text type="bool">true</draw-text>
     <alignment>right-top</alignment>
   </text>
+
+  <text>
+    <name>outside_t</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.005</character-size>
+    <offsets>
+      <x-m>-3.77431</x-m>
+      <y-m>0.35307</y-m>
+      <z-m>0.51089</z-m>
+      <heading-deg>-80</heading-deg>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%+4.0f</format>
+    <truncate type="bool">false</truncate>
+    <!--<property>/instrumentation/transponder/id-code</property>-->
+    <property>environment/temperature-degc</property>
+    <draw-text type="bool">true</draw-text>
+    <alignment>right-top</alignment>
+  </text>
+
+  <!--<text>
+    <name>nav_id</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.005</character-size>
+    <offsets>
+      <x-m>-3.53105</x-m>
+      <y-m>-0.36825</y-m>
+      <z-m>0.520</z-m>
+      <heading-deg>90</heading-deg>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">text-value</type>
+    --><!--<format type="string">-&gt;%4s</format>--><!--
+    <format type="string">%4s</format>
+    <truncate type="bool">false</truncate>
+    <property>/instrumentation/gps/wp/wp[1]/ID</property>
+    <draw-text type="bool">true</draw-text>
+    <alignment>left-top</alignment>
+  </text>-->
+
+  <!--<text>
+    <name>nav_id</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.005</character-size>
+    <offsets>
+      <x-m>-3.53005</x-m>
+      <y-m>-0.36825</y-m>
+      <z-m>0.520</z-m>
+      <heading-deg>90</heading-deg>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    --><!--<format type="string">-&gt;%4s</format>--><!--
+    <format type="string">%3.3f</format>
+    <truncate type="bool">false</truncate>
+    <property>instrumentation/nav/frequencies/selected-mhz</property>
+    <draw-text type="bool">true</draw-text>
+    <alignment>left-top</alignment>
+  </text>-->
+
+  <!--<text>
+    <name>land_id</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.005</character-size>
+    <offsets>
+      <x-m>-3.56177</x-m>
+      <y-m>-0.36825</y-m>
+      <z-m>0.520</z-m>
+      <heading-deg>90</heading-deg>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%03.0f</format>
+    <truncate type="bool">false</truncate>
+    <property>/instrumentation/gps/wp/wp[1]/bearing-mag-deg</property>
+    <draw-text type="bool">true</draw-text>
+    <alignment>left-top</alignment>
+  </text>-->
+  
+  <!--<text>
+    <name>land_id</name>
+    <font>lcd.txf</font>
+    <character-size type="double">0.005</character-size>
+    <offsets>
+      <x-m>-3.55977</x-m>
+      <y-m>-0.36825</y-m>
+      <z-m>0.520</z-m>
+      <heading-deg>90</heading-deg>
+    </offsets>
+    <axis-alignment>yz-plane</axis-alignment>
+    <type type="string">number-value</type>
+    <format type="string">%3.3f</format>
+    <truncate type="bool">false</truncate>
+    <property>instrumentation/nav[1]/frequencies/selected-mhz</property>
+    <draw-text type="bool">true</draw-text>
+    <alignment>left-top</alignment>
+  </text>-->
 
   <text>
     <name>LabelText</name>
@@ -596,7 +718,7 @@
     <alignment>center-center</alignment>
     <offsets>
       <x-m>-3.72179</x-m>
-      <y-m>0.32034</y-m>
+      <y-m>0.31034</y-m>
       <z-m>0.46526</z-m>
       <heading-deg>-90</heading-deg>
     </offsets>

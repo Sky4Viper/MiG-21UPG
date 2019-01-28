@@ -7,10 +7,11 @@
     <type>material</type>
     <object-name>Buttons</object-name>
     <emission>
-      <red>0.045</red>
-      <green>0.025</green>
-      <blue>0.015</blue>
-      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>0.45</red>
+      <green>0.25</green>
+      <blue>0.15</blue>
+      <!--<factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>-->
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
   </animation>
 
@@ -23,6 +24,12 @@
 	<model>
 		<name>radar</name>
 		<path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/MFD-1radar.xml</path>
+    <condition>
+      <equals>
+        <property>controls/hud/hudmode</property>
+        <value>3</value>
+      </equals>
+    </condition>
 		<offsets>
 			<x-m>0.008</x-m>
 			<y-m>0</y-m>
@@ -32,7 +39,14 @@
 	</model>
   
 	<model>
+    <name>terrain map</name>
 		<path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/MFD-2terrain.xml</path>
+    <condition>
+      <equals>
+        <property>controls/hud/hudmode</property>
+        <value>2</value>
+      </equals>
+    </condition>
 		<offsets>
 			<x-m>0</x-m>
 			<y-m>0</y-m>
@@ -40,6 +54,195 @@
 			<pitch-offset>0</pitch-offset>
 		</offsets>
 	</model>
+
+  <model>
+    <name>navigation map</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/MFD-3navmap.xml</path>
+    <condition>
+      <equals>
+        <property>controls/hud/hudmode</property>
+        <value>0</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+      <pitch-offset>0</pitch-offset>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>pick</type>
+    <object-name>mfd-bt-1</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>instrumentation/radar/radar-standby</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>instrumentation/radar/display-rdr</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>mfd-bt-2</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>radar2.radar_mode_toggle()</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>mfd-bt-3</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>instrumentation/radar2/wcs-mode/pulse-srch</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>mfd-bt-4</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>instrumentation/radar2/wcs-mode/tws-auto</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>mfd-bt-20</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/radar/range-selected</property>
+        <step>40</step>
+        <min>20</min>
+        <max>140</max>
+      </binding>
+      <binding>
+        <command>property-cycle</command>
+        <property>/instrumentation/efis/inputs/range-nm</property>
+        <value>20</value>
+        <value>60</value>
+        <value>100</value>
+        <value>140</value>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>mfd-bt-19</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/radar/range-selected</property>
+        <step>-40</step>
+        <min>20</min>
+        <max>140</max>
+      </binding>
+      <binding>
+        <command>property-cycle</command>
+        <property>/instrumentation/efis/inputs/range-nm</property>
+        <value>140</value>
+        <value>100</value>
+        <value>60</value>
+        <value>20</value>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>mfd-bt-18</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>instrumentation/radar/az-field</property>
+        <value>60</value>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>mfd-bt-17</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>instrumentation/radar/az-field</property>
+        <value>120</value>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
   
   <!--<model>
     <name>MFD-Screen</name>

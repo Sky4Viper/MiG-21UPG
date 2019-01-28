@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+	
+<model>
+	<path>MFD-3navmap.ac</path>
+</model>
+ 
+ 
+<animation>
+<type>select</type>
+<object-name>IPV.ekran</object-name>
+  <condition>
+    <equals>
+      <property>controls/hud/hudmode</property>
+      <value>0</value>
+    </equals>
+  </condition>
+</animation>
+ 
+ 
+</PropertyList>
+

@@ -23,7 +23,6 @@
   
   <animation>
     <type>select</type>
-    <object-name>face</object-name>
 		<object-name>alt.001</object-name>
 		<object-name>alt.002</object-name>
 		<object-name>alt.003</object-name>
@@ -31,8 +30,40 @@
 		<object-name>alt.005</object-name>
     <condition>
       <property>/controls/power/radioalt</property>
+      <not>
+        <or>
+          <less-than>
+            <property>orientation/roll-deg</property>
+            <value>-45</value>
+          </less-than>
+          <greater-than>
+            <property>orientation/roll-deg</property>
+            <value>45</value>
+          </greater-than>
+          <less-than>
+            <property>orientation/pitch-deg</property>
+            <value>-45</value>
+          </less-than>
+          <greater-than>
+            <property>orientation/pitch-deg</property>
+            <value>45</value>
+          </greater-than>
+          <greater-than>
+            <property>position/altitude-agl-ft</property>
+            <value>3000</value>
+          </greater-than>
+        </or>
+      </not>
     </condition>
     </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>face</object-name>
+    <condition>
+      <property>/controls/power/radioalt</property>
+    </condition>
+  </animation>
     
 	<!--<animation>
 		<type>rotate</type>
@@ -159,6 +190,51 @@
 			<z>0</z>
 		</axis>
 	</animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>ralt_btn_2</object-name>
+    <property>/controls/power/sound/pulup-alert</property>
+    <factor>0.0020</factor>
+    <offset-m>-0.002</offset-m>
+    <center>
+      <x-m>0.01037</x-m>
+      <y-m>0.01687</y-m>
+      <z-m>-0.01908</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>ralt_btn_2</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/power/sound/pulup-alert</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>pulup-alert</tooltip-id>
+        <label>Pullup Alert Toggle</label>
+      </binding>
+    </hovered>
+    
+  </animation>
 	
 <!-- Label text -->
 

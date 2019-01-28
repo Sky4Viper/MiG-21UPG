@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>brklvr1.ac</path>
+
+ <animation>
+  <type>material</type>
+     <object-name>parking_brake_sw</object-name>
+     <object-name>parking_brake_ax</object-name>
+   <emission>
+     <red>0.2</red>
+     <green>0.2</green>
+     <blue>0.2</blue>
+     <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission>
+ </animation>
+
+
+  <animation>
+    <type>translate</type>
+    <object-name>parking_brake_sw</object-name>
+    <object-name>parking_brake_ax</object-name>
+    <property>controls/gear/brake-parking</property>
+    <interpolation>
+      <entry>
+        <ind>1</ind>
+        <dep>0.03</dep>
+      </entry>
+      <entry>
+        <ind>0</ind>
+        <dep>0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.99195</x-m>
+      <y-m>-0.13398</y-m>
+      <z-m>0.80768</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>parking_brake_sw</object-name>
+    <property>controls/gear/brake-parking</property>
+    <interpolation>
+      <entry>
+        <ind>1</ind>
+        <dep>-80</dep>
+      </entry>
+      <entry>
+        <ind>0</ind>
+        <dep>0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.99195</x-m>
+      <y-m>-0.13398</y-m>
+      <z-m>0.80768</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>parking_brake_sw</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/gear/brake-parking</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>parking-brake</tooltip-id>
+        <label>Parking Brake</label>
+      </binding>
+    </hovered>
+
+  </animation>
+
+</PropertyList>

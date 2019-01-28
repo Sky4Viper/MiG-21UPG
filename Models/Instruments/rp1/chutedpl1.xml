@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>chutedpl1.ac</path>
+
+ <animation>
+  <type>material</type>
+     <object-name>chute_sw</object-name>
+   <emission>
+     <red>0.2</red>
+     <green>0.2</green>
+     <blue>0.2</blue>
+     <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission>
+ </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>ctp_text</object-name>
+    <emission>
+      <red>1.1</red>
+      <green>0.3</green>
+      <blue>0.1</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+
+  <animation>
+    <type>translate</type>
+    <object-name>chute_sw</object-name>
+    <property>controls/flight/chute_deploy</property>
+    <factor>-0.0045</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>chute_sw</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <condition>
+          <property>controls/flight/chute_loaded</property>
+        </condition>
+        <command>property-assign</command>
+        <property>controls/flight/chute_deploy</property>
+        <value type="bool">1</value>
+      </binding>
+      <binding>
+        <condition>
+          <property>controls/flight/chute_loaded</property>
+        </condition>
+        <command>property-assign</command>
+        <property>controls/flight/chute_loaded</property>
+        <value type="bool">0</value>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>drag-chute</tooltip-id>
+        <label>Brake Chute Deploy</label>
+      </binding>
+    </hovered>
+
+  </animation>
+
+</PropertyList>

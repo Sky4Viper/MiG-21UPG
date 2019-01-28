@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>lightpnl1.ac</path>
+
+ <animation>
+  <type>material</type>
+   <object-name>lnd_light_sw</object-name>
+   <emission>
+     <red>0.2</red>
+     <green>0.2</green>
+     <blue>0.2</blue>
+     <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission>
+ </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lnd_light_text</object-name>
+    <emission>
+      <red>1.1</red>
+      <green>0.3</green>
+      <blue>0.1</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lnd_light_sw_light</object-name>
+    <emission>
+      <red>0.1</red>
+      <green>0.9</green>
+      <blue>0.1</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lnd_light_sw</object-name>
+    <object-name>lnd_light_sw_light</object-name>
+    <property>/controls/lighting/landing-lights-switch</property>
+    <factor>-44</factor>
+    <offset-deg>22</offset-deg>
+    <center>
+      <x-m>0.00538</x-m>
+      <y-m>-0.01003</y-m>
+      <z-m>-0.00002</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>lnd_light_sw</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/landing-lights-switch</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/taxi-light-switch</property>
+      </binding>
+      <!--temp switch for nav lights-->
+      <binding>
+        <command>property-toggle</command>
+        <property>lightpack/nav-lights-intensity</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>lightpack/white-light-intensity</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/beacon-switch</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>

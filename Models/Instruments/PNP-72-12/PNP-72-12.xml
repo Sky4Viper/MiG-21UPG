@@ -51,6 +51,11 @@
     <object-name>pnp_glass</object-name>
   </animation>
 
+  <animation>
+    <type>noshadow</type>
+    <object-name>pnp_glass</object-name>
+  </animation>
+
 <animation>
  <type>material</type>
  <object-name>screws</object-name>
@@ -65,10 +70,20 @@
  <type>rotate</type>
   <object-name>PNP.CourseDisc</object-name>
   <object-name>PNP.NSetPathAngle</object-name>
-  <object-name>PNP.NCAngleRC</object-name>
+  <!--<object-name>PNP.NCAngleRC</object-name>-->
   <object-name>PNP.AngleDerivIndex</object-name>
   <property>orientation/heading-magnetic-deg</property>
-  <factor>-1</factor>
+  <!--<property>/orientation/heading-deg</property>-->
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>359</ind>
+      <dep>-359</dep>
+    </entry>
+  </interpolation>
   <center>
     <x-m> 0.0</x-m>
     <y-m> 0.0</y-m>
@@ -265,8 +280,23 @@
 <animation>
  <type>translate</type>
  <object-name>ILS.HDG.Needle</object-name>
- <property>instrumentation/nav/heading-needle-deflection-norm</property>
- <factor>0.015</factor>
+ <!--<property>instrumentation/nav/heading-needle-deflection-norm</property>
+ <factor>0.015</factor>-->
+  <property>instrumentation/nav/heading-needle-deflection</property>
+  <interpolation>
+    <entry>
+      <ind>-10.0</ind>
+      <dep>-0.013</dep>
+    </entry>
+    <entry>
+      <ind>0.0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>10.0</ind>
+      <dep>0.013</dep>
+    </entry>
+  </interpolation>
  <axis>
   <x>0</x>
   <y>1</y>
@@ -279,8 +309,8 @@
  <object-name>PNP.BlenkerK</object-name>
  <condition>
   <equals>
-   <property>mig29/o/snv</property>
-   <value>1</value>
+   <property>/controls/power/gyro1</property>
+   <value>0</value>
   </equals>
  </condition>
 </animation>
@@ -290,8 +320,8 @@
  <object-name>PNP.BlenkerG</object-name>
  <condition>
   <equals>
-   <property>mig29/o/snv</property>
-   <value>1</value>
+   <property>/controls/power/rsbn</property>
+   <value>0</value>
   </equals>
  </condition>
 </animation>
@@ -301,7 +331,7 @@
  <object-name>PNP.BlenkerKS</object-name>
  <condition>
   <equals>
-   <property>fdm/jsbsim/systems/IK-VK/IK-VK-on</property>
+   <property>/controls/power/gyro2</property>
    <value>0</value>
   </equals>
  </condition>
@@ -321,10 +351,13 @@
  <type>select</type>
  <object-name>PNP.BlenkerNIU</object-name>
  <condition>
-  <equals>
+  <!--<equals>
    <property>mig29/o/snv</property>
    <value>1</value>
-  </equals>
+  </equals>-->
+     <not>
+     <property>/controls/power/rsbn</property>
+     </not>
  </condition>
 </animation>
 

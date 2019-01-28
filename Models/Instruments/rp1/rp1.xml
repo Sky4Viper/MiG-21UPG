@@ -51,12 +51,13 @@
    <object-name>rp_sw33_po7501</object-name>
    <object-name>rp_sw34_po7502</object-name>
    <object-name>rp_sw35_batheat</object-name>
-   <object-name>canopy_lever1</object-name>
-   <object-name>canopy_lever2</object-name>
-   <object-name>chute_sw</object-name>
+   <object-name>lp_sw3_ac</object-name>
+   <!--<object-name>canopy_lever1</object-name>
+   <object-name>canopy_lever2</object-name>-->
+   <!--<object-name>chute_sw</object-name>-->
    <object-name>chute_btn</object-name>
    <object-name>chute_btn_lid</object-name>
-   <object-name>lnd_light_sw</object-name>
+   <!--<object-name>lnd_light_sw</object-name>-->
    <object-name>eng_start_btn</object-name>
    <!--<object-name>droppylon12_btn</object-name>
    <object-name>droppylon12_btn_lid</object-name>
@@ -142,6 +143,7 @@
     <object-name>rp_sw34_light</object-name>
     <object-name>rp_sw35_light</object-name>
     <object-name>lnd_light_sw_light</object-name>
+    <object-name>lp_sw3_light</object-name>
     <emission>
       <red>0.1</red>
       <green>0.9</green>
@@ -714,6 +716,70 @@
 
   <animation>
     <type>rotate</type>
+    <object-name>lp_sw3_ac</object-name>
+    <object-name>lp_sw3_light</object-name>
+    <property>controls/ventilation/airconditioning-type</property>
+    <!-- cold for 12s: -1 auto: 0 warm for 12s: 1 -->
+    <interpolation>
+      <entry>
+        <ind>-1</ind>
+        <dep>-22</dep>
+      </entry>
+      <entry>
+        <ind>0</ind>
+        <dep>22</dep>
+      </entry>
+      <entry>
+        <ind>1</ind>
+        <dep>-22</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.51759</x-m>
+      <y-m>-0.36567</y-m>
+      <z-m>0.60251</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>lp_sw3_ac</object-name>
+    <object-name>lp_sw3_light</object-name>
+    <property>controls/ventilation/airconditioning-type</property>
+    <!-- cold for 12s: -1 auto: 0 warm for 12s: 1 --> 
+    <interpolation>
+      <entry>
+        <ind>-1</ind>
+        <dep>-22</dep>
+      </entry>
+      <entry>
+        <ind>0</ind>
+        <dep>0</dep>
+      </entry>
+      <entry>
+        <ind>1</ind>
+        <dep>22</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-3.51759</x-m>
+      <y-m>-0.36567</y-m>
+      <z-m>0.60251</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
     <object-name>rp_sw21_flightrec</object-name>
     <object-name>rp_sw21_light</object-name>
     <property>controls/power/flightrec</property>
@@ -997,7 +1063,7 @@
     </axis>
   </animation>
 
-  <animation>
+  <!--<animation>
     <type>translate</type>
     <object-name>parking_brake_sw</object-name>
     <object-name>parking_brake_ax</object-name>
@@ -1036,9 +1102,9 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
+  </animation>-->
 
-  <animation>
+  <!--<animation>
     <type>rotate</type>
     <object-name>canopy_lever1</object-name>
     <property>canopy/position-norm</property>
@@ -1078,7 +1144,7 @@
       <y>1</y>
       <z>0</z>
     </axis>
-  </animation>
+  </animation>-->
 
   <animation>
     <type>translate</type>
@@ -1149,7 +1215,7 @@
   </animation>
 
   
-  <animation>
+  <!--<animation>
     <type>translate</type>
     <object-name>droppylon12_btn</object-name>
     <property>controls/buttons/drop_12</property>
@@ -1252,7 +1318,7 @@
       <y>1</y>
       <z>0</z>
     </axis>
-  </animation>
+  </animation>-->
 
   <animation>
     <type>rotate</type>
@@ -1275,6 +1341,65 @@
 
 
   <!--Buttons-->
+
+  <animation>
+    <type>pick</type>
+    <object-name>lp_sw3_ac</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/ventilation/airconditioning-type</property>
+        <step>1</step>
+        <min>-1</min>
+        <max>2</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <condition>
+          <equals>
+            <property>controls/ventilation/airconditioning-type</property>
+            <value>1</value>
+          </equals>
+        </condition>
+        <command>property-adjust</command>
+        <property>controls/ventilation/airconditioning-temperature</property>
+        <step type="double">+2.0</step>
+        <min type="double">8</min>
+        <max type="double">28</max>
+        <wrap>false</wrap>
+      </binding>
+      <binding>
+        <condition>
+          <equals>
+            <property>controls/ventilation/airconditioning-type</property>
+            <value>-1</value>
+          </equals>
+        </condition>
+        <command>property-adjust</command>
+        <property>controls/ventilation/airconditioning-temperature</property>
+        <step type="double">-4.0</step>
+        <min type="double">8</min>
+        <max type="double">28</max>
+        <wrap>false</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>lp-ac</tooltip-id>
+        <label>Air Conditioning</label>
+      </binding>
+    </hovered>
+
+  </animation>
 
   <animation>
     <type>pick</type>
@@ -1601,6 +1726,14 @@
       </binding>
       <binding>
         <command>nasal</command>
+        <script>instrumentation.RSBN_init()</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>instrumentation.PRMG_init()</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
         <script>switchclicksound.click("switch")</script>
       </binding>
     </action>
@@ -1630,10 +1763,10 @@
         <property>instrumentation/radar/range-selected</property>
         <value>60</value>
       </binding>-->
-      <binding>
+      <!--<binding>
         <command>nasal</command>
         <script>radar2.radar_mode_toggle()</script>
-      </binding>
+      </binding>-->
     </action>
   </animation>
 
@@ -2036,7 +2169,7 @@
     </action>
   </animation>
 
-  <animation>
+  <!--<animation>
     <type>pick</type>
     <object-name>chute_sw</object-name>
     <visible>true</visible>
@@ -2073,9 +2206,9 @@
       </binding>
     </hovered>
     
-  </animation>
+  </animation>-->
 
-  <animation>
+  <!--<animation>
     <type>pick</type>
     <object-name>parking_brake_sw</object-name>
     <visible>true</visible>
@@ -2100,7 +2233,7 @@
       </binding>
     </hovered>
     
-  </animation>
+  </animation>-->
 
   <animation>
     <type>pick</type>
@@ -2138,7 +2271,7 @@
     </action>
   </animation>
 
-  <animation>
+  <!--<animation>
     <type>pick</type>
     <object-name>droppylon12_btn</object-name>
     <visible>true</visible>
@@ -2275,9 +2408,9 @@
         <script>switchclicksound.click("switch")</script>
       </binding>
     </action>
-  </animation>
+  </animation>-->
 
-  <animation>
+  <!--<animation>
     <type>pick</type>
     <object-name>canopy_lever1</object-name>
     <visible>true</visible>
@@ -2329,9 +2462,9 @@
       </binding>
     </hovered>
 
-  </animation>
+  </animation>-->
 
-  <animation>
+  <!--<animation>
     <type>pick</type>
     <object-name>lnd_light_sw</object-name>
     <visible>true</visible>
@@ -2346,7 +2479,7 @@
         <command>property-toggle</command>
         <property>/controls/lighting/taxi-light-switch</property>
       </binding>
-      <!--temp switch for nav lights-->
+      --><!--temp switch for nav lights--><!--
       <binding>
         <command>property-toggle</command>
         <property>lightpack/nav-lights-intensity</property>
@@ -2360,7 +2493,7 @@
         <script>switchclicksound.click("switch")</script>
       </binding>
     </action>
-  </animation>
+  </animation>-->
 
 
 </PropertyList>

@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>cnplvr1.ac</path>
+
+ <animation>
+  <type>material</type>
+   <object-name>canopy_lever1</object-name>
+   <object-name>canopy_lever2</object-name>
+   <emission>
+     <red>0.2</red>
+     <green>0.2</green>
+     <blue>0.2</blue>
+     <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission>
+ </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>canopy_lever1</object-name>
+    <property>sim/model/door-positions/canopy/position-norm</property>
+    <interpolation>
+      <entry><ind>0.0</ind><dep>-30</dep></entry>
+      <entry><ind>0.05</ind><dep>-30</dep></entry>
+      <entry><ind>1.0</ind><dep>30</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>-3.79313</x-m>
+      <y-m>-0.31616</y-m>
+      <z-m>0.71091</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>canopy_lever2</object-name>
+    <property>sim/model/door-positions/canopy/position-norm</property>
+    <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>0.02</ind><dep>90</dep></entry>
+      <entry><ind>1.0</ind><dep>90</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>-3.738</x-m>
+      <y-m>-0.34092</y-m>
+      <z-m>0.70844</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>canopy_lever1</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>canopy.move_canopy();</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>canopy</tooltip-id>
+        <label>Canopy Open/Close</label>
+      </binding>
+    </hovered>
+
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>canopy_lever2</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>canopy.move_canopy();</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>canopy</tooltip-id>
+        <label>Canopy Open/Close</label>
+      </binding>
+    </hovered>
+
+  </animation>
+
+</PropertyList>
