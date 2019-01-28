@@ -31,14 +31,16 @@ The RAC "MiG" jointly with the SOKOL aircraft-building plant of Nizhniy Novgorod
 
 The upgrade project offered by RAC "MiG" and named MiG-21-93 is based on the use of "Kopyo" ("Spear") airborne radar, new weapons and equipment. This project has been developed jointly by RAC "MiG", Phazotron-NIIR Company, GosNIIAS and "Sokol" Joint-Stock Company under the general patronage of "Rosvooruzhenye" company. Due to high technical characteristics and reasonable cost, the project has won the Indian tender for MiG-21 fleet retrofitting. The "Kopyo" radar is designed for controlling the full aircraft weapons spectrum: built-in gun, rockets, advanced missiles with homing heads and guided bombs. This makes it possible to enhance qualitatively the MiG-21 following characteristics:
 
-air target detection and lock-on range both in look-up and look-down with using R-27 and RVV-AE middle-range missiles ( the latter can be launched against several targets simultaneously);
-ground and sea-surface target detection and improved communication, EW and navigation aids;
-air target detection and engagement range in action in the front hemisphere;
-improved guidance and engagement capabilities in action against ground targets of any type;
-track-while-scan mode with the capability of tracking up to 10 targets and engaging two of them;
-capability to battle successfully with forth-generation fighters;
-effective destruction of ground targets covered by enemy air defense.
+- air target detection and lock-on range both in look-up and look-down with using R-27 and RVV-AE middle-range missiles ( the latter can be launched against several targets simultaneously);
+- ground and sea-surface target detection and improved communication, EW and navigation aids;
+- air target detection and engagement range in action in the front hemisphere;
+- improved guidance and engagement capabilities in action against ground targets of any type;
+- track-while-scan mode with the capability of tracking up to 10 targets and engaging two of them;
+- capability to battle successfully with forth-generation fighters;
+- effective destruction of ground targets covered by enemy air defense.
+
 In accordance with the Indian party request, a number of systems of Western and Indian make have been combined in a single avionics complex.
+
 The main objective of the MiG-21-93 project was to achieve the maximum combat effectiveness with minimum aircraft changes and extend the service life of this reliable aircraft (up to 40 years and 4,000 flying hours). Also, this rational approach to MiG-21 upgrade allows the Customer to save great funds to the utmost. Essentially the tests of the aircraft had been completed and the series production of the upgraded MiG-21bis aircraft for the Indian Air Force was launched.
 
 In 1998-2005 the Indian Air Force upgraded fundamentally 125 MiG-21 fighters on the basis of the MiG-21-93 project developed by the RAC "MiG". In the course of upgrading the MiG-21bis was equipped with a new armament control system including the multi-function radar "Kopyo", helmet-mounted target designation system, data display equipment based on the up-to-date head-up and multifunctional displays.
