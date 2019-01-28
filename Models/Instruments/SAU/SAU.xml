@@ -475,7 +475,6 @@ properties' values.
   <animation>
     <type>textranslate</type>
     <object-name>alt-digit1</object-name>
-    <!--<property>autopilot/settings/target-agl-ft</property>-->
     <property>autopilot/SAU/settings/target-alt-ft</property>
     <factor>0.00001</factor>
     <step>10000</step>
@@ -488,7 +487,6 @@ properties' values.
   <animation>
     <type>textranslate</type>
     <object-name>alt-digit2</object-name>
-    <!--<property>autopilot/settings/target-agl-ft</property>-->
     <property>autopilot/SAU/settings/target-alt-ft</property>
     <factor>0.0001</factor>
     <step>1000</step>
@@ -501,7 +499,6 @@ properties' values.
   <animation>
     <type>textranslate</type>
     <object-name>alt-digit3</object-name>
-    <!--<property>autopilot/settings/target-agl-ft</property>-->
     <property>autopilot/SAU/settings/target-alt-ft</property>
     <factor>0.001</factor>
     <step>100</step>
@@ -514,7 +511,6 @@ properties' values.
   <animation>
     <type>textranslate</type>
     <object-name>alt-digit4</object-name>
-    <!--<property>autopilot/settings/target-agl-ft</property>-->
     <property>autopilot/SAU/settings/target-alt-ft</property>
     <factor>0.01</factor>
     <step>10</step>
@@ -527,7 +523,6 @@ properties' values.
   <animation>
     <type>textranslate</type>
     <object-name>alt-digit5</object-name>
-    <!--<property>autopilot/settings/target-agl-ft</property>-->
     <property>autopilot/SAU/settings/target-alt-ft</property>
     <factor>0.1</factor>
     <step>1</step>
@@ -696,8 +691,13 @@ properties' values.
         <command>nasal</command>
         <script>sau.apBtn();</script>
       </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
     </action>
   </animation>
+  
   <animation>
     <type>pick</type>
     <object-name>att-btn</object-name>
@@ -707,6 +707,10 @@ properties' values.
       <binding>
         <command>nasal</command>
         <script>sau.attBtn();</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
       </binding>
     </action>
   </animation>
@@ -723,6 +727,10 @@ properties' values.
           sau.altBtn();
         </script>
       </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
     </action>
   </animation>
 
@@ -737,6 +745,10 @@ properties' values.
         <script>
           sau.tfrBtn();
         </script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
       </binding>
     </action>
   </animation>
@@ -753,6 +765,10 @@ properties' values.
           sau.navBtn();
         </script>
       </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
     </action>
   </animation>
   
@@ -767,6 +783,10 @@ properties' values.
         <script>
       sau.aprBtn();
      </script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
       </binding>
     </action>
   </animation>
@@ -954,10 +974,11 @@ properties' values.
     <type>material</type>
     <object-name>buttons</object-name>
     <emission>
-      <red>0.045</red>
-      <green>0.025</green>
-      <blue>0.015</blue>
-      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>0.45</red>
+      <green>0.25</green>
+      <blue>0.15</blue>
+      <!--<factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>-->
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
   </animation>
 
