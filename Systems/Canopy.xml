@@ -16,7 +16,7 @@
           <time>     2 </time>
        </setting>
      </traverse>
-     <output>/canopy/position-norm</output>
+     <output>/sim/model/door-positions/canopy/position-norm</output>
    </kinematic>
 
   </channel>
