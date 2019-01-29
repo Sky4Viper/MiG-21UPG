@@ -36,12 +36,21 @@
   <green>0.8</green>
   <blue>0.8</blue> 
  </emission>-->
-  <emission>
+  <!--<emission>
       <red>1.1</red>
       <green>0.3</green>
       <blue>0.1</blue>
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
-    </emission>
+    </emission>-->
+  <emission>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    <red>0.8</red>
+    <green>0.3</green>
+    <blue>0.1</blue>
+  </emission>
+  <condition>
+    <property>/controls/power/battery</property>
+  </condition>
 </animation>
 
   <animation>
@@ -56,7 +65,7 @@
     <object-name>pnp_glass</object-name>
   </animation>
 
-<animation>
+<!--<animation>
  <type>material</type>
  <object-name>screws</object-name>
  <emission>
@@ -64,7 +73,7 @@
   <green>0.8</green>
   <blue>0.8</blue>
  </emission>
-</animation>
+</animation>-->
 
 <animation>
  <type>rotate</type>
