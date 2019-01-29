@@ -14,17 +14,23 @@
      <blue>0.2</blue>
      <factor-prop>controls/lighting/instruments-norm</factor-prop>
    </emission>
+   <condition>
+     <property>/controls/power/battery</property>
+   </condition>
  </animation>
 
   <animation>
     <type>material</type>
     <object-name>textlight</object-name>
     <emission>
-      <red>1.1</red>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>0.8</red>
       <green>0.3</green>
       <blue>0.1</blue>
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
   </animation>
 
   <animation>
@@ -36,6 +42,9 @@
       <blue>0.1</blue>
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
   </animation>
 
   <animation>
@@ -47,6 +56,9 @@
       <blue>0.1</blue>
       <factor-prop>controls/armament/ecm-on</factor-prop>
     </emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
   </animation>
 
   <animation>
