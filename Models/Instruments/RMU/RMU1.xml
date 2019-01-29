@@ -18,6 +18,7 @@
           <value>10</value>
         </greater-than-equals>-->
           <property>/controls/power/radio</property>
+          <property>/controls/power/battery</property>
       </condition>
         <object-name>Com.1</object-name>
         <object-name>Com.2</object-name>
