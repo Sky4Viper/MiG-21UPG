@@ -18,7 +18,10 @@
             <green>0.8</green>
             <blue>0.8</blue>
             <factor-prop>controls/lighting/instruments-norm</factor-prop>
-        </emission> 
+        </emission>
+      <condition>
+        <property>/controls/power/battery</property>
+      </condition>
     </animation>
   
   <animation>
@@ -29,6 +32,7 @@
 		<object-name>alt.004</object-name>
 		<object-name>alt.005</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <property>/controls/power/radioalt</property>
       <not>
         <or>
