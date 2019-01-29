@@ -30,7 +30,18 @@
       <blue>0.2</blue>
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
+      <condition>
+        <property>/controls/power/battery</property>
+      </condition>
     <!--<texture-prop>mig29/systems/cockpitlighting/texture5</texture-prop>-->
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>RUS.PrivGorOn</object-name>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
   </animation>
 
   <!-- Ручка Управления Самолётом -->
