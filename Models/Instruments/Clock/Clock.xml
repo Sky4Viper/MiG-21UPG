@@ -10,11 +10,17 @@
         <object-name>min</object-name>
         <object-name>hour</object-name>
         <emission>
-          <red>1.1</red>
+          <factor-prop>controls/lighting/instruments-norm</factor-prop>
+          <!--<red>1.1</red>
+          <green>0.3</green>
+          <blue>0.1</blue>-->
+          <red>0.8</red>
           <green>0.3</green>
           <blue>0.1</blue>
-            <factor-prop>controls/lighting/instruments-norm</factor-prop>
-        </emission> 
+        </emission>
+      <condition>
+        <property>/controls/power/battery</property>
+      </condition>
     </animation>
 
   <animation>
