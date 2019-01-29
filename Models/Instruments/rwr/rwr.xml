@@ -1784,6 +1784,7 @@
 		<type>material</type>
 		<object-name>bkg</object-name>
 		<condition>
+      <property>/controls/power/battery</property>
 			<greater-than>
 				<property alias="../../../../power-supply"/>
 				<value alias="../../../../mininal-volts"/>
@@ -1801,6 +1802,7 @@
 		<type>select</type>
 		<object-name>symbology</object-name>
 		<condition>
+      <property>/controls/power/battery</property>
 			<greater-than>
 				<property alias="../../../../power-supply"/>
 				<value alias="../../../../mininal-volts"/>
@@ -1817,6 +1819,9 @@
 			<green>1</green>
 			<blue>0</blue>
 		</emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
 	</animation>
 
 	<animation> 
@@ -1828,6 +1833,9 @@
 			<green>0.34</green>
 			<blue>0.18</blue>
 		</emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
 	</animation>
 
 	<animation> 
@@ -1839,6 +1847,9 @@
 			<green>0.18</green>
 			<blue>0.09</blue>
 		</emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
 	</animation>
 
 	<animation> 
@@ -1850,6 +1861,9 @@
 			<green>0.045</green>
 			<blue>0.022</blue>
 		</emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
 	</animation>
 
 	<animation>
