@@ -968,6 +968,9 @@ properties' values.
       <blue>0.10</blue>
       <factor-prop>/controls/lighting/panel-norm</factor-prop>
     </emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
   </animation>
   
   <animation>
@@ -980,6 +983,9 @@ properties' values.
       <!--<factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>-->
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
   </animation>
 
   <!-- Label text (needs ajustment) -->
