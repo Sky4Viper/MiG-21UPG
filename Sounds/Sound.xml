@@ -38,6 +38,7 @@
       <path>Aircraft/MiG-21UPG/Sounds/Samples/mig21startup.wav</path>
       <condition>
         <and>
+            <property>/controls/engines/engine[0]/starter</property>
             <greater-than>  
             <property>/engines/engine[0]/rpm</property>
             <value>0.5</value>
