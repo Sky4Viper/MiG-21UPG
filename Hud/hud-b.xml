@@ -4,6 +4,7 @@
 
   <enable3d>true</enable3d>
 
+
   <tape>
     <name>Gyrocompass</name>
     <x>-25</x>
@@ -17,6 +18,9 @@
       <max>85</max>
       <min>0</min>
     </input>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
     <display-span>3</display-span>
     <option>top</option>
     <major-divisions>1</major-divisions>
@@ -43,6 +47,9 @@
     <width>1</width>
     <height>1</height>
     <format>^</format>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
   </label>
 
   <label>
@@ -55,6 +62,9 @@
       <!--<property>/orientation/heading-deg</property>-->
       <property>orientation/heading-magnetic-deg</property>
     </input>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
     <format>%4.0f</format>
     <halign>center</halign>
     <box>true</box>
@@ -69,6 +79,9 @@
     <input>
       <property>/velocities/airspeed-kt</property>
     </input>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
     <format>%4.0f</format>
     <halign>left</halign>
     <box>true</box>
@@ -84,6 +97,9 @@
     <input>
       <property>/position/altitude-ft</property>
     </input>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
     <format>%4.0f</format>
     <halign>right</halign>
     <box>true</box>
@@ -100,6 +116,7 @@
       <property>/autopilot/settings/target-altitude-ft</property>
     </input>
     <condition>
+        <property>/controls/power/battery</property>
       <equals>
         <property>/autopilot/locks/altitude</property>
         <value>altitude-hold</value>
@@ -121,6 +138,7 @@
       <property>/autopilot/settings/target-agl-ft</property>
     </input>
     <condition>
+      <property>/controls/power/battery</property>
       <equals>
         <property>/autopilot/locks/altitude</property>
         <value>agl-hold</value>
@@ -142,6 +160,7 @@
       <property>/autopilot/settings/target-speed-kt</property>
     </input>
     <condition>
+      <property>/controls/power/battery</property>
       <equals>
         <property>/autopilot/locks/speed</property>
         <value>speed-with-throttle</value>
@@ -186,6 +205,7 @@
     <enable-waypoint-marker>0</enable-waypoint-marker>
 
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <equals>
           <property>controls/hud/hudmode</property>
@@ -236,6 +256,7 @@
     <enable-nadir>true</enable-nadir>
 
     <condition>
+      <property>/controls/power/battery</property>
       <less-than>
         <property>controls/hud/hudmode</property>
         <value>3</value>
@@ -257,6 +278,7 @@
       <min>-10</min>
     </input>
     <condition>
+      <property>/controls/power/battery</property>
       <greater-than>
         <property>autopilot/internal/vert-speed-fpm</property>
         <value>0</value>
@@ -281,6 +303,7 @@
       <min>-10</min>
     </input>
     <condition>
+      <property>/controls/power/battery</property>
       <less-than>
         <property>autopilot/internal/vert-speed-fpm</property>
         <value>0</value>
@@ -325,6 +348,7 @@
     </input>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>controls/power/radioalt</property>
@@ -392,6 +416,7 @@
         <pointer-type>fixed</pointer-type>
 
       <condition>
+        <property>/controls/power/battery</property>
         <equals>
           <property>controls/hud/hudmode</property>
           <value>4</value>
@@ -430,6 +455,7 @@
     <pointer-type>fixed</pointer-type>
 
     <condition>
+      <property>/controls/power/battery</property>
       <equals>
         <property>controls/hud/hudmode</property>
         <value>4</value>
@@ -469,6 +495,7 @@
     <option>left</option>
 
     <condition>
+      <property>/controls/power/battery</property>
       <not-equals>
         <property>controls/hud/hudmode</property>
         <value>3</value>
@@ -489,6 +516,7 @@
         <halign>left</halign>
       
       <condition>
+        <property>/controls/power/battery</property>
         <not-equals>
           <property>controls/hud/hudmode</property>
           <value>3</value>
@@ -512,6 +540,7 @@
     <halign>left</halign>
 
     <condition>
+      <property>/controls/power/battery</property>
       <not-equals>
         <property>controls/hud/hudmode</property>
         <value>3</value>
@@ -550,6 +579,7 @@
     </input>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <property>/instrumentation/gps/wp/wp[1]/valid</property>
         <equals>
@@ -577,6 +607,7 @@
     </input>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <property>/instrumentation/gps/wp/wp[1]/valid</property>
         <equals>
@@ -604,6 +635,7 @@
     <box>false</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <not-equals>
           <property>sim/weight[0]/selected</property>
@@ -636,6 +668,7 @@
     <box>false</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <not-equals>
           <property>sim/weight[1]/selected</property>
@@ -700,6 +733,7 @@
     <box>false</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <not-equals>
           <property>sim/weight[6]/selected</property>
@@ -732,6 +766,7 @@
     <box>false</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <not-equals>
           <property>sim/weight[7]/selected</property>
@@ -764,6 +799,7 @@
     <box>true</box>
 
       <condition>
+        <property>/controls/power/battery</property>
         <or>
           <and>
             <equals>
@@ -829,6 +865,7 @@
     <blinking>
       <interval>0.5</interval>
       <condition>
+        <property>/controls/power/battery</property>
         <or>
           <and>
             <equals>
@@ -870,6 +907,7 @@
     <box>true</box>
 
     <condition>
+      <property>/controls/power/battery</property>
         <or>
           <and>
             <equals>
@@ -938,6 +976,7 @@
         <property>controls/armament/masterarm</property>
       </condition>-->
       <condition>
+        <property>/controls/power/battery</property>
         <or>
           <and>
             <equals>
@@ -1007,6 +1046,7 @@
     <box>true</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <and>
           <equals>
@@ -1075,6 +1115,7 @@
         <property>controls/armament/masterarm</property>
       </condition>-->
       <condition>
+        <property>/controls/power/battery</property>
         <or>
           <and>
             <equals>
@@ -1116,6 +1157,7 @@
     <box>true</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <and>
           <equals>
@@ -1181,6 +1223,7 @@
     <blinking>
       <interval>0.5</interval>
       <condition>
+        <property>/controls/power/battery</property>
         <or>
           <and>
             <equals>
@@ -1220,6 +1263,7 @@
   <aiming-reticle>
     <name>Missile Sight</name>
     <condition>
+      <property>/controls/power/battery</property>
         <and>
           <equals>
             <property>/sim/current-view/name</property>
@@ -1264,6 +1308,7 @@
     <name>Bomb Sight</name>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>/sim/current-view/name</property>
@@ -1348,6 +1393,7 @@
     <name>Gun Sight</name>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>/sim/current-view/name</property>
@@ -1385,6 +1431,7 @@
     <name>Rocket Sight</name>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>/sim/current-view/name</property>
@@ -1518,6 +1565,7 @@
     <maxBankAngle>90.0</maxBankAngle>
     
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>controls/hud/hudmode</property>
@@ -1576,6 +1624,7 @@
       <min>0</min>
     </input>
     <condition>
+      <property>/controls/power/battery</property>
         <equals>
           <property>controls/hud/hudmode</property>
           <value>3</value>
@@ -1597,6 +1646,7 @@
     <box>false</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <equals>
         <property>controls/hud/hudmode</property>
         <value>3</value>
@@ -1616,6 +1666,7 @@
     <box>false</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <equals>
         <property>controls/hud/hudmode</property>
         <value>3</value>
@@ -1636,6 +1687,7 @@
     <box>false</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <equals>
         <property>controls/hud/hudmode</property>
         <value>1</value>
@@ -1654,6 +1706,7 @@
     <box>false</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <or>
           <equals>
@@ -1689,6 +1742,7 @@
     <box>false</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>controls/armament/selectedweapon</property>
@@ -1735,6 +1789,7 @@
     <box>false</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>controls/armament/selectedweapon</property>
@@ -1773,6 +1828,7 @@
     <box>false</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>controls/armament/selectedweapon</property>
@@ -1811,6 +1867,7 @@
     <box>false</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>controls/armament/selectedweapon</property>
@@ -1845,6 +1902,7 @@
     <box>false</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>controls/armament/selectedweapon</property>
@@ -1879,6 +1937,7 @@
     <box>false</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>controls/armament/selectedweapon</property>
@@ -1913,6 +1972,7 @@
     <box>false</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>controls/armament/selectedweapon</property>
@@ -1953,6 +2013,7 @@
     <box>true</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>controls/armament/selectedweapon</property>
@@ -1985,6 +2046,7 @@
     <box>true</box>
 
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>controls/armament/selectedweapon</property>
