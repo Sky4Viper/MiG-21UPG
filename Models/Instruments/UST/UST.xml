@@ -21,6 +21,9 @@
     <blue>0.8</blue>
    <factor-prop>controls/lighting/instruments-norm</factor-prop>
   </emission>
+   <condition>
+     <property>/controls/power/battery</property>
+   </condition>
  </animation>
 
  <animation>
