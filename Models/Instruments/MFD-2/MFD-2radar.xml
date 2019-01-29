@@ -13,6 +13,9 @@
       <blue>1</blue>
       <factor>0.8</factor>
     </emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
   </animation>
   
   <animation>
@@ -47,6 +50,9 @@
       <blue>1</blue>
       <factor>1</factor>
     </emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
   </animation>
   
 	<animation>

@@ -13,6 +13,9 @@
       <!--<factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>-->
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
   </animation>
 
   <animation>
@@ -25,6 +28,8 @@
 		<name>radar</name>
 		<path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/MFD-1radar.xml</path>
     <condition>
+      <property>/controls/power/battery</property>
+      <property>/controls/power/gyro1</property>
       <equals>
         <property>controls/hud/hudmode</property>
         <value>3</value>
@@ -42,6 +47,8 @@
     <name>terrain map</name>
 		<path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/MFD-2terrain.xml</path>
     <condition>
+      <property>/controls/power/battery</property>
+      <property>/controls/power/gyro1</property>
       <equals>
         <property>controls/hud/hudmode</property>
         <value>2</value>
@@ -59,6 +66,8 @@
     <name>navigation map</name>
     <path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/MFD-3navmap.xml</path>
     <condition>
+      <property>/controls/power/battery</property>
+      <property>/controls/power/gyro1</property>
       <equals>
         <property>controls/hud/hudmode</property>
         <value>0</value>
@@ -147,6 +156,26 @@
       </binding>
     </action>
   </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>mfd-bt-13</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>autopilot/settings/heading-bug-deg</property>
+        <value>0</value>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
 
   <animation>
     <type>pick</type>

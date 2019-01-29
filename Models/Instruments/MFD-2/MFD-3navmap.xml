@@ -11,6 +11,7 @@
 <type>select</type>
 <object-name>IPV.ekran</object-name>
   <condition>
+    <property>/controls/power/battery</property>
     <equals>
       <property>controls/hud/hudmode</property>
       <value>0</value>
