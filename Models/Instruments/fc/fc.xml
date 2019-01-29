@@ -10,18 +10,15 @@
   <object-name>button1</object-name>
   <object-name>button2</object-name>
   <object-name>button3</object-name>
-  <!--<emission>
-   <red>  0.8</red>
-   <green>0.8</green>
-   <blue> 0.8</blue>
-   <factor-prop>mig29/systems/cockpitlighting/panel-norm</factor-prop>
-  </emission>-->
    <emission>
      <red>0.2</red>
      <green>0.2</green>
      <blue>0.2</blue>
      <factor-prop>controls/lighting/instruments-norm</factor-prop>
    </emission>
+   <condition>
+     <property>/controls/power/battery</property>
+   </condition>
  </animation>
 
     <animation> 
