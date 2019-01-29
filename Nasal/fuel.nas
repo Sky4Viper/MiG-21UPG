@@ -63,7 +63,7 @@ var fuelTanks = func {
 		if(levelIntCentr0 == nil) { levelIntCentr0 = 0; }
 	var wingdroptanks = getprop("sim/weight[0]/weight-lb") + getprop("sim/weight[7]/weight-lb");
 	var centerdroptank = getprop("sim/weight[4]/weight-lb");
-	var fuelPump0 = getprop("controls/power/pump");
+	var fuelPump0 = getprop("controls/power/disppump");
 	var fuelPump1 = getprop("controls/power/fuelpump1");
 	var fuelPump3 = getprop("controls/power/fuelpump3");
 		if (getprop("sim/freeze/fuel")) { return registerTimer(fuelTanks); }
