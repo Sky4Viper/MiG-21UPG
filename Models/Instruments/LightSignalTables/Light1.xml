@@ -46,12 +46,16 @@
       <blue>0</blue>
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
   </animation>
 
   <animation>
     <type>select</type>
     <object-name>light_on_1</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>sim/weight[0]/selected</property>
@@ -69,6 +73,7 @@
     <type>select</type>
     <object-name>light_on_2</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>sim/weight[1]/selected</property>
@@ -86,6 +91,7 @@
     <type>select</type>
     <object-name>light_on_3</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>sim/weight[6]/selected</property>
@@ -103,6 +109,7 @@
     <type>select</type>
     <object-name>light_on_4</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>sim/weight[7]/selected</property>
@@ -120,6 +127,7 @@
     <type>select</type>
     <object-name>light_on_5</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>sim/weight[0]/selected</property>
@@ -145,6 +153,7 @@
     <type>select</type>
     <object-name>light_on_6</object-name>
     <condition>
+      <property>/controls/power/battery</property>
         <not-equals>
           <property>sim/weight[1]/selected</property>
           <value>none</value>
@@ -156,6 +165,7 @@
     <type>select</type>
     <object-name>light_on_7</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <not-equals>
         <property>sim/weight[6]/selected</property>
         <value>none</value>
@@ -167,6 +177,7 @@
     <type>select</type>
     <object-name>light_on_9</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <equals>
           <property>sim/weight[4]/selected</property>
@@ -184,6 +195,7 @@
     <type>select</type>
     <object-name>light_on_10</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <not-equals>
         <property>sim/weight[0]/selected</property>
         <value>none</value>
@@ -195,6 +207,7 @@
     <type>select</type>
     <object-name>light_on_11</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <not-equals>
         <property>sim/weight[7]/selected</property>
         <value>none</value>
@@ -206,6 +219,7 @@
     <type>select</type>
     <object-name>light_on_8</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <equals>
         <property>sim/weight[2]/selected</property>
         <value>ECM pod left</value>
@@ -217,6 +231,7 @@
     <type>select</type>
     <object-name>light_on_12</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <equals>
         <property>sim/weight[5]/selected</property>
         <value>ECM pod right</value>

@@ -13,6 +13,9 @@
       <blue>0</blue>
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
   </animation>
 
   <animation>
@@ -26,12 +29,16 @@
       <green>1.6</green>
       <blue>0</blue>
     </emission>
+      <condition>
+      <property>/controls/power/battery</property>
+    </condition>
   </animation>
 
   <animation>
     <type>select</type>
     <object-name>light1_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <and>
           <property>instrumentation/nav/dme-in-range</property>
@@ -49,6 +56,7 @@
     <type>select</type>
     <object-name>light2_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest2</property>
         <equals>
@@ -66,6 +74,7 @@
     <type>select</type>
     <object-name>light3_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest2</property>
         <less-than>
@@ -80,6 +89,7 @@
     <type>select</type>
     <object-name>light4_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest2</property>
         <and>

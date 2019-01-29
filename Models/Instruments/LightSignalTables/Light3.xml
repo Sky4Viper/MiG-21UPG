@@ -46,6 +46,9 @@
       <green>1.6</green>
       <blue>0</blue>
     </emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
   </animation>
   
     <animation>
@@ -62,6 +65,9 @@
       <blue>0</blue>
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
+      <condition>
+        <property>/controls/power/battery</property>
+      </condition>
   </animation>
 
   <animation>
@@ -74,12 +80,16 @@
       <blue>0</blue>
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
   </animation>
 
   <animation>
     <type>select</type>
     <object-name>light_5_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
         <property>/controls/engines/engine[0]/starter</property>
@@ -91,6 +101,7 @@
     <type>select</type>
     <object-name>light_6_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
         <less-than>
@@ -105,6 +116,7 @@
     <type>select</type>
     <object-name>light_3_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
         <and>
@@ -125,6 +137,7 @@
     <type>select</type>
     <object-name>light_2_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
         <less-than>
@@ -139,6 +152,7 @@
     <type>select</type>
     <object-name>light_4_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
         <less-than>
@@ -153,6 +167,7 @@
     <type>select</type>
     <object-name>light_1_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
         <and>
@@ -181,6 +196,7 @@
     <type>select</type>
     <object-name>light_7_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
         <property>engines/engine/afterburner</property>
@@ -192,6 +208,7 @@
     <type>select</type>
     <object-name>light_8_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
         <and>
@@ -209,6 +226,7 @@
     <type>select</type>
     <object-name>light_13_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
         <less-than>
@@ -223,6 +241,7 @@
     <type>select</type>
     <object-name>light_14_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
         <less-than>
@@ -237,6 +256,7 @@
     <type>select</type>
     <object-name>light_9_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
         <less-than>
@@ -251,6 +271,7 @@
     <type>select</type>
     <object-name>light_10_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
         <less-than>
@@ -265,6 +286,7 @@
     <type>select</type>
     <object-name>light_11_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
         <equals>
@@ -279,6 +301,7 @@
     <type>select</type>
     <object-name>light_12_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
         <greater-than>
@@ -296,6 +319,7 @@
     <object-name>light_17_on</object-name>
     <object-name>light_18_on</object-name>
     <condition>
+      <property>/controls/power/battery</property>
       <and>
         <property>mig21/controls/buttons/lightstest3</property>
         <greater-than>
