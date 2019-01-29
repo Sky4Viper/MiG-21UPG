@@ -27,6 +27,8 @@
       <splash-texture>Aircraft/MiG-21UPG/Splash3.png</splash-texture>
       <splash-texture>Aircraft/MiG-21UPG/Splash4.png</splash-texture>
 		</startup>
+
+    <checklists include="Docs/checklists-bison.xml"/>
 	
 		<model>
 			<path>Aircraft/MiG-21UPG/Models/MiG-21Bison.xml</path>
