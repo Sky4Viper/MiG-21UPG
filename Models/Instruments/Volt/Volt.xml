@@ -13,12 +13,21 @@
 		<object-name>A.001</object-name>
 		<object-name>A.002</object-name>
 		<object-name>A.003</object-name>
-        <emission>
+        <!--<emission>
           <red>1.1</red>
           <green>0.3</green>
           <blue>0.1</blue>
             <factor-prop>controls/lighting/instruments-norm</factor-prop>
-        </emission> 
+        </emission>-->
+    <emission>
+          <factor-prop>controls/lighting/instruments-norm</factor-prop>
+          <red>0.8</red>
+          <green>0.3</green>
+          <blue>0.1</blue>
+     </emission>
+     <condition>
+          <property>/controls/power/battery</property>
+     </condition>
     </animation>
 
   <animation>
