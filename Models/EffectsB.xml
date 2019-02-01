@@ -25,10 +25,10 @@
 			<heading-deg>-45</heading-deg>
 		</offsets>
 	</model>
-	
-	<model>
+
+<model>
 		<name>sonicboom</name>
-		<path>Aircraft/MiG-21UPG/Models/Effects/Boom/fx.xml</path>
+		<path>Aircraft/MiG-21UPG/Models/Effects/Boom/transsonic-deltawing-vapor-cone.xml</path>
 		<offsets>
 			<x-m>1</x-m>
 			<y-m>0</y-m>
