@@ -84,15 +84,15 @@
 		<power>100</power>
 	</animation>
 	
-	<!--<model>
-		<name>flare-trail</name>
-		<path>Aircraft/MiG-21UPG/Models/Effects/Flare/Flare-Trail.xml</path>
+	<model>
+		<name>flare-sparks</name>
+		<path>Aircraft/MiG-21UPG/Models/Effects/Flare/Flare-Sparks.xml</path>
 		<offsets>
 			<x-m>0.0</x-m>
 			<y-m>0.0</y-m>
 			<z-m>0.0</z-m>
 		</offsets>
-	</model>-->
+	</model>
 	
 	<model>
 		<name>flare-smoke</name>

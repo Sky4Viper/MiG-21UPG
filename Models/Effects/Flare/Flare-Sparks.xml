@@ -4,8 +4,8 @@
 
 	<particlesystem>
 	
-		<name>flare-smoke</name>
-		<texture>Puff.png</texture>
+		<name>flare-sparks</name>
+		<texture>Sparks.png</texture>
     <emissive>true</emissive>
     <lighting>false</lighting>
 		
@@ -49,7 +49,7 @@
 		
 		<counter>
 			<particles-per-sec>
-			<value>20</value>
+			<value>10</value>
 			<spread>0</spread>
 			</particles-per-sec>
 		</counter>
@@ -61,46 +61,46 @@
       <start>
         <color>
           <red>
-            <value>0.1</value>
+            <value>0.3</value>
           </red>
           <green>
-            <value>0.1</value>
+            <value>0.2</value>
           </green>
           <blue>
-            <value>0.1</value>
+            <value>0.0</value>
           </blue>
           <alpha>
-            <value>0.3</value>
+            <value>0.5</value>
           </alpha>
         </color>
         <size>
-          <value>0.2</value>
+          <value>0.8</value>
         </size>
       </start>
-			
-			<end>
-				<color>
-				<red>
-				<value>1</value>
-				</red>
-				<green>
-				<value>1</value>
-				</green>
-				<blue>
-				<value>1</value>
-				</blue>
-				<alpha>
-				<value>1</value>
-				</alpha>
-				</color>
-				<size>
-				<value>3</value>
-				</size>
-			</end>
-			
-			<life-sec>
-			<value>2.5</value>
-			</life-sec>
+      
+      <end>
+        <color>
+          <red>
+            <value>0.25</value>
+          </red>
+          <green>
+            <value>0.2</value>
+          </green>
+          <blue>
+            <value>0.0</value>
+          </blue>
+          <alpha>
+            <value>0.2</value>
+          </alpha>
+        </color>
+        <size>
+          <value>0.3</value>
+        </size>
+      </end>
+
+      <life-sec>
+        <value>1</value>
+      </life-sec>
 			
 			<mass-kg>0.1</mass-kg>
 			<radius-m>0.15</radius-m>
