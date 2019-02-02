@@ -368,10 +368,21 @@
     <object-name>APU-73-R</object-name>
     <object-name>APU-60-L</object-name>
     <object-name>APU-60-R</object-name>
+    <object-name>tank</object-name>
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>Aircraft/MiG-21UPG/Models/Liveries/Default.dds</texture>
   </animation>
+  
+  <!--<animation>
+    <type>material</type>
+    
+    <object-name>tank</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>Aircraft/MiG-21UPG/Models/Liveries/Tank21-93.png</texture>
+  </animation>-->
 	
 	<!-- Shaders -->
 
@@ -441,6 +452,7 @@
     <object-name>APU-73-R</object-name>
     <object-name>APU-60-L</object-name>
     <object-name>APU-60-R</object-name>
+    <object-name>tank</object-name>
   </effect>
 	
     <!-- Parts invisible from internally -->
@@ -553,15 +565,6 @@
 		 </axis>
 	 </animation>
 
-  <!--<model>
-    <name>ext-power</name>
-    <path>Aircraft/MiG-21UPG/Models/EXT-Power/volvo/volvo.xml</path>
-    <offsets>
-      <x-m>-2.8257</x-m>
-      <y-m>9.38872</y-m>
-      <z-m>-1.38246</z-m>
-    </offsets>
-  </model>-->
 
   <model>
     <name>ground-equipment</name>
@@ -572,61 +575,6 @@
       <z-m>0</z-m>
     </offsets>
   </model>
-
-  <!--<animation>
-    <type>translate</type>
-    <object-name>ext-power</object-name>
-    <property>fdm/jsbsim/systems/electrical/ext-power-z-m</property>
-    <factor>1</factor>
-    <axis>
-      <z>1</z>
-    </axis>
-    <center>
-      <x-m>0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0</z-m>
-    </center>
-  </animation>-->
-
-  <!--<animation>
-  <type>select</type>
-  <object-name>ext-power</object-name>
-  <condition>
-    <property>controls/power/auxinverter</property>
-  </condition>
- </animation>-->
-
-  <!--<animation>
-    <type>scale</type>
-    <object-name>ext-power</object-name>
-    <property>fdm/jsbsim/systems/electrical/external/available</property>
-    <interpolation>
-      <entry>
-        <ind> 0.00 </ind>
-        <dep> 0.00 </dep>
-      </entry>
-      <entry>
-        <ind> 0.01 </ind>
-        <dep> 1.00 </dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>  0 </x-m>
-      <y-m>  0 </y-m>
-      <z-m>  0 </z-m>
-    </center>
-    <x-min>0.0</x-min>
-    <y-min>0.0</y-min>
-    <z-min>0.0</z-min>
-    <x-max>1.0</x-max>
-    <y-max>1.0</y-max>
-    <z-max>1.0</z-max>
-    <axis>
-      <x>1.0</x>
-      <y>1.0</y>
-      <z>1.0</z>
-    </axis>
-  </animation>-->
 	 
 	<animation>
 		 <type>select</type>
