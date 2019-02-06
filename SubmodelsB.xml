@@ -13,9 +13,9 @@
     <weight>0.3968</weight>
     <eda>0.006763</eda>
     <fuse-range>0</fuse-range>
-    <life>8.0</life>
+    <life>15.0</life>
     <trigger>/controls/armament/trigger-GSh-23</trigger>
-    <expiry>true</expiry>
+    <!--<expiry>true</expiry>-->
     <repeat>true</repeat>
     <count>-1</count>
     <wind>false</wind>
@@ -38,9 +38,9 @@
     <weight>0.3968</weight>
     <eda>0.006763</eda>
     <fuse-range>0</fuse-range>
-    <life>8.0</life>
+    <life>15.0</life>
     <trigger>/controls/armament/trigger-GSh-23</trigger>
-    <expiry>true</expiry>
+    <!--<expiry>true</expiry>-->
     <repeat>true</repeat>
     <count>-1</count>
     <wind>false</wind>
