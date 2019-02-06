@@ -6,7 +6,7 @@
     <ambient-correction type="float">0.00</ambient-correction>
     <normalmap-enabled type="int">1</normalmap-enabled>
 	<normalmap-dds type="int">0</normalmap-dds>
-	<lightmap-enabled type="int">1</lightmap-enabled>
+	<lightmap-enabled type="int">0</lightmap-enabled>
 	
 	<lightmap-factor type="float" n="0"><use>sim/multiplay/generic/int[4]</use></lightmap-factor>
 	<lightmap-color type="vec3d" n="0"> 1.0 0.0 0.0 </lightmap-color>
@@ -33,7 +33,7 @@
     <dirt-color type="vec3d">0.0 0.0 0.0</dirt-color>
 	
   	<texture n="2">
-      <image>Aircraft/MiG-21UPG/Models/Effects/Fx/Bumpmap11.dds</image>
+      <image>Aircraft/MiG-21UPG/Models/Effects/Fx/Bumpmap11.png</image>
       <filter>linear</filter><!-- trilinear linear linear-mipmap-linear linear-mipmap-nearest -->
       <wrap-s>repeat</wrap-s>
       <wrap-t>repeat</wrap-t>
