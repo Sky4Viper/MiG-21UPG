@@ -8,7 +8,7 @@
     
 		<description>Mikoyan-Gurevich MiG-21 BISON (YASIM)</description>
 		<author>Petar Jedvaj, David Culp, Raptor, Stuart Cassie, Gary Brown, Brendan Black and Tomaskom, Sergei "Skydive" Solyshko</author>
-		<status>2.1.121117</status>
+		<status>2.1.190206</status>
 		<flight-model>yasim</flight-model>
 		<aero>MiG-21Bison-yasim</aero><!-- remove this line for FG versions earlier than 3.2 -->
 
@@ -27,6 +27,66 @@
       <splash-texture>Aircraft/MiG-21UPG/Splash3.png</splash-texture>
       <splash-texture>Aircraft/MiG-21UPG/Splash4.png</splash-texture>
 		</startup>
+
+    <gui>
+      <style>
+        <colors>
+          <splash-font>
+            <red>1.0</red>
+            <green>1.00</green>
+            <blue>1.00</blue>
+          </splash-font>
+          <splash-screen>
+            <red>0.9</red>
+            <green>0.2</green>
+            <blue>0.15</blue>
+          </splash-screen>
+        </colors>
+      </style>
+    </gui>
+
+    <previews>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>gui/previewSplashes/upg1.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>gui/previewSplashes/upg2.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>gui/previewSplashes/upg3.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>gui/previewSplashes/upg4.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>gui/previewSplashes/upg5.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>gui/previewSplashes/upg6.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>gui/previewSplashes/upg7.png</path>
+      </preview>
+      <preview>
+        <type>panel</type>
+        <splash type="bool">false</splash>
+        <path>gui/previewSplashes/upg2.png</path>
+      </preview>
+    </previews>
 
     <checklists include="Docs/checklists-bison.xml"/>
 	
@@ -124,6 +184,38 @@
         <default-field-of-view-deg type="double">75</default-field-of-view-deg>
       </config>
     </view>
+
+    <!--<rendering>
+      <redout>
+        <parameters>
+          <blackout-onset-g type="double">4.5</blackout-onset-g>
+          <blackout-complete-g type="double">7.0</blackout-complete-g>
+          <redout-onset-g type="double">-2.25</redout-onset-g>
+          <redout-complete-g type="double">-3.5</redout-complete-g>
+        </parameters>
+      </redout>
+    </rendering>-->
+
+    <rendering>
+      <redout>
+        <enabled type="bool" userarchive="y">true</enabled>
+        <parameters>
+          <blackout-onset-g type="double">3.75</blackout-onset-g>
+          <blackout-complete-g type="double">7.5</blackout-complete-g>
+          <onset-blackout-sec type="double">270</onset-blackout-sec>
+          <fast-blackout-sec type="double">8</fast-blackout-sec>
+          <redout-onset-g type="double">-1</redout-onset-g>
+          <redout-complete-g type="double">-3</redout-complete-g>
+          <onset-redout-sec type="double">45</onset-redout-sec>
+          <fast-redout-sec type="double">7.5</fast-redout-sec>
+          <recover-fast-sec type="double">7</recover-fast-sec>
+          <recover-slow-sec type="double">15</recover-slow-sec>
+        </parameters>
+      </redout>
+      <headshake>
+        <enabled type="bool" userarchive="y">true</enabled>
+      </headshake>
+    </rendering>
     
 		<!-- Menu -->
     
@@ -451,6 +543,8 @@
       <po7501 type="bool">false</po7501>
       <po7502 type="bool">false</po7502>
       <batteryheat type="bool">false</batteryheat>
+
+      <g-suit-press type="bool">false</g-suit-press>
 
       <!-- Event sounds -->
       
@@ -1170,6 +1264,30 @@
       <running>false</running>
     </engine>
   </engines>
+
+  <rotors>
+    <main>
+      <rpm alias="/engines/engine/nozzle-pos-norm"/>
+      <blade n="0">
+        <flap-deg type="double">0</flap-deg>
+        <position-deg alias="/gear/gear[0]/rollspeed-ms"/>
+      </blade>
+      <blade n="1">
+        <flap-deg type="double">0</flap-deg>
+        <position-deg alias="/gear/gear[1]/rollspeed-ms"/>
+      </blade>
+      <blade n="2">
+        <flap-deg type="double">0</flap-deg>
+        <position-deg alias="/gear/gear[2]/rollspeed-ms"/>
+      </blade>
+      <blade n="3">
+        <flap-deg type="double" alias="/fdm/jsbsim/systems/armament/cm/flares-mp-value"/>
+        <!-- used for releasing flares -->
+        <position-deg type="double" alias="/fdm/jsbsim/systems/armament/cm/chaff-mp-value"/>
+        <!-- used for releasing chaff  -->
+      </blade>
+    </main>
+  </rotors>
     
 	<!-- Effects -->
     
