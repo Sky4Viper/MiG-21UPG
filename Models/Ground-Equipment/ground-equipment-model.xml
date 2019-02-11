@@ -49,6 +49,7 @@ changelog
     <object-name>ge-flags</object-name>
     <condition>
       <property>sim/model/ground-equipment-e</property>
+      <property>controls/gear/brake-parking</property>
       <property>/gear/gear[2]/wow</property>
       <not>
         <property>/engines/engine/running</property>
@@ -79,6 +80,27 @@ changelog
       </or>
     </condition>
   </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>fuel-truck.pipe</object-name>
+    <condition>
+      <property>sim/model/ground-equipment-f</property>
+      <property>/gear/gear[2]/wow</property>
+      <property>controls/gear/brake-parking</property>
+      <or>
+        <less-than>
+          <property>velocities/groundspeed-kt</property>
+          <value>2</value>
+        </less-than>
+        <equals>
+          <property>engines/engine[0]/stopped</property>
+          <value type="int">1</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+  
   <!--<animation> --><!-- as the object touchs the ground, I had to add a translation --><!--
     <type>translate</type>
     <object-name>ge-chokes</object-name>
@@ -96,6 +118,7 @@ changelog
     <object-name>ge-ladder</object-name>
     <condition>
       <property>sim/model/ground-equipment-s</property>
+      <property>controls/gear/brake-parking</property>
       <property>/gear/gear[2]/wow</property>
       <greater-than>
         <property>sim/model/door-positions/canopy/position-norm</property>
@@ -133,6 +156,7 @@ changelog
     <object-name>ge-apu-cable</object-name>
     <condition>
       <property>sim/model/ground-equipment-p</property>
+      <property>controls/gear/brake-parking</property>
       <property>/gear/gear[2]/wow</property>
       <not>
         <property>/engines/engine/running</property>
@@ -144,11 +168,12 @@ changelog
     </condition>
   </animation>
 
+
   <!-- ~~~~~~~~~~~~~~~~~~ fuel-truck -->
   <animation>
     <type>select</type>
     <object-name>fuel-truck.base</object-name>
-    <object-name>fuel-truck.pipe</object-name>
+    <!--<object-name>fuel-truck.pipe</object-name>-->
     <object-name>fuel-truck.tank</object-name>
     <condition>
       <property>sim/model/ground-equipment-f</property>
