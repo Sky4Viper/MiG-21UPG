@@ -4,7 +4,7 @@
 
 
 <particlesystem>
-  <name>gun-smoke</name>
+  <name>GSh-23-smoke</name>
   <texture>puff.png</texture>
   <emissive>false</emissive>
   <lighting>true</lighting>
@@ -93,7 +93,7 @@
       </size>
     </end>
     <life-sec>
-      <value>2.0</value>
+      <value>1.5</value>
     </life-sec>
     <mass-kg>0.01</mass-kg>
     <radius-m>100</radius-m>

@@ -13,7 +13,7 @@
     <weight>0.3968</weight>
     <eda>0.006763</eda>
     <fuse-range>0</fuse-range>
-    <life>15.0</life>
+    <life>5.0</life>
     <trigger>/controls/armament/trigger-GSh-23</trigger>
     <!--<expiry>true</expiry>-->
     <repeat>true</repeat>
@@ -24,10 +24,9 @@
     <submodel-path>Aircraft/MiG-21UPG/Models/Effects/Gun/Bullet-Submodel.xml</submodel-path>
     <collision-report>sim/ai/aircraft/collision/gun</collision-report>
     <impact-reports>sim/ai/aircraft/impact/bullet</impact-reports>
-    <!--<x-offset> 10.31360 </x-offset>
-    <y-offset>  -1 </y-offset>
-    <z-offset> -0.7718 </z-offset>
-    <yaw-offset>0</yaw-offset>-->
+    <!--<x-offset> 10.25912073 </x-offset>
+    <y-offset> -0.1130577428 </y-offset>
+    <z-offset> -1.5226378 </z-offset>-->
     <pitch-offset>0</pitch-offset>
   </Cannon>
   
@@ -38,7 +37,7 @@
     <weight>0.3968</weight>
     <eda>0.006763</eda>
     <fuse-range>0</fuse-range>
-    <life>15.0</life>
+    <life>5.0</life>
     <trigger>/controls/armament/trigger-GSh-23</trigger>
     <!--<expiry>true</expiry>-->
     <repeat>true</repeat>
@@ -48,15 +47,15 @@
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
     <submodel-path>Aircraft/MiG-21UPG/Models/Stores/Bullet-Submodel.xml</submodel-path>
-    <!--<x-offset> 10.31360 </x-offset>
-    <y-offset>  -1 </y-offset>
-    <z-offset> -0.7718 </z-offset>-->
+    <!--<x-offset> 10.25912073 </x-offset>
+    <y-offset> -0.1130577428 </y-offset>
+    <z-offset> -1.5226378 </z-offset>-->
     <yaw-offset>0.0</yaw-offset>
     <pitch-offset>0</pitch-offset>
   </CannonTracer>
   
   <submodel>
-    <name>GSh-23 bullets</name>
+    <name>GSh-23 bullets R</name>
     <model alias="../../Cannon/model"/>
     <trigger>/controls/armament/trigger-GSh-23</trigger>
     <speed alias="../../Cannon/speed"/>
@@ -74,15 +73,15 @@
     <impact alias="../../Cannon/impact"/>
     <impact-reports alias="../../Cannon/impact-reports"/>
     <submodel-path alias="../../Cannon/submodel-path"/>
-    <x-offset> 10.31360 </x-offset> 
-    <y-offset>  0 </y-offset> 
-    <z-offset> -1.5166 </z-offset> 
+    <x-offset> 10.25912073 </x-offset> 
+    <y-offset>  0.1130577428 </y-offset> 
+    <z-offset> -1.5226378 </z-offset> 
     <yaw-offset>0</yaw-offset>
     <pitch-offset alias="../../Cannon/pitch-offset"/>
   </submodel>
 
   <submodel>
-    <name>GSh-23 tracer</name>
+    <name>GSh-23 tracer R</name>
     <model alias="../../CannonTracer/model"/>
     <trigger>/controls/armament/trigger-GSh-23</trigger>
     <speed alias="../../CannonTracer/speed"/>
@@ -99,9 +98,61 @@
     <collision alias="../../CannonTracer/collision"/>
     <impact alias="../../CannonTracer/impact"/>
     <submodel-path alias="../../CannonTracer/submodel-path"/>
-    <x-offset> 10.31360 </x-offset> 
-    <y-offset>  0 </y-offset> 
-    <z-offset> -1.5166 </z-offset> 
+    <x-offset> 10.25912073 </x-offset>
+    <y-offset>  0.1130577428 </y-offset>
+    <z-offset> -1.5226378 </z-offset> 
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset alias="../../CannonTracer/pitch-offset"/>
+  </submodel>
+
+  <submodel>
+    <name>GSh-23 bullets L</name>
+    <model alias="../../Cannon/model"/>
+    <trigger>/controls/armament/trigger-GSh-23</trigger>
+    <speed alias="../../Cannon/speed"/>
+    <cd alias="../../Cannon/cd"/>
+    <eda alias="../../Cannon/eda"/>
+    <fuse-range alias="../../Cannon/fuse-range"/>
+    <weight alias="../../Cannon/weight"/>
+    <life alias="../../Cannon/life"/>
+    <repeat alias="../../Cannon/repeat"/>
+    <delay>0.017</delay>
+    <count alias="../../Cannon/count"/>
+    <wind alias="../../Cannon/wind"/>
+    <expiry alias="../../Cannon/expiry"/>
+    <collision alias="../../Cannon/collision"/>
+    <impact alias="../../Cannon/impact"/>
+    <impact-reports alias="../../Cannon/impact-reports"/>
+    <submodel-path alias="../../Cannon/submodel-path"/>
+    <x-offset> 10.25912073 </x-offset>
+    <y-offset>  -0.1130577428 </y-offset>
+    <z-offset> -1.5226378 </z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset alias="../../Cannon/pitch-offset"/>
+  </submodel>
+
+  <submodel>
+    <name>GSh-23 tracer L</name>
+    <model alias="../../CannonTracer/model"/>
+    <trigger>/controls/armament/trigger-GSh-23</trigger>
+    <speed alias="../../CannonTracer/speed"/>
+    <cd alias="../../CannonTracer/cd"/>
+    <eda alias="../../CannonTracer/eda"/>
+    <fuse-range alias="../../CannonTracer/fuse-range"/>
+    <weight alias="../../CannonTracer/weight"/>
+    <life alias="../../CannonTracer/life"/>
+    <repeat alias="../../CannonTracer/repeat"/>
+    <delay>0.085</delay>
+    <!-- tracer once every 5 rounds -->
+    <count alias="../../CannonTracer/count"/>
+    <wind alias="../../CannonTracer/wind"/>
+    <expiry alias="../../CannonTracer/expiry"/>
+    <collision alias="../../CannonTracer/collision"/>
+    <impact alias="../../CannonTracer/impact"/>
+    <submodel-path alias="../../CannonTracer/submodel-path"/>
+    <x-offset> 10.25912073 </x-offset>
+    <y-offset>  -0.1130577428 </y-offset>
+    <z-offset> -1.5226378 </z-offset>
     <yaw-offset>0</yaw-offset>
     <pitch-offset alias="../../CannonTracer/pitch-offset"/>
   </submodel>
