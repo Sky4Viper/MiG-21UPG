@@ -84,7 +84,8 @@
 
   <model>
     <name>P3-PTB-490</name>
-    <path>Aircraft/MiG-21UPG/Models/Payload/PTB-490.ac</path>
+    <!--<path>Aircraft/MiG-21UPG/Models/Payload/PTB-490.ac</path>-->
+    <path>Aircraft/MiG-21UPG/Models/Payload/PTB-490.xml</path>
     <offsets>
       <x-m> 1.30121</x-m>
       <y-m>-2.58798</y-m>
@@ -349,7 +350,8 @@
 
 	<model>
 		<name>P8-PTB-490</name>
-		<path>Aircraft/MiG-21UPG/Models/Payload/PTB-490.ac</path>
+		<!--<path>Aircraft/MiG-21UPG/Models/Payload/PTB-490.ac</path>-->
+    <path>Aircraft/MiG-21UPG/Models/Payload/PTB-490.xml</path>
 		<offsets>
 			<x-m>-0.24</x-m>
 			<y-m>0.0</y-m>
@@ -608,7 +610,8 @@
 
   <model>
     <name>P4-PTB-490</name>
-    <path>Aircraft/MiG-21UPG/Models/Payload/PTB-490.ac</path>
+    <!--<path>Aircraft/MiG-21UPG/Models/Payload/PTB-490.ac</path>-->
+    <path>Aircraft/MiG-21UPG/Models/Payload/PTB-490.xml</path>
     <offsets>
       <x-m> 1.30121</x-m>
       <y-m> 2.58798</y-m>

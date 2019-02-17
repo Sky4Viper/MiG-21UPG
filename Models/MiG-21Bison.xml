@@ -328,6 +328,7 @@
     <object-name>SpeedbrakeL</object-name>
     <object-name>SpeedbrakeR</object-name>
     <object-name>Airbrake</object-name>
+    <object-name>Boxes</object-name>
 
     <object-name>WingL</object-name>
     <object-name>WingR</object-name>
@@ -413,6 +414,7 @@
     <object-name>SpeedbrakeL</object-name>
     <object-name>SpeedbrakeR</object-name>
     <object-name>Airbrake</object-name>
+    <object-name>Boxes</object-name>
 
     <object-name>WingL</object-name>
     <object-name>WingR</object-name>
@@ -1736,6 +1738,59 @@
 			<z>-1</z>
 		</axis>
 	</animation>
+
+  <!-- Wheel Spinning-->
+
+  <animation>
+    <type>spin</type>
+    <object-name>WheelN</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor>8.2</factor>
+    <center>
+      <x-m>-4.1809</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-1.13114</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>-1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>WheelL</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor>8.2</factor>
+    <center>
+      <x-m>0.39946</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.98826</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>-1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>WheelR</object-name>
+    <property>gear/gear[2]/rollspeed-ms</property>
+    <factor>8.2</factor>
+    <center>
+      <x-m>0.39946</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.98826</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>-1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
 
   <animation>
     <type>translate</type>

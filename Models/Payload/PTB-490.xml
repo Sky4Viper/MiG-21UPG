@@ -1,0 +1,11 @@
+<PropertyList>
+
+  <path>PTB-490.ac</path>
+
+  <effect>
+    <inherits-from>Aircraft/MiG-21UPG/Models/Effects/Fx/mig-21bison-combined-shader</inherits-from>
+    <object-name>tank</object-name>
+  </effect>
+
+	
+</PropertyList>

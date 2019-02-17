@@ -1,7 +1,7 @@
 AC3Db
-MATERIAL "caseouter" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.163 0.163 0.163 shi 252 trans 0
-MATERIAL "caseinner" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 252 trans 0
-MATERIAL "rackeeeeet.002" rgb 0.783 0.783 0.783 amb 1 1 1 emis 0 0 0 spec 0.826 0.826 0.826 shi 17 trans 0
+MATERIAL "caseinner" rgb 0.90 0.90 0.90  amb 0.90 0.90 0.90  emis 0.00 0.00 0.00  spec 0.10 0.10 0.10  shi  25 trans 0.00
+MATERIAL "caseouter" rgb 1.00 1.00 1.00  amb 1.00 1.00 1.00  emis 0.00 0.00 0.00  spec 0.50 0.50 0.50  shi  25 trans 0.00
+MATERIAL "rockets" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.8 0.8 0.8  shi 4  trans 0
 OBJECT world
 kids 35
 OBJECT poly
@@ -9,7 +9,7 @@ name "Cylinder.003"
 loc 0 0 -0
 data 12
 Cylinder.003
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\ub-32.png"
+texture "ub-32.png"
 texrep 1 1
 crease 30.000001
 numvert 3231
@@ -15905,7 +15905,7 @@ name "midpod"
 loc 0 0 -0
 data 6
 midpod
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\ub-32.png"
+texture "ub-32.png"
 texrep 1 1
 crease 30.000001
 numvert 286
@@ -17797,7 +17797,7 @@ name "s-5-1"
 loc 0 0 -0
 data 5
 s-5-1
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -18434,7 +18434,7 @@ name "s-5-10"
 loc 0 0 -0
 data 6
 s-5-10
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -19071,7 +19071,7 @@ name "s-5-11"
 loc 0 0 -0
 data 6
 s-5-11
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -19708,7 +19708,7 @@ name "s-5-12"
 loc 0 0 -0
 data 6
 s-5-12
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -20345,7 +20345,7 @@ name "s-5-13"
 loc 0 0 -0
 data 6
 s-5-13
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -20982,7 +20982,7 @@ name "s-5-14"
 loc 0 0 -0
 data 6
 s-5-14
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -21619,7 +21619,7 @@ name "s-5-15"
 loc 0 0 -0
 data 6
 s-5-15
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -22256,7 +22256,7 @@ name "s-5-16"
 loc 0 0 -0
 data 6
 s-5-16
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -22893,7 +22893,7 @@ name "s-5-17"
 loc 0 0 -0
 data 6
 s-5-17
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -23530,7 +23530,7 @@ name "s-5-18"
 loc 0 0 -0
 data 6
 s-5-18
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -24167,7 +24167,7 @@ name "s-5-19"
 loc 0 0 -0
 data 6
 s-5-19
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -24804,7 +24804,7 @@ name "s-5-2"
 loc 0 0 -0
 data 5
 s-5-2
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -25441,7 +25441,7 @@ name "s-5-20"
 loc 0 0 -0
 data 6
 s-5-20
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -26078,7 +26078,7 @@ name "s-5-21"
 loc 0 0 -0
 data 6
 s-5-21
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -26715,7 +26715,7 @@ name "s-5-22"
 loc 0 0 -0
 data 6
 s-5-22
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -27352,7 +27352,7 @@ name "s-5-23"
 loc 0 0 -0
 data 6
 s-5-23
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -27989,7 +27989,7 @@ name "s-5-24"
 loc 0 0 -0
 data 6
 s-5-24
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -28626,7 +28626,7 @@ name "s-5-25"
 loc 0 0 -0
 data 6
 s-5-25
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -29263,7 +29263,7 @@ name "s-5-26"
 loc 0 0 -0
 data 6
 s-5-26
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -29900,7 +29900,7 @@ name "s-5-27"
 loc 0 0 -0
 data 6
 s-5-27
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -30537,7 +30537,7 @@ name "s-5-28"
 loc 0 0 -0
 data 6
 s-5-28
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -31174,7 +31174,7 @@ name "s-5-29"
 loc 0 0 -0
 data 6
 s-5-29
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -31811,7 +31811,7 @@ name "s-5-3"
 loc 0 0 -0
 data 5
 s-5-3
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -32448,7 +32448,7 @@ name "s-5-30"
 loc 0 0 -0
 data 6
 s-5-30
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -33085,7 +33085,7 @@ name "s-5-31"
 loc 0 0 -0
 data 6
 s-5-31
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -33722,7 +33722,7 @@ name "s-5-32"
 loc 0 0 -0
 data 6
 s-5-32
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -34359,7 +34359,7 @@ name "s-5-4"
 loc 0 0 -0
 data 5
 s-5-4
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -34996,7 +34996,7 @@ name "s-5-5"
 loc 0 0 -0
 data 5
 s-5-5
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -35633,7 +35633,7 @@ name "s-5-6"
 loc 0 0 -0
 data 5
 s-5-6
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -36270,7 +36270,7 @@ name "s-5-7"
 loc 0 0 -0
 data 5
 s-5-7
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -36907,7 +36907,7 @@ name "s-5-8"
 loc 0 0 -0
 data 5
 s-5-8
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -37544,7 +37544,7 @@ name "s-5-9"
 loc 0 0 -0
 data 5
 s-5-9
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\s-5.png"
+texture "s-5.png"
 texrep 1 1
 crease 64.200001
 numvert 94
@@ -38181,7 +38181,7 @@ name "tippod"
 loc 0 0 -0
 data 6
 tippod
-texture "..\..\Documents\FlightGear\Aircraft\MiG-21UPG\Models\Payload\UB-32\ub-32.png"
+texture "ub-32.png"
 texrep 1 1
 crease 30.000001
 numvert 1329

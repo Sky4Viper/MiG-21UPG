@@ -2,11 +2,12 @@
 
 	<path>ub-32.ac</path>
 
-  <!--<effect>
+  <effect>
     <inherits-from>Aircraft/MiG-21UPG/Models/Effects/Fx/ub32-shader</inherits-from>
     <object-name>midpod</object-name>
     <object-name>tippod</object-name>
-  </effect>-->
+    <object-name>Cylinder.003</object-name>
+  </effect>
 
   <model>
     <name>S5flameL1</name>

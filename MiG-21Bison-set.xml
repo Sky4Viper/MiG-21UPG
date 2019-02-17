@@ -268,6 +268,29 @@
             </binding>
           </item>
           <item>
+            <label>Ground Equipment Toggle</label>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/model/ground-equipment-e</property>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/model/ground-equipment-g</property>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/model/ground-equipment-s</property>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/model/ground-equipment-p</property>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>sim/model/ground-equipment-f</property>
+            </binding>
+          </item>
+          <item>
             <label>ARC setup</label>
             <name>config</name>
             <binding>
@@ -380,6 +403,7 @@
         <int n="9" alias="/controls/armament/trigger-S-13" />
         <int n="10" alias="/controls/armament/trigger-R-73" />
         <int n="11" alias="/controls/armament/trigger-FAB-250" />
+        <int type="int" n="12"> 1 </int>
 				<float n="0" alias="/surface-positions/left-taileron-pos-norm"/>
 				<float n="1" alias="/surface-positions/right-taileron-pos-norm"/>
 				<float n="2" alias="/surface-positions/left-flap-pos-norm"/>
@@ -1256,6 +1280,29 @@
 				<taxi type="bool">1</taxi>
 			</input>
 		</efis>
+
+    <tcas>
+      <!-- http://wiki.flightgear.org/index.php/TCAS -->
+
+      <serviceable type="bool">true</serviceable>
+      <!-- TCAS ENABLE -->
+
+      <inputs>
+        <mode type="int">3</mode>
+        <!-- 0=off, 1=standby, 2=TA-only, 3=auto(TA/RA) -->
+      </inputs>
+
+      <speaker>
+        <!-- Speaker Configuration -->
+        <max-dist> 2 </max-dist>
+        <!-- Max. distance where speaker is heard -->
+        <reference-dist> 1 </reference-dist>
+        <!-- Distance to pilot -->
+        <volume> 1.0 </volume>
+        <!-- Volume at reference distance -->
+      </speaker>
+
+    </tcas>
         
 	</instrumentation>
 
@@ -1495,7 +1542,7 @@
     </rwr>
 
     <nd>
-      <file>Aircraft/MiG-21UPG/Nasal/ND.nas</file>
+      <file>Aircraft/MiG-21UPG/Nasal/nd.nas</file>
     </nd>
 
     <sau>
