@@ -56,30 +56,43 @@ setprop("/controls/armament/LAMarkerON", 0);
 #	settimer( func { max_launch_range_finder(); }, 1);
 #}
 
+#meters to feet table *by3.281
+#1000m=3280.84ft
+#1500m=4921.26ft
+#2000m=6561.68ft
+#2500m=8202.1ft
+#3000m=9842.52ft
+#3500m=11482.94ft
+#4000m=13123.36ft
+
 setlistener("controls/armament/masterarm", WeaponsHot);
 
 
 var RangeSet = maketimer (0.1, func()
 {
+#GSh-23 gun
 if (getprop("controls/armament/selectedweapon") == 1){
-LArange = 5500;
+LArange = 1800*3.281;
 RangeTest.start();
-#screen.log.write("LA Range 5100", 1, 0.6, 0.1);
+#screen.log.write("LA Range 1800", 1, 0.6, 0.1);
 }
+#Rockets
 if (getprop("controls/armament/selectedweapon") == 2 and (getprop("/sim/weight[1]/payload-int") == 8 or getprop("/sim/weight[6]/payload-int") == 8)){
-LArange = 6500;
+LArange = 3000*3.281;
 RangeTest.start();
-#screen.log.write("LA Range 6500", 1, 0.6, 0.1);
+#screen.log.write("LA Range 3000м", 1, 0.6, 0.1);
 }
+#FAB-250
 if (getprop("controls/armament/selectedweapon") == 2 and (getprop("/sim/weight[1]/payload-int") == 7 or getprop("/sim/weight[6]/payload-int") == 7)){
-LArange = 5100;
+LArange = 1700*3.281;
 RangeTest.start();
-#screen.log.write("LA Range 4800", 1, 0.6, 0.1);
+#screen.log.write("LA Range 1700м", 1, 0.6, 0.1);
 }
+#FAB-500
 if (getprop("controls/armament/selectedweapon") == 2 and (getprop("/sim/weight[1]/payload-int") == 10 or getprop("/sim/weight[6]/payload-int") == 10)){
-LArange = 4900;
+LArange = 1500*3.281;
 RangeTest.start();
-#screen.log.write("LA Range 4900", 1, 0.6, 0.1);
+#screen.log.write("LA Range 1500м", 1, 0.6, 0.1);
 }
 #else{
 #LArange = 5000;

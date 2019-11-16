@@ -13,7 +13,7 @@
   <condition>
     <property>/controls/power/battery</property>
     <equals>
-      <property>controls/hud/hudmode</property>
+      <property>controls/mfd/mfdpage</property>
       <value>0</value>
     </equals>
   </condition>

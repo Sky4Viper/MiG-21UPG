@@ -29,7 +29,7 @@ var nd_display = {};
     'toggle_position':      {path: '/inputs/pos', value:0, type:'BOOL'},
     'toggle_data':          {path: '/inputs/data',value:0, type:'BOOL'},
     'toggle_terrain':       {path: '/inputs/terr',value:0, type:'BOOL'},
-    'toggle_traffic':       {path: '/inputs/tfc',value:0, type:'BOOL'},
+    'toggle_traffic':       {path: '/inputs/tfc',value:1, type:'BOOL'},
     'toggle_centered':      {path: '/inputs/nd-centered',value:0, type:'BOOL'},
     'toggle_lh_vor_adf':    {path: '/inputs/lh-vor-adf',value:0, type:'INT'},
     'toggle_rh_vor_adf':    {path: '/inputs/rh-vor-adf',value:0, type:'INT'},
@@ -75,6 +75,13 @@ var _list = setlistener("sim/signals/fdm-initialized", func() {
     removelistener(_list); # run ONCE
 }); # fdm-initialized listener callback
 
+var event_click_radar = func()
+{
+    var infos_displayed = getprop("instrumentation/my_aircraft/nd/inputs/inputs/tfc") or 0;
+    infos_displayed = (infos_displayed) ? 0 : 1;
+
+    setprop("instrumentation/my_aircraft/nd/inputs/inputs/tfc", infos_displayed);
+}
 
 var showNd = func(pilot='cpt') {
     if(getprop("sim/instrument-options/canvas-popup-enable"))

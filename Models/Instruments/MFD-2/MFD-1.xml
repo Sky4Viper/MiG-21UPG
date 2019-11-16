@@ -27,11 +27,12 @@
 	<model>
 		<name>radar</name>
 		<path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/MFD-1radar.xml</path>
+    <!--<path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/radar-screen.xml</path>-->
     <condition>
       <property>/controls/power/battery</property>
       <property>/controls/power/gyro1</property>
       <equals>
-        <property>controls/hud/hudmode</property>
+        <property>controls/mfd/mfdpage</property>
         <value>3</value>
       </equals>
     </condition>
@@ -50,7 +51,7 @@
       <property>/controls/power/battery</property>
       <property>/controls/power/gyro1</property>
       <equals>
-        <property>controls/hud/hudmode</property>
+        <property>controls/mfd/mfdpage</property>
         <value>2</value>
       </equals>
     </condition>
@@ -69,7 +70,7 @@
       <property>/controls/power/battery</property>
       <property>/controls/power/gyro1</property>
       <equals>
-        <property>controls/hud/hudmode</property>
+        <property>controls/mfd/mfdpage</property>
         <value>0</value>
       </equals>
     </condition>
@@ -156,6 +157,50 @@
       </binding>
     </action>
   </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>mfd-bt-11</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/mfd/mfdpage</property>
+        <step>1</step>
+        <min>0.0</min>
+        <max>5</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>mfd-bt-12</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/mfd/mfdpage</property>
+        <step>-1</step>
+        <min>0.0</min>
+        <max>5</max>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
 
   <animation>
     <type>pick</type>
@@ -165,10 +210,17 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
-        <command>property-assign</command>
-        <property>autopilot/settings/heading-bug-deg</property>
-        <value>0</value>
+        <command>nasal</command>
+        <script>matchheadingbug.setheadingbug();</script>
       </binding>
+      <!--<binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+nd.event_click_radar();
+          ]]>
+        </script>
+      </binding>-->
       <binding>
         <command>nasal</command>
         <script>switchclicksound.click("switch")</script>

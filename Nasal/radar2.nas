@@ -468,7 +468,7 @@ var Target = {
 		} else {
 			obj.RangeLast.setValue(0);
 		}
-		obj.RadarStandby = c.getNode("sim/multiplay/generic/int[6]");
+		obj.RadarStandby = c.getNode("sim/multiplay/generic/int[12]");
 
 		obj.deviation = nil;
 

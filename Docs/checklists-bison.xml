@@ -133,12 +133,12 @@
         </item>
 
         <item>
-            <name>FUEL GAUGE (2 WING DROP TANKS)</name>
+            <name>FUEL GAUGE (2x WING DROP TANKS)</name>
             <value>3750L (6409 LB)</value>
         </item>
 
         <item>
-            <name>FUEL GAUGE (3 490L DROP TANKS)</name>
+            <name>FUEL GAUGE (3x 490L DROP TANKS)</name>
             <value>4200L (7262 LB)</value>
         </item>
 
@@ -426,26 +426,31 @@
     </checklist>
     
     <checklist>
-        <title>Landing</title>  
-        
+        <title>Landing</title>
+
         <item>
-            <name>Flaps</name>
-            <value>SET FOR LANDING</value>  
+          <name>Altitude 1000m</name>
+          <value>IAS 500km/h (270kn), extract landing gear, initial descend 7m/s</value>
+        </item>    
+      
+        <item>
+            <name>Altitude 600m</name>
+            <value>IAS 500km/h (270kn), flaps 25*, allow slow speed drop</value>  
         </item>
         
         <item>
-            <name>Gear lever</name>
-            <value>DOWN</value> 
+            <name>Altitude 300m</name>
+            <value>IAS 380km/h (205 kn), flaps 45*, do not allow IAS below 340km/h (184 kn)</value> 
         </item>
         
         <item>
-            <name>Gear lever</name>
-            <value>NEUTRAL</value>  
+            <name>Altitude 100m</name>
+            <value>IAS 360-340km/h (194-184 kn), on threshold below 340km/h (184 kn)</value>  
         </item>
         
         <item>
-            <name>Landing chute</name>
-            <value>DEPLOY AFTER TOUCHDOWN</value>   
+            <name>Altitude 0m</name>
+            <value>IAS below 320km/h, DEPLOY DRAG CHUTE</value>   
         </item>
     </checklist>
     

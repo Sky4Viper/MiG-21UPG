@@ -364,7 +364,7 @@
       </key>
       <key>
         <name>d</name>
-        <desc>Cycle weapons</desc>
+        <desc>Cycle weapons, hud and mfd</desc>
       </key>
       <key>
         <name>q</name>
@@ -598,6 +598,11 @@
     <hud>
       <hudmode type="double">0</hudmode>
     </hud>
+
+    <mfd>
+      <mfdpage type="double">0</mfdpage>
+      <hdgbugset type="double">0</hdgbugset>
+    </mfd>
  
 		<armament>
       
@@ -1014,6 +1019,14 @@
         <binding>
           <command>property-adjust</command>
           <property>controls/hud/hudmode</property>
+          <step>1</step>
+          <min>0.0</min>
+          <max>5</max>
+          <wrap>true</wrap>
+        </binding>
+        <binding>
+          <command>property-adjust</command>
+          <property>controls/mfd/mfdpage</property>
           <step>1</step>
           <min>0.0</min>
           <max>5</max>
@@ -1441,6 +1454,10 @@
     <switchclicksound>
       <file>Aircraft/MiG-21UPG/Nasal/switchclicksound.nas</file>
     </switchclicksound>
+
+    <matchheadingbug>
+      <file>Aircraft/MiG-21UPG/Nasal/matchheadingbug.nas</file>
+    </matchheadingbug>
 		
 		<fuel>
       <file>Aircraft/MiG-21UPG/Nasal/fuel.nas</file>

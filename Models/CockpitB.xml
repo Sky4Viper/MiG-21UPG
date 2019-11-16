@@ -48,6 +48,20 @@
     </offsets>
   </model>
   
+  
+  <!--AcesII Ejection Seat. Used with Cockpit C-->
+
+<!--<model>
+  <name>AcesII</name>
+  <path>Aircraft/MiG-21UPG/Models/Seat/AcesII/acesII.xml</path>
+  <offsets>
+   <x-m>0.84197</x-m>
+   <y-m>0</y-m>
+   <z-m>0.90374</z-m>
+    <pitch-deg>-9.956</pitch-deg>
+  </offsets>
+ </model>-->
+  
   <!--<model>
 		<name>Seat</name>
 		<path>Aircraft/MiG-21UPG/Models/Seat/Seat.xml</path>
@@ -63,6 +77,43 @@
       <blue>0.1</blue>
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
     </emission>
+  </animation>-->
+
+  <!--<animation>
+    <type>material</type>
+    <object-name>g-pressure-lever</object-name>
+    <emission>
+      <red>0.1</red>
+      <green>0.1</green>
+      <blue>0.1</blue>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+    </emission>
+    <condition>
+      <property>/controls/power/battery</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>g-pressure-lever</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>g-pressure-lever</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>g-suit-press</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
   </animation>-->
 
 

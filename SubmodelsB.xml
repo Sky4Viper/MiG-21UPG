@@ -159,6 +159,8 @@
 	
 	<!-- UB-32-rocket-pods -->
 
+  <!--info on S-5 and S-8 http://militaryrussia.ru/blog/topic-50.html -->
+
   <submodel>
     <name>S-5L1</name>
     <!--<model>Aircraft/MiG-21UPG/Models/Stores/Rocket.xml</model>-->
@@ -184,6 +186,32 @@
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
     <submodel-path>Aircraft/MiG-21UPG/Models/Effects/S-5/Rocket-Submodel.xml</submodel-path>
+  </submodel>
+
+  <submodel>
+    <name>S-5L1-blank</name>
+    <model>Aircraft/MiG-21UPG/Models/Effects/S-5/rocket_blank.xml</model>
+    <trigger>controls/armament/trigger-UB32-1-L</trigger>
+    <speed>2000</speed>
+    <repeat>true</repeat>
+    <delay>0.151</delay>
+    <count>-1</count>
+    <x-offset>10.3773</x-offset>
+    <y-offset>-6.46948</y-offset>
+    <z-offset>-1.46325</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>0</pitch-offset>
+    <no-roll>true</no-roll>
+    <life>0.6</life>
+    <wind>false</wind>
+    <weight>120</weight>
+    <cd>0.075</cd>
+    <eda>0.01051198</eda>
+    <collision>false</collision>
+    <!--<collision-report>sim/ai/aircraft/collision/gun</collision-report>-->
+    <impact>false</impact>
+    <!--<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/S-5/Rocket-Submodel.xml</submodel-path>-->
   </submodel>
 
 	<submodel>
@@ -215,6 +243,34 @@
 	</submodel>
 
   <submodel>
+    <name>S-5L3-blank</name>
+    <model>Aircraft/MiG-21UPG/Models/Effects/S-5/rocket_blank.xml</model>
+    <trigger>controls/armament/trigger-UB32-3-L</trigger>
+    <speed>2000</speed>
+    <repeat>true</repeat>
+    <delay>0.151</delay>
+    <count>-1</count>
+    <x-offset>7.3773</x-offset>
+    <!--<y-offset>-6.46948</y-offset>-->
+    <y-offset>-8.49393</y-offset>
+    <z-offset>-1.46325</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>0</pitch-offset>
+    <no-roll>true</no-roll>
+    <life>0.6</life>
+    <!--the rocket motor on S-8 actually runs for 0.69 sec, on S-5 0.55-0.92 sec, after that inertia-->
+    <wind>false</wind>
+    <weight>120</weight>
+    <cd>0.075</cd>
+    <eda>0.01051198</eda>
+    <collision>false</collision>
+    <!--<collision-report>sim/ai/aircraft/collision/gun</collision-report>-->
+    <impact>false</impact>
+    <!--<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/S-5/Rocket-Submodel.xml</submodel-path>-->
+  </submodel>
+
+  <submodel>
     <name>S-5R2</name>
     <!--<model>Aircraft/MiG-21UPG/Models/Stores/Rocket.xml</model>-->
     <model>Aircraft/MiG-21UPG/Models/Stores/S-5/s-5-sub.xml</model>
@@ -239,6 +295,32 @@
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
     <submodel-path>Aircraft/MiG-21UPG/Models/Effects/S-5/Rocket-Submodel.xml</submodel-path>
+  </submodel>
+
+  <submodel>
+    <name>S-5R2-blank</name>
+    <model>Aircraft/MiG-21UPG/Models/Effects/S-5/rocket_blank.xml</model>
+    <trigger>controls/armament/trigger-UB32-2-R</trigger>
+    <speed>2000</speed>
+    <repeat>true</repeat>
+    <delay>0.151</delay>
+    <count>-1</count>
+    <x-offset>10.3773</x-offset>
+    <y-offset>6.46948</y-offset>
+    <z-offset>-1.46325</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>0</pitch-offset>
+    <no-roll>true</no-roll>
+    <life>0.6</life>
+    <wind>false</wind>
+    <weight>120</weight>
+    <cd>0.075</cd>
+    <eda>0.01051198</eda>
+    <collision>false</collision>
+    <!--<collision-report>sim/ai/aircraft/collision/gun</collision-report>-->
+    <impact>false</impact>
+    <!--<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/S-5/Rocket-Submodel.xml</submodel-path>-->
   </submodel>
 	
 	<submodel>
@@ -267,6 +349,33 @@
 		<impact>true</impact>
 		<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
 		<submodel-path>Aircraft/MiG-21UPG/Models/Effects/S-5/Rocket-Submodel.xml</submodel-path>
+  </submodel>
+
+  <submodel>
+    <name>S-5R4-blank</name>
+    <model>Aircraft/MiG-21UPG/Models/Effects/S-5/rocket_blank.xml</model>
+    <trigger>controls/armament/trigger-UB32-4-R</trigger>
+    <speed>2000</speed>
+    <repeat>true</repeat>
+    <delay>0.151</delay>
+    <count>-1</count>
+    <x-offset>7.3773</x-offset>
+    <!--<y-offset>6.46948</y-offset>-->
+    <y-offset>8.49393</y-offset>
+    <z-offset>-1.46325</z-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>0</pitch-offset>
+    <no-roll>true</no-roll>
+    <life>0.6</life>
+    <wind>false</wind>
+    <weight>120</weight>
+    <cd>0.075</cd>
+    <eda>0.01051198</eda>
+    <collision>false</collision>
+    <!--<collision-report>sim/ai/aircraft/collision/gun</collision-report>-->
+    <impact>false</impact>
+    <!--<impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/MiG-21UPG/Models/Effects/S-5/Rocket-Submodel.xml</submodel-path>-->
   </submodel>
 
   <!--<submodel>
