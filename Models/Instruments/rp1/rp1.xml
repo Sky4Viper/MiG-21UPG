@@ -550,7 +550,7 @@
     <type>rotate</type>
     <object-name>rp_sw20_lgt</object-name>
     <object-name>rp_sw20_light</object-name>
-    <property>controls/lighting/instruments-norm</property>
+    <property>controls/lighting/navlights-switch</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -609,7 +609,7 @@
     <type>rotate</type>
     <object-name>rp_sw20_lgt</object-name>
     <object-name>rp_sw20_light</object-name>
-    <property>controls/lighting/instruments-norm</property>
+    <property>controls/lighting/navlights-switch</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -668,7 +668,7 @@
     <type>rotate</type>
     <object-name>rp_sw20_lgt</object-name>
     <object-name>rp_sw20_light</object-name>
-        <property>controls/lighting/instruments-norm</property>
+        <property>controls/lighting/navlights-switch</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -1860,8 +1860,23 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-assign</command>
-        <property>controls/lighting/instruments-norm</property>
+        <property>controls/lighting/navlights-switch</property>
         <value>0.2</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>lightpack/nav-lights-intensity</property>
+        <value>0</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>lightpack/white-light-intensity</property>
+        <value>0</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/lighting/beacon-switch</property>
+        <value>0</value>
       </binding>
       <binding>
         <command>nasal</command>
@@ -1879,8 +1894,23 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-assign</command>
-        <property>controls/lighting/instruments-norm</property>
+        <property>controls/lighting/navlights-switch</property>
         <value>0.4</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>lightpack/nav-lights-intensity</property>
+        <value>1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>lightpack/white-light-intensity</property>
+        <value>1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/lighting/beacon-switch</property>
+        <value>0</value>
       </binding>
       <binding>
         <command>nasal</command>
@@ -1898,8 +1928,23 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-assign</command>
-        <property>controls/lighting/instruments-norm</property>
+        <property>controls/lighting/navlights-switch</property>
         <value>0.8</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>lightpack/nav-lights-intensity</property>
+        <value>1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>lightpack/white-light-intensity</property>
+        <value>1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/lighting/beacon-switch</property>
+        <value>1</value>
       </binding>
       <binding>
         <command>nasal</command>

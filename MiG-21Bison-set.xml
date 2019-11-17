@@ -603,6 +603,7 @@
     
     <lighting>
       <instruments-norm>0.3</instruments-norm>
+      <navlights-switch>0.3</navlights-switch>
       <beacon-switch type="bool">true</beacon-switch>
     </lighting>
 
