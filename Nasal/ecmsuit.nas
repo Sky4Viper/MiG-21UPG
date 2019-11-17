@@ -60,7 +60,7 @@ var ECM1 = maketimer (4, func()
 {
 setprop("/controls/armament/trigger2", 1);
 #var ecmInterval = 0.2;
-ECMOFF.restart(0.2);
+ECMOFF.restart(0.25);
 #settimer(ECMOFF, 0.2);
 });
 

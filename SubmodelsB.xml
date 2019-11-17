@@ -506,7 +506,7 @@
 		<trigger>controls/armament/trigger2</trigger>
 		<speed>400</speed>
 		<repeat>true</repeat>
-		<delay>0.2</delay>
+		<delay>0.25</delay>
 		<count>-1</count>
     <x-offset>-12.1221</x-offset>
     <y-offset> 4.9067</y-offset>
@@ -528,7 +528,7 @@
 		<trigger>controls/armament/trigger2</trigger>
 		<speed>400</speed>
 		<repeat>true</repeat>
-		<delay>0.2</delay>
+		<delay>0.25</delay>
 		<count>-1</count>
 		<x-offset>-12.1221</x-offset>
 		<y-offset> -4.9067</y-offset>
