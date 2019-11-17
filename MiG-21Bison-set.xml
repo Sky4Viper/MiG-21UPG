@@ -246,6 +246,17 @@
 						</binding>
 					</item>
           <item>
+            <label>Reload flares</label>
+            <binding>
+              <condition>
+                <property>/gear/gear[2]/wow</property>
+              </condition>
+              <command>property-assign</command>
+              <property>controls/armament/ecm-flares</property>
+              <value type="int">120</value>
+            </binding>
+          </item>
+          <item>
             <label>Reload dragchute</label>
             <binding>
               <command>nasal</command>
@@ -695,6 +706,8 @@
       <ecm-on>
         <interval type="bool">false</interval>
       </ecm-on>
+
+      <ecm-flares type="int">120.0</ecm-flares>
       
       <sound>
         <drop type="bool">false</drop>

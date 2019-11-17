@@ -7,6 +7,7 @@ var ecmInterval = 0.1;
 var ecmControl = func{
 	ecmMode = getprop("controls/armament/ecm-prog");
 	ecmON = getprop("controls/armament/ecm-on");
+	ecmFlares = getprop("controls/armament/ecm-flares");
 	if (ecmMode == 0 and ecmON ==1){
 	#screen.log.write("Select ECM program! ", 1, 0.6, 0.1);
 	}
@@ -56,28 +57,55 @@ var ECMOFF = maketimer (ecmInterval, func()
 setprop("/controls/armament/trigger2", 0);
 });
 
-var ECM1 = maketimer (4, func()
+#2x1 flare every 3 seconds
+var ECM1 = maketimer (3, func()
 {
-setprop("/controls/armament/trigger2", 1);
-#var ecmInterval = 0.2;
-ECMOFF.restart(0.25);
-#settimer(ECMOFF, 0.2);
+	if (getprop("/controls/armament/ecm-flares") > 0){
+	setprop("/controls/armament/trigger2", 1);
+    setprop("/controls/armament/ecm-flares", getprop("/controls/armament/ecm-flares") - 2);
+	#screen.log.write("Flares left: 2x" ~ getprop("/controls/armament/ecm-flares"), 1, 0.6, 0.1);
+	ECMOFF.restart(0.25);
+	}
+	else {
+	#screen.log.write("Flares Out", 1, 0.6, 0.1);
+	setprop("/controls/armament/ecm-on", 0);
+	switchclicksound.click("switch");
+	ECM1.stop();
+	}
 });
 
-var ECM2 = maketimer (5, func()
+#2x3 flares every 6 seconds
+var ECM2 = maketimer (6, func()
 {
-setprop("/controls/armament/trigger2", 1);
-#var ecmInterval = 1.0;
-ECMOFF.restart(0.5);
-#settimer(ECMOFF, 1);
+	if (getprop("/controls/armament/ecm-flares") > 0){
+	setprop("/controls/armament/trigger2", 1);
+    setprop("/controls/armament/ecm-flares", getprop("/controls/armament/ecm-flares") - 6);
+	#screen.log.write("Flares left: 2x" ~ getprop("/controls/armament/ecm-flares"), 1, 0.6, 0.1);
+	ECMOFF.restart(0.75);
+	}
+	else {
+	#screen.log.write("Flares Out", 1, 0.6, 0.1);
+	setprop("/controls/armament/ecm-on", 0);
+	switchclicksound.click("switch");
+	ECM2.stop();
+	}
 });
 
-var ECM3 = maketimer (3, func()
+#2x6 flares every 9 seconds
+var ECM3 = maketimer (9, func()
 {
-setprop("/controls/armament/trigger2", 1);
-#var ecmInterval = 2.0;
-ECMOFF.restart(1.5);
-#settimer(ECMOFF, 1.8);
+	if (getprop("/controls/armament/ecm-flares") > 0){
+	setprop("/controls/armament/trigger2", 1);
+    setprop("/controls/armament/ecm-flares", getprop("/controls/armament/ecm-flares") - 12);
+	#screen.log.write("Flares left: 2x" ~ getprop("/controls/armament/ecm-flares"), 1, 0.6, 0.1);
+	ECMOFF.restart(1.5);
+	}
+	else {
+	#screen.log.write("Flares Out", 1, 0.6, 0.1);
+	setprop("/controls/armament/ecm-on", 0);
+	switchclicksound.click("switch");
+	ECM3.stop();
+	}
 });
 
 

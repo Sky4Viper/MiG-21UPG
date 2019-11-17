@@ -139,6 +139,7 @@ var Air2Air2 = func()
 		
 		setprop("/controls/armament/roundsLeft", 200);
 		setprop("/controls/armament/roundsCount", 200);
+		setprop("/controls/armament/ecm-flares", 120);
 
 		screen.log.write("Weapon stores loaded! (AA2)", 1, 0.6, 0.1);
         
@@ -209,6 +210,7 @@ var Air2Air3 = func()
 		
 		setprop("/controls/armament/roundsLeft", 200);
 		setprop("/controls/armament/roundsCount", 200);
+		setprop("/controls/armament/ecm-flares", 120);
 
 		screen.log.write("Weapon stores loaded! (AA3)", 1, 0.6, 0.1);
         
@@ -284,6 +286,7 @@ var Air2Ground1 = func()
 		
 		setprop("/controls/armament/roundsLeft", 200);
 		setprop("/controls/armament/roundsCount", 200);
+		setprop("/controls/armament/ecm-flares", 120);
 		
 		setprop("/controls/armament/rocketsLeft", 32);
 		setprop("/controls/armament/rocketsCount", 32);
@@ -357,6 +360,7 @@ var Air2Ground2 = func()
 		
 		setprop("/controls/armament/roundsLeft", 200);
 		setprop("/controls/armament/roundsCount", 200);
+		setprop("/controls/armament/ecm-flares", 120);
 
 		screen.log.write("Weapon stores loaded! (AG2)", 1, 0.6, 0.1);
         
@@ -500,6 +504,7 @@ var Air2Ground4 = func()
 		
 		setprop("/controls/armament/roundsLeft", 200);
 		setprop("/controls/armament/roundsCount", 200);
+		setprop("/controls/armament/ecm-flares", 120);
 
 		screen.log.write("Weapon stores loaded! (AG4)", 1, 0.6, 0.1);
         
@@ -570,6 +575,7 @@ var Air2Ground5 = func()
 		
 		setprop("/controls/armament/roundsLeft", 200);
 		setprop("/controls/armament/roundsCount", 200);
+		setprop("/controls/armament/ecm-flares", 120);
 
 		screen.log.write("Weapon stores loaded! (AG4)", 1, 0.6, 0.1);
         
@@ -640,6 +646,7 @@ var Air2Ground6 = func()
 		
 		setprop("/controls/armament/roundsLeft", 200);
 		setprop("/controls/armament/roundsCount", 200);
+		setprop("/controls/armament/ecm-flares", 120);
 		
 		setprop("/controls/armament/rocketsLeft", 32);
 		setprop("/controls/armament/rocketsCount", 32);
@@ -713,6 +720,7 @@ var Air2Ground7 = func()
 		
 		setprop("/controls/armament/roundsLeft", 200);
 		setprop("/controls/armament/roundsCount", 200);
+		setprop("/controls/armament/ecm-flares", 120);
 		
 		setprop("/controls/armament/rocketsLeft", 32);
 		setprop("/controls/armament/rocketsCount", 32);
@@ -786,6 +794,7 @@ var NoLoad = func()
 		
 		setprop("/controls/armament/roundsLeft", 0);
 		setprop("/controls/armament/roundsCount", 0);
+		setprop("/controls/armament/ecm-flares", 0);
 
 		screen.log.write("Weapon stores unloaded! ", 1, 0.6, 0.1);
         
