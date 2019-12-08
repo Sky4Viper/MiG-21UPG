@@ -508,7 +508,7 @@
 		<repeat>true</repeat>
 		<delay>0.25</delay>
 		<count>-1</count>
-    <x-offset>-12.1221</x-offset>
+    <x-offset>-2.1221</x-offset>
     <y-offset> 4.9067</y-offset>
     <z-offset> 0.5225</z-offset>
 		<yaw-offset>90</yaw-offset>
@@ -530,7 +530,7 @@
 		<repeat>true</repeat>
 		<delay>0.25</delay>
 		<count>-1</count>
-		<x-offset>-12.1221</x-offset>
+		<x-offset>-2.1221</x-offset>
 		<y-offset> -4.9067</y-offset>
 		<z-offset>  0.5225</z-offset>
 		<yaw-offset>-90</yaw-offset>

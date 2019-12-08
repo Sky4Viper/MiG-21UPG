@@ -585,6 +585,7 @@
       
       <sound>
         <click-switch type="bool">false</click-switch>
+        <click-latch type="bool">false</click-latch>
         <pulup-alert type="bool">true</pulup-alert> 
       </sound>
       
