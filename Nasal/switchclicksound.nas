@@ -2,7 +2,7 @@
 # Click Sounds
 ##########################################
 
-var click = func (name, timeout=0.1) {
+var click = func (name, timeout=0.5) {
     var sound_prop = "/controls/power/sound/click-" ~ name;
 
     # Play the sound

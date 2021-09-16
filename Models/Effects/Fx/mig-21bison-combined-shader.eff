@@ -3,8 +3,8 @@
   <inherits-from>Effects/model-combined-deferred</inherits-from>
   <parameters>
 	<rain-enabled type="int">2</rain-enabled>
-    <ambient-correction type="float">0.00</ambient-correction>
-    <normalmap-enabled type="int">1</normalmap-enabled>
+    	<ambient-correction type="float">0.00</ambient-correction>
+    	<normalmap-enabled type="int">1</normalmap-enabled>
 	<normalmap-dds type="int">0</normalmap-dds>
 	<lightmap-enabled type="int">0</lightmap-enabled>
 	
@@ -19,25 +19,29 @@
 	
 	<reflection-enabled type="int">0</reflection-enabled>
 	<reflection-type type="int">2</reflection-type>
-    <reflect-map-enabled type="int">0</reflect-map-enabled>
-    <reflection-correction type="float">-0.5</reflection-correction>
-    <reflection-fresnel type="float">0.0</reflection-fresnel>
-    <reflection-rainbow type="float">0.0</reflection-rainbow>
-    <reflection-noise type="float">0.0</reflection-noise>
-    <reflection-dynamic type="int">1</reflection-dynamic>
+    	<reflect-map-enabled type="int">0</reflect-map-enabled>
+    	<reflection-correction type="float">-0.5</reflection-correction>
+    	<reflection-fresnel type="float">0.0</reflection-fresnel>
+    	<reflection-rainbow type="float">0.0</reflection-rainbow>
+    	<reflection-noise type="float">0.0</reflection-noise>
+    	<reflection-dynamic type="int">1</reflection-dynamic>
 
-    <delta_T>10.0</delta_T>
+    	<delta_T>10.0</delta_T>
 
-    <dirt-enabled type="int">0</dirt-enabled>
-    <dirt-factor type="float">0.0</dirt-factor>
-    <dirt-color type="vec3d">0.0 0.0 0.0</dirt-color>
+    	<dirt-enabled type="int">0</dirt-enabled>
+    	<dirt-factor type="float">0.0</dirt-factor>
+    	<dirt-color type="vec3d">0.0 0.0 0.0</dirt-color>
+    	<!--<dirt-enabled type="int">1</dirt-enabled>
+      	<dirt-multi type="int">1</dirt-multi>
+      	<dirt-color type="vec3d" n="0">0.27 0.21 0.18</dirt-color>
+      	<dirt-factor type="float" n="0">0.01</dirt-factor>-->
 	
   	<texture n="2">
-      <image>Aircraft/MiG-21UPG/Models/Effects/Fx/Bumpmap15.png</image>
-      <filter>linear</filter><!-- trilinear linear linear-mipmap-linear linear-mipmap-nearest -->
-      <wrap-s>repeat</wrap-s>
-      <wrap-t>repeat</wrap-t>
-      <internal-format>normalized</internal-format>
+      		<image>Aircraft/MiG-21UPG/Models/Effects/Fx/Bumpmap15.png</image>
+      		<filter>linear</filter><!-- trilinear linear linear-mipmap-linear linear-mipmap-nearest -->
+      		<wrap-s>repeat</wrap-s>
+      		<wrap-t>repeat</wrap-t>
+      		<internal-format>normalized</internal-format>
   	</texture>
 	
 	<texture n="3">
@@ -51,7 +55,7 @@
 	
 	
   </parameters>
-  <!--WARNING: Do not edit below this line -->
+<!--WARNING: Do not edit below this line -->
 <!-- ####################
 ### NORMALMAP INCLUDE ###
 ######################### -->

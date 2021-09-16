@@ -21,18 +21,24 @@
         <min> 0.03 </min>
         <max> 0.07 </max>
       </volume>
+      <volume>
+        <property>sim/model/door-positions/canopy/position-norm</property>
+        <offset>0.01</offset>
+        <min> 0.01 </min>
+        <max> 0.6 </max>
+      </volume>
       <pitch>
         <property>engines/engine[0]/n2</property>
         <factor> 0.01 </factor>
         <min> 0.0 </min>
         <max> 0.9 </max>
       </pitch>
-       <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-   </engine>
+       <!--<reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>-->
+ </engine>
 
    
-<engine>
+ <engine>
       <name>engine-start-outside</name>
       <mode>once</mode>
       <path>Aircraft/MiG-21UPG/Sounds/Samples/mig21startup.wav</path>
@@ -43,7 +49,10 @@
             <property>/engines/engine[0]/rpm</property>
             <value>0.5</value>
             </greater-than>
-          <or>
+            <not>
+             <property>/sim/current-view/internal</property>
+            </not>
+          <!--<or>
             <not>
             <property>/sim/current-view/internal</property>
             </not>
@@ -51,7 +60,7 @@
             <property>sim/model/door-positions/canopy/position-norm</property>
             <value>0</value>
             </greater-than>
-          </or>
+          </or>-->
         </and>
       </condition>
       <volume>
@@ -68,30 +77,24 @@
       </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
-</engine>
+ </engine>
 
-<engine>
-      <name>turbine</name>
+ <engine>
+      <name>turbine-out</name>
       <mode>looped</mode>
       <path>Aircraft/MiG-21UPG/Sounds/Samples/mig21whine.wav</path>
       <condition>
         <property>/engines/engine/running</property>
-        <or>
           <not>
             <property>/sim/current-view/internal</property>
           </not>
-          <greater-than>
-            <property>sim/model/door-positions/canopy/position-norm</property>
-            <value>0</value>
-          </greater-than>
-        </or>
       </condition>
       <orientation>
         <x>   0 </x>
         <y>   0 </y>
         <z> 180 </z>
-        <inner-cone> 180.0 </inner-cone>
-        <outer-cone> 360.0 </outer-cone>
+        <inner-cone> 50.0 </inner-cone>
+        <outer-cone> 100.0 </outer-cone>
         <outer-gain>   0.2 </outer-gain>
       </orientation>
       <volume>
@@ -108,10 +111,47 @@
       </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
-</engine>
+ </engine>
 
- 
-		<jet>
+ <engine>
+      <name>turbine-in</name>
+      <mode>looped</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/mig21whine.wav</path>
+      <condition>
+        <property>/engines/engine/running</property>
+        <property>/sim/current-view/internal</property>
+      </condition>
+      <!-- <orientation>
+        <x>   0 </x>
+        <y>   0 </y>
+        <z> 180 </z>
+        <inner-cone> 100.0 </inner-cone>
+        <outer-cone> 180.0 </outer-cone>
+        <outer-gain>   0.2 </outer-gain>
+      </orientation> -->
+      <volume>
+        <property>engines/engine/n2</property>
+        <factor>0.09</factor>
+        <min>0.3</min>
+        <max>0.9</max>
+      </volume>
+      <volume>
+        <property>sim/model/door-positions/canopy/position-norm</property>
+        <offset>0.3</offset>
+        <min>0.0</min>
+        <max>0.7</max>
+      </volume>
+      <pitch>
+        <property>engines/engine/n2</property>
+        <factor>0.01</factor>
+        <min>0</min>
+        <max>0.9</max>
+      </pitch>
+      <!--<reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>-->
+ </engine>
+
+ <jet>
 			<name>jet</name>
 			<path>Sounds/jet.wav</path>
 			<mode>looped</mode>
@@ -142,9 +182,9 @@
 			<outer-angle>180.0</outer-angle>
 			<outer-gain>0.2</outer-gain>
 			</orientation>
-		</jet>
+ </jet>
 		
-		   <engine>
+ <engine>
       <name>engine</name>
       <path>Aircraft/MiG-21UPG/Sounds/Samples/jet-blast.wav</path>
       <mode>looped</mode>
@@ -177,9 +217,9 @@
  
    <reference-dist>20</reference-dist>
    <max-dist>3000</max-dist>
-    </engine>
+ </engine>
 	
-		<engine>
+ <engine>
 			<name>engine</name>
 			<mode>looped</mode>
 			<path>Sounds/turbine_loop.wav</path>
@@ -209,9 +249,9 @@
 			<min>0.1</min>
 			<max>0.5</max>
 			</volume>
-		</engine>
+ </engine>
 	
-		 <engine>
+ <engine>
       <name>whine-int</name>
       <path>Aircraft/MiG-21UPG/Sounds/Samples/f16-engine-int.wav</path>
       <mode>looped</mode>
@@ -225,18 +265,20 @@
          <z> 0.29 </z>
        </position>
       <volume>
-        <property>engines/engine[0]/n2</property>
-        <factor type="double">0.003</factor>
-      </volume>
+			  <property>/controls/engines/engine[0]/throttle</property>
+			  <factor>0.5</factor>
+			  <min>0.1</min>
+			  <max>0.5</max>
+			</volume>
       <pitch>
         <property>/engines/engine[0]/n2</property>
         <factor>0.02</factor>
         <offset>-0.1</offset>
       </pitch>
-    </engine>
+ </engine>
 	
-		<engine>
-			<name>burner</name>
+ <engine>
+			<name>burner-out</name>
 			<mode>looped</mode>
 			<path>Aircraft/MiG-21UPG/Sounds/Samples/reheat.wav</path>
 			<condition>
@@ -271,9 +313,45 @@
 			<min>0.4</min>
 			<max>0.5</max>
 			</volume>
-		</engine>
+ </engine>
+
+ <engine>
+      <name>burner-in</name>
+      <mode>looped</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/reheat.wav</path>
+      <condition>
+        <property>engines/engine/afterburner</property>
+            <property>/sim/current-view/internal</property>
+        <not>
+          <property>engines/engine[0]/out-of-fuel</property>
+        </not>
+        <not>
+          <property>fdm/jsbsim/systems/crash-detect/crashed</property>
+        </not>
+      </condition>
+      <!--<orientation>
+        <x>0.0</x>
+        <y>0.0</y>
+        <z>180.0</z>
+        <inner-cone>180.0</inner-cone>
+        <outer-cone>360.0</outer-cone>
+        <outer-gain>0.2</outer-gain>
+      </orientation>-->
+      <volume>
+        <property>/controls/throttle[0]</property>
+        <factor>1</factor>
+        <min>0.4</min>
+        <max>0.5</max>
+      </volume>
+      <volume>
+        <property>sim/model/door-positions/canopy/position-norm</property>
+        <offset>0.1</offset>
+        <min>0.0</min>
+        <max>0.5</max>
+      </volume>
+ </engine>
 		
-		<engine>
+ <!--<engine>
 			<name>burner-from-cockpit</name>
 			<mode>looped</mode>
 			<path>Sounds/turbojet_fan.wav</path>
@@ -293,29 +371,23 @@
 			<min>0.1</min>
 			<max>0.1</max>
 			</volume>
-		</engine>
+ </engine>-->
 		
-		<engine>
-			<name>compressor whine</name>
+ <engine>
+			<name>compressor-whine-out</name>
 			<path>Sounds/turbojet_fan.wav</path>
 			<mode>looped</mode>
 			<condition>
-        <or>
-          <not>
-            <property>/sim/current-view/internal</property>
-          </not>
-          <greater-than>
-            <property>sim/model/door-positions/canopy/position-norm</property>
-            <value>0</value>
-          </greater-than>
-        </or>
-			<not>
-			 <property>engines/engine[0]/out-of-fuel</property>
-			</not>
-			<not>
+       <not>
+        <property>/sim/current-view/internal</property>
+       </not>
+			 <not>
+			  <property>engines/engine[0]/out-of-fuel</property>
+			 </not>
+			 <not>
 			  <property>fdm/jsbsim/systems/crash-detect/crashed</property>
-			</not>
-			<property>/engines/engine[0]/running</property>
+			 </not>
+			 <property>/engines/engine[0]/running</property>
 			</condition>
       <position>
         <x> 1.68 </x>
@@ -323,10 +395,9 @@
         <z> 0.29 </z>
       </position>
       <orientation>
-        <!-- normalized vector -->
-        <x>-1.0</x><!-- +X = aft  -->
-        <y> 0.0</y><!-- +Y = left -->
-        <z> 0.0</z><!-- +Z = up   -->
+        <x>-1.0</x>
+        <y> 0.0</y>
+        <z> 0.0</z>
         <inner-angle>20.0</inner-angle>
         <outer-angle>50.0</outer-angle>
         <outer-gain>0.2</outer-gain>
@@ -343,7 +414,124 @@
 			<min>0.05</min>
 			<max>0.15</max>
 			</volume>
-		</engine>
+ </engine>
+
+ <engine>
+      <name>compressor-whine-in</name>
+      <path>Sounds/turbojet_fan.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>/sim/current-view/internal</property>
+        <not>
+          <property>engines/engine[0]/out-of-fuel</property>
+        </not>
+        <not>
+          <property>fdm/jsbsim/systems/crash-detect/crashed</property>
+        </not>
+        <property>/engines/engine[0]/running</property>
+      </condition>
+      <position>
+        <x> 1.68 </x>
+        <y>  0.0 </y>
+        <z> 0.29 </z>
+      </position>
+      <!-- <orientation>
+        <x>-1.0</x>
+        <y> 0.0</y>
+        <z> 0.0</z>
+        <inner-angle>20.0</inner-angle>
+        <outer-angle>50.0</outer-angle>
+        <outer-gain>0.2</outer-gain>
+      </orientation> -->
+      <pitch>
+        <property>/engines/engine[0]/n1</property>
+        <offset>0.7</offset>
+        <factor>.003</factor>
+      </pitch>
+      <volume>
+        <property>/engines/engine[0]/n1</property>
+        <offset>0.15</offset>
+        <factor>-0.003</factor>
+        <min>0.05</min>
+        <max>0.15</max>
+      </volume>
+      <volume>
+        <property>sim/model/door-positions/canopy/position-norm</property>
+        <offset>0.02</offset>
+        <min> 0.02 </min>
+        <max> 0.1 </max>
+      </volume>
+ </engine>
+
+    <!--<engine>
+      <name>shutdown0</name>
+      <mode>once</mode>
+      <path>Aircraft/IL-76/Sounds/shutdown.wav</path>
+      <condition>
+        <property>/controls/engines/engine[0]/cutoff</property>
+      </condition>
+      <volume>
+        <property>/engines/engine[0]/n2</property>
+        <factor>0.09</factor>
+        <min>0.3</min>
+        <max>0.9</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>-->
+
+ <shutdown>
+      <name>shutdown-out</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/shutdown.wav</path>
+      <condition>
+        <not>
+          <property>/sim/current-view/internal</property>
+        </not>
+        <property>engines/engine[0]/spooldown</property>
+        <equals>
+          <property>engines/engine[0]/running</property>
+          <value>false</value>
+        </equals>
+      </condition>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+ </shutdown>
+    
+ <shutdown>
+      <name>shutdown-in</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/shutdown.wav</path>
+      <condition>
+        <property>/sim/current-view/internal</property>
+        <property>engines/engine[0]/spooldown</property>
+        <equals>
+          <property>engines/engine[0]/running</property>
+          <value>false</value>
+        </equals>
+      </condition>
+      <volume>
+        <property>sim/model/door-positions/canopy/position-norm</property>
+        <offset>0.02</offset>
+        <min> 0.06 </min>
+        <max> 0.8 </max>
+      </volume>
+ </shutdown>
+
+
+    <!--<shutdown>
+      <name>shutdown</name>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/shutdown.wav</path>
+      <condition>
+        <not>
+          <property>/sim/current-view/internal</property>
+        </not>
+        <equals>
+          <property>engines/engine[1]/running</property>
+          <value>false</value>
+        </equals>
+      </condition>
+    </shutdown>-->
 		
 <!-- Gear -->
 	
@@ -447,6 +635,34 @@
 			<offset>1.2</offset>
 			</pitch>
 		</squeal>
+
+    <!--<rattle-front>
+      --><!--wheel-speed-fps--><!--
+      <name>nose wheel rumble</name>
+      <mode>in-transit</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/ground-rattle.wav</path>
+      <property>fdm/jsbsim/gear/unit[0]/compression-velocity-fps</property>
+      <condition>
+        <property>gear/gear[0]/wow</property>
+        <property>sim/current-view/internal</property>
+        <greater-than>
+          <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+          <value>20</value>
+        </greater-than>
+      </condition>
+      <position>
+        <x>-5</x>
+        <y>0</y>
+        <z>-1</z>
+      </position>
+      <volume>
+        <property>fdm/jsbsim/gear/unit[0]/compression-velocity-fps</property>
+        <factor>100</factor>
+        <min>0.3</min>
+      </volume>
+      <reference-dist>60.0</reference-dist>
+      <max-dist>300.0</max-dist>
+    </rattle-front>-->
 		
 <!-- Enviromental -->
 		
@@ -697,7 +913,8 @@
     <canopy-latch-open>
       <name>canopy-latch-open</name>
       <mode>once</mode>
-      <path>Aircraft/MiG-21UPG/Sounds/Samples/door_close.wav</path>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/canopy_lock.wav</path>
+      <!-- <path>Aircraft/MiG-21UPG/Sounds/Samples/door_close.wav</path> -->
       <condition>
           <greater-than>
             <property>sim/model/door-positions/canopy/position-norm</property>
@@ -716,7 +933,7 @@
     <canopy-latch-close>
       <name>canopy-latch-close</name>
       <mode>once</mode>
-      <path>Aircraft/MiG-21UPG/Sounds/Samples/door_close.wav</path>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/canopy_lock.wav</path>
       <condition>
           <less-than>
             <property>sim/model/door-positions/canopy/position-norm</property>
@@ -757,8 +974,20 @@
     <canopy>
       <name>canopy</name>
       <mode>in-transit</mode>
-      <path>Aircraft/MiG-21UPG/Sounds/Samples/lever.wav</path>
-      <property>sim/model/door-positions/canopy/position-norm</property>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/canopy_move.wav</path>
+      <condition>
+          <and>
+          <less-than>
+            <property>sim/model/door-positions/canopy/position-norm</property>
+            <value>1</value>
+          </less-than>
+          <greater-than>
+            <property>sim/model/door-positions/canopy/position-norm</property>
+            <value>0.1</value>
+          </greater-than>
+          </and>
+      </condition>
+
       <pitch>
         <internal>dt_play</internal>
         <offset>1.0</offset>
@@ -776,8 +1005,12 @@
 					<property>/sim/current-view/internal</property>
 					<greater-than>
 						<property>/accelerations/pilot/z-accel-fps_sec</property>
-						<value>-161</value>
+						<value>161</value>
 					</greater-than>
+          <!--<greater-than>
+            <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+            <value>50</value>
+          </greater-than>-->
 				</and> 
 			</condition>
 			<volume>
@@ -795,6 +1028,10 @@
 						<property>/accelerations/pilot/z-accel-fps_sec</property>
 						<value>-225</value>
 					</less-than>
+          <!--<greater-than>
+            <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+            <value>50</value>
+          </greater-than>-->
 				</and>  
 			</condition>
 			<volume>
@@ -840,6 +1077,596 @@
       <max-dist>5.0</max-dist>
     </latch>
 
+    <detach1>
+      <name>detach1-click</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/dropload.wav</path>
+      <condition>
+        <and>
+          <property>/controls/power/sound/click-detach1</property>
+          <!-- <property>/sim/current-view/internal</property>
+          <greater-than>
+            <property>sim/model/door-positions/canopy/position-norm</property>
+            <value>0</value>
+          </greater-than> -->
+        </and>
+      </condition>
+      <position>
+        <x>2.2660</x>
+        <y>0.0</y>
+        <z>-0.4500</z>
+      </position>
+      <reference-dist>1</reference-dist>
+      <max-dist>20.0</max-dist>
+    </detach1>
+
+    <detach2>
+      <name>detach2-click</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/cannon-23-case-drop.wav</path>
+      <condition>
+        <and>
+          <property>/controls/power/sound/click-detach2</property>
+          <!-- <property>/sim/current-view/internal</property>
+          <greater-than>
+            <property>sim/model/door-positions/canopy/position-norm</property>
+            <value>0</value>
+          </greater-than> -->
+        </and>
+      </condition>
+      <position>
+        <x>-1.2660</x>
+        <y>0.0</y>
+        <z>-0.4500</z>
+      </position>
+      <reference-dist>1</reference-dist>
+      <max-dist>50.0</max-dist>
+    </detach2>
+
+    <detach3>
+      <name>detach3-click</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/cannon-37-case-drop.wav</path>
+      <condition>
+        <and>
+          <property>/controls/power/sound/click-detach3</property>
+          <!-- <property>/sim/current-view/internal</property>
+          <greater-than>
+            <property>sim/model/door-positions/canopy/position-norm</property>
+            <value>0</value>
+          </greater-than> -->
+        </and>
+      </condition>
+      <position>
+        <x>6.2660</x>
+        <y>0.0</y>
+        <z>0.4500</z>
+      </position>
+      <reference-dist>1</reference-dist>
+      <max-dist>50.0</max-dist>
+    </detach3>
+
+    <attach1>
+      <name>attach1-click</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/chuteload.wav</path>
+      <condition>
+        <and>
+          <property>/controls/power/sound/click-attach1</property>
+          <!-- <property>/sim/current-view/internal</property>
+          <greater-than>
+            <property>sim/model/door-positions/canopy/position-norm</property>
+            <value>0</value>
+          </greater-than> -->
+        </and>
+      </condition>
+      <position>
+        <x>1.2660</x>
+        <y>0.0</y>
+        <z>-0.4500</z>
+      </position>
+      <reference-dist>2</reference-dist>
+      <max-dist>50.0</max-dist>
+    </attach1>
+
+    <attach2>
+      <name>attach2-click</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/lockandload.wav</path>
+      <condition>
+        <and>
+          <property>/controls/power/sound/click-attach2</property>
+          <!-- <property>/sim/current-view/internal</property>
+          <greater-than>
+            <property>sim/model/door-positions/canopy/position-norm</property>
+            <value>0</value>
+          </greater-than> -->
+        </and>
+      </condition>
+      <position>
+        <x>1.2660</x>
+        <y>0.0</y>
+        <z>-0.4500</z>
+      </position>
+      <reference-dist>1</reference-dist>
+      <max-dist>50.0</max-dist>
+    </attach2>
+
+    <attach3>
+      <name>attach3-click</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/load3.wav</path>
+      <condition>
+        <and>
+          <property>/controls/power/sound/click-attach3</property>
+          <!-- <property>/sim/current-view/internal</property>
+          <greater-than>
+            <property>sim/model/door-positions/canopy/position-norm</property>
+            <value>0</value>
+          </greater-than> -->
+        </and>
+      </condition>
+      <position>
+        <x>1.2660</x>
+        <y>0.0</y>
+        <z>-0.3500</z>
+      </position>
+      <reference-dist>1</reference-dist>
+      <max-dist>50.0</max-dist>
+    </attach3>
+
+    <attach4>
+      <name>attach4-click</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/Samples/load4.wav</path>
+      <condition>
+        <and>
+          <property>/controls/power/sound/click-attach4</property>
+          <!-- <property>/sim/current-view/internal</property>
+          <greater-than>
+            <property>sim/model/door-positions/canopy/position-norm</property>
+            <value>0</value>
+          </greater-than> -->
+        </and>
+      </condition>
+      <position>
+        <x>1.2660</x>
+        <y>0.0</y>
+        <z>-0.4500</z>
+      </position>
+      <reference-dist>1</reference-dist>
+      <max-dist>50.0</max-dist>
+    </attach4>
+    
+    <!--Ground Crew Comms-->
+
+    <ground-crew-disarm>
+      <name>gc-comm-1</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-disarmingac.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg1</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-disarm>
+
+    <ground-crew-gun-disarm>
+      <name>gc-comm-2</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-gundisarmed.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg2</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-gun-disarm>
+
+    <ground-crew-flare-disarm>
+      <name>gc-comm-3</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-flaresdisarmed.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg3</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-flare-disarm>
+
+    <ground-crew-unload>
+      <name>gc-comm-4</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-unloaded.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg4</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-unload>
+
+    <ground-crew-rearming>
+      <name>gc-comm-5</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-rearming.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg5</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-rearming>
+
+    <ground-crew-chute>
+      <name>gc-comm-6</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-chute.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg6</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-chute>
+
+    <ground-crew-gunarmed>
+      <name>gc-comm-7</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-gunarmed200.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg7</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-gunarmed>
+
+    <ground-crew-flareload>
+      <name>gc-comm-8</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-flaresloaded120.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg8</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-flareload>
+
+    <ground-crew-aamissile12>
+      <name>gc-comm-9</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-p12loadedAA.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg9</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-aamissile12>
+
+    <ground-crew-aamissile34>
+      <name>gc-comm-10</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-p34loadedAA.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg10</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-aamissile34>
+
+    <ground-crew-rockets12>
+      <name>gc-comm-13</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-p12loadedR.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg13</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-rockets12>
+
+    <ground-crew-rockets34>
+      <name>gc-comm-14</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-p34loadedR.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg14</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-rockets34>
+
+    <ground-crew-bomb12>
+      <name>gc-comm-15</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-p12loadedB.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg15</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-bomb12>
+
+    <ground-crew-bomb34>
+      <name>gc-comm-16</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-p34loadedB.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg16</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-bomb34>
+
+    <ground-crew-tankC>
+      <name>gc-comm-17</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-dtloadedC.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg17</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-tankC>
+
+    <ground-crew-tankW>
+      <name>gc-comm-18</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-dtloadedW.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg18</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-tankW>
+
+    <ground-crew-rearmed>
+      <name>gc-comm-19</name>
+      <mode>once</mode>
+      <path>Aircraft/MiG-21UPG/Sounds/GCcomms/gc-comms-rearmed.wav</path>
+      <condition>
+        <and>
+          <property>/controls/sound/comms/gc-msg19</property>
+          <property>/sim/current-view/internal</property>
+          <property>controls/power/radio</property>
+          <property>controls/power/battery</property>
+          <property>controls/power/dcgen</property>
+        </and>
+      </condition>
+      <!-- <position>
+        <x>-0.3660</x>
+        <y>0.0</y>
+        <z>1.3500</z>
+      </position>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist> -->
+      <volume>
+      <factor>0.9</factor>
+      </volume>
+    </ground-crew-rearmed>
+    
+    <!--Avionics-->
+
     <gyro>
       <name>gyro-hum</name>
       <mode>looped</mode>
@@ -874,7 +1701,6 @@
     <guns>
       <name>gunfire</name>
       <mode>looped</mode>
-      <!--<path>Aircraft/MiG-21UPG/Sounds/Samples/gun.wav</path>-->
       <path>Aircraft/MiG-21UPG/Sounds/Samples/GSh23.wav</path>
       <condition>
         <property>sim/multiplay/generic/int[8]</property>
@@ -1050,6 +1876,7 @@
 			
 		</flyby>
 
-	</fx>
+	
+</fx>
  
 </PropertyList>

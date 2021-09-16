@@ -212,61 +212,170 @@ return;}
 }
 
 var emergency_jettison = func{
-		# pylon 3
-        setprop("/sim/weight[0]/selected",                   "none");
-		setprop("/consumables/fuel/tank[6]/selected",        0);
-        setprop("/consumables/fuel/tank[6]/capacity-gal_us", 0);
-        setprop("/consumables/fuel/tank[6]/level-gal_us",    0);
+
+        pylon12_jettison();
+        pylon34_jettison();
+        tanks_jettison();
         
-        # pylon 1
-        setprop("/sim/weight[1]/selected",                   "none");
-        
-        # pylon 8
-        setprop("/sim/weight[4]/selected",                   "none");
-		setprop("/consumables/fuel/tank[7]/selected",        0);
-        setprop("/consumables/fuel/tank[7]/capacity-gal_us", 0);
-        setprop("/consumables/fuel/tank[7]/level-gal_us",    0);
-        
-        # pylon 2
-        setprop("/sim/weight[6]/selected",                   "none");
-        
-        # pylon 4
-        setprop("/sim/weight[7]/selected",                   "none");
-		setprop("/consumables/fuel/tank[8]/selected",        0);
-        setprop("/consumables/fuel/tank[8]/capacity-gal_us", 0);
-        setprop("/consumables/fuel/tank[8]/level-gal_us",    0);
-		
-		setprop("controls/armament/sound/drop", 1);
-		settimer(func {setprop("controls/armament/sound/drop", 0);}, 0.2);
 }
 
 var pylon12_jettison = func{
+
+	var pylon1_load = getprop("/sim/weight[1]/payload-int");
+	var pylon2_load = getprop("/sim/weight[6]/payload-int");
      
         # pylon 1
-        setprop("/sim/weight[1]/selected",                   "none");
+        
+            if(pylon1_load == 6){
+            settimer(func {
+			setprop("controls/armament/station[1]/m1jettison", 1);
+			setprop("/sim/weight[1]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+	    
+        	if(pylon1_load == 7){
+            settimer(func {
+			setprop("controls/armament/station[1]/b1jettison", 1);
+			setprop("/sim/weight[1]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+	    
+	        if(pylon1_load == 8){
+            settimer(func {
+			setprop("controls/armament/station[1]/r1jettison", 1);
+			setprop("/sim/weight[1]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+	    
+	        if(pylon1_load == 9){
+            settimer(func {
+			setprop("controls/armament/station[1]/m2jettison", 1);
+			setprop("/sim/weight[1]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+	    
+	        if(pylon1_load == 10){
+            settimer(func {
+			setprop("controls/armament/station[1]/b2jettison", 1);
+			setprop("/sim/weight[1]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+	    
+        #setprop("/sim/weight[1]/selected",                   "none");
         
         # pylon 2
-        setprop("/sim/weight[6]/selected",                   "none");
+        
+            if(pylon2_load == 6){
+            settimer(func {
+			setprop("controls/armament/station[2]/m1jettison", 1);
+			setprop("/sim/weight[6]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+        
+        	if(pylon2_load == 7){
+            settimer(func {
+			setprop("controls/armament/station[2]/b1jettison", 1);
+			setprop("/sim/weight[6]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+	    
+	    	if(pylon2_load == 8){
+            settimer(func {
+			setprop("controls/armament/station[2]/r1jettison", 1);
+			setprop("/sim/weight[6]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+	    
+	        if(pylon2_load == 9){
+            settimer(func {
+			setprop("controls/armament/station[2]/m2jettison", 1);
+			setprop("/sim/weight[6]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+	    
+	        if(pylon2_load == 10){
+            settimer(func {
+			setprop("controls/armament/station[2]/b2jettison", 1);
+			setprop("/sim/weight[6]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+	    
+	    else {return;}
+
 		
-		setprop("controls/armament/sound/drop", 1);
-		settimer(func {setprop("controls/armament/sound/drop", 0);}, 0.2);
 }
 
 var pylon34_jettison = func{
-		# pylon 3
-        setprop("/sim/weight[0]/selected",                   "none");
-		setprop("/consumables/fuel/tank[6]/selected",        0);
-        setprop("/consumables/fuel/tank[6]/capacity-gal_us", 0);
-        setprop("/consumables/fuel/tank[6]/level-gal_us",    0);
 
+	var pylon3_load = getprop("/sim/weight[0]/payload-int");
+	var pylon4_load = getprop("/sim/weight[7]/payload-int");
+     
+        # pylon 3
+        	if(pylon3_load == 1){
+            settimer(func {
+			setprop("controls/armament/station[3]/m1jettison", 1);
+			setprop("/sim/weight[0]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+	    
+	        if(pylon3_load == 2){
+            settimer(func {
+			setprop("controls/armament/station[3]/m2jettison", 1);
+			setprop("/sim/weight[0]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+	    
+	        if(pylon3_load == 8){
+            settimer(func {
+			setprop("controls/armament/station[3]/r1jettison", 1);
+			setprop("/sim/weight[0]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+	    
+        #setprop("/sim/weight[1]/selected",                   "none");
+        
         # pylon 4
-        setprop("/sim/weight[7]/selected",                   "none");
-		setprop("/consumables/fuel/tank[8]/selected",        0);
-        setprop("/consumables/fuel/tank[8]/capacity-gal_us", 0);
-        setprop("/consumables/fuel/tank[8]/level-gal_us",    0);
+        
+        	if(pylon4_load == 1){
+            settimer(func {
+			setprop("controls/armament/station[4]/m1jettison", 1);
+			setprop("/sim/weight[7]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+	    
+	        if(pylon4_load == 2){
+            settimer(func {
+			setprop("controls/armament/station[4]/m2jettison", 1);
+			setprop("/sim/weight[7]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+	    
+	    	if(pylon4_load == 8){
+            settimer(func {
+			setprop("controls/armament/station[4]/r1jettison", 1);
+			setprop("/sim/weight[7]/selected", "none");
+			setprop("controls/armament/sound/drop", 1);
+	    }, 0.4);
+	    }
+	    
+	    else {return;}
+
 		
-		setprop("controls/armament/sound/drop", 1);
-		settimer(func {setprop("controls/armament/sound/drop", 0);}, 0.2);
 }
 
 var tanks_jettison = func{

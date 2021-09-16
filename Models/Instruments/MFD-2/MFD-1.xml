@@ -44,7 +44,7 @@
 		</offsets>
 	</model>
   
-	<model>
+<!-- 	<model>
     <name>terrain map</name>
 		<path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/MFD-2terrain.xml</path>
     <condition>
@@ -61,7 +61,26 @@
 			<z-m>0</z-m>
 			<pitch-offset>0</pitch-offset>
 		</offsets>
-	</model>
+	</model> -->
+
+  <model>
+    <name>moving map</name>
+    <path>Aircraft/MiG-21UPG/Models/Instruments/MFD-2/MFD-2movmap.xml</path>
+    <condition>
+      <property>/controls/power/battery</property>
+      <property>/controls/power/gyro1</property>
+      <equals>
+        <property>controls/mfd/mfdpage</property>
+        <value>2</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+      <pitch-offset>0</pitch-offset>
+    </offsets>
+  </model>
 
   <model>
     <name>navigation map</name>
@@ -228,28 +247,20 @@ nd.event_click_radar();
     </action>
   </animation>
 
-
-  <animation>
+    <animation>
     <type>pick</type>
-    <object-name>mfd-bt-20</object-name>
+    <object-name>mfd-bt-14</object-name>
     <visible>true</visible>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>instrumentation/radar/range-selected</property>
-        <step>40</step>
-        <min>20</min>
-        <max>140</max>
-      </binding>
-      <binding>
-        <command>property-cycle</command>
-        <property>/instrumentation/efis/inputs/range-nm</property>
-        <value>20</value>
-        <value>60</value>
-        <value>100</value>
-        <value>140</value>
+        <property>controls/mfd/mfdpage</property>
+        <step>1</step>
+        <min>0.0</min>
+        <max>5</max>
+        <wrap>true</wrap>
       </binding>
       <binding>
         <command>nasal</command>
@@ -260,25 +271,15 @@ nd.event_click_radar();
 
   <animation>
     <type>pick</type>
-    <object-name>mfd-bt-19</object-name>
+    <object-name>mfd-bt-17</object-name>
     <visible>true</visible>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
-        <command>property-adjust</command>
-        <property>instrumentation/radar/range-selected</property>
-        <step>-40</step>
-        <min>20</min>
-        <max>140</max>
-      </binding>
-      <binding>
-        <command>property-cycle</command>
-        <property>/instrumentation/efis/inputs/range-nm</property>
-        <value>140</value>
-        <value>100</value>
-        <value>60</value>
-        <value>20</value>
+        <command>property-assign</command>
+        <property>instrumentation/radar/az-field</property>
+        <value>120</value>
       </binding>
       <binding>
         <command>nasal</command>
@@ -308,15 +309,47 @@ nd.event_click_radar();
 
   <animation>
     <type>pick</type>
-    <object-name>mfd-bt-17</object-name>
+    <object-name>mfd-bt-19</object-name>
     <visible>true</visible>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
-        <command>property-assign</command>
-        <property>instrumentation/radar/az-field</property>
-        <value>120</value>
+        <condition>
+            <equals>
+            <property>controls/mfd/mfdpage</property>
+            <value>3</value>
+            </equals>
+        </condition>
+        <command>property-adjust</command>
+        <property>instrumentation/radar/range-selected</property>
+        <step>-40</step>
+        <min>20</min>
+        <max>140</max>
+      </binding>
+      <binding>
+        <condition>
+            <equals>
+            <property>controls/mfd/mfdpage</property>
+            <value>0</value>
+            </equals>
+        </condition>
+        <command>property-cycle</command>
+        <property>/instrumentation/efis/inputs/range-nm</property>
+        <value>140</value>
+        <value>100</value>
+        <value>60</value>
+        <value>20</value>
+      </binding>
+      <binding>
+        <condition>
+            <equals>
+            <property>controls/mfd/mfdpage</property>
+            <value>2</value>
+            </equals>
+        </condition>
+        <command>nasal</command>
+        <script>mm.toggleScale();</script>
       </binding>
       <binding>
         <command>nasal</command>
@@ -324,6 +357,58 @@ nd.event_click_radar();
       </binding>
     </action>
   </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>mfd-bt-20</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+          <condition>
+            <equals>
+            <property>controls/mfd/mfdpage</property>
+            <value>3</value>
+            </equals>
+          </condition>
+        <command>property-adjust</command>
+        <property>instrumentation/radar/range-selected</property>
+        <step>40</step>
+        <min>20</min>
+        <max>140</max>
+      </binding>
+      <binding>
+          <condition>
+            <equals>
+            <property>controls/mfd/mfdpage</property>
+            <value>0</value>
+            </equals>
+          </condition>
+        <command>property-cycle</command>
+        <property>/instrumentation/efis/inputs/range-nm</property>
+        <value>20</value>
+        <value>60</value>
+        <value>100</value>
+        <value>140</value>
+      </binding>
+      <binding>
+          <condition>
+            <equals>
+            <property>controls/mfd/mfdpage</property>
+            <value>2</value>
+            </equals>
+          </condition>
+        <command>nasal</command>
+        <script>mm.toggleScale();</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
   
   <!--<model>
     <name>MFD-Screen</name>

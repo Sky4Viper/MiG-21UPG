@@ -143,6 +143,7 @@ changelog
     <object-name>ge-apu-box</object-name>
     <condition>
       <property>sim/model/ground-equipment-p</property>
+      <property>controls/gear/brake-parking</property>
       <property>/gear/gear[2]/wow</property>
       <less-than>
         <property>velocities/groundspeed-kt</property>
@@ -177,6 +178,7 @@ changelog
     <object-name>fuel-truck.tank</object-name>
     <condition>
       <property>sim/model/ground-equipment-f</property>
+      <property>controls/gear/brake-parking</property>
       <less-than>
         <property>velocities/groundspeed-kt</property>
         <value>2</value>

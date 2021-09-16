@@ -7,7 +7,8 @@
     <animation>
         <type>material</type>
         <object-name>face</object-name>
-        <object-name>needle</object-name>
+        <object-name>needle-N1</object-name>
+        <object-name>needle-N2</object-name>
         <!--<emission>
           <red>1.1</red>
           <green>0.3</green>
@@ -34,12 +35,12 @@
     
 	<animation>
 		<type>rotate</type>
-		<object-name>needle</object-name>
+		<object-name>needle-N1</object-name>
 		<property>/engines/engine[0]/n1</property>
-		<interpolation>
-			<entry><ind>0.0</ind><dep>-120</dep></entry>     
-			<entry><ind>100</ind><dep>68</dep></entry>     
-		</interpolation>
+    <interpolation>
+      <entry><ind>  0.0</ind><dep> -315 </dep></entry>
+      <entry><ind> 110</ind><dep>  30 </dep></entry>
+    </interpolation>
         <center>
             <x-m> 0.0056</x-m>
             <y-m> 0.0143</y-m>
@@ -51,6 +52,26 @@
 			<z>0</z>
 		</axis>
 	</animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle-N2</object-name>
+    <property>/engines/engine[0]/n2</property>
+    <interpolation>
+      <entry><ind>  0.0</ind><dep> -315 </dep></entry>
+      <entry><ind> 110</ind><dep>  30 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.0056</x-m>
+      <y-m> 0.0143</y-m>
+      <z-m>-0.0067</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
 	
 <!-- Label text -->
 

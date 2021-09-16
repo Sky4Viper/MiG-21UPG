@@ -5,11 +5,11 @@ MATERIAL "rockets" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.8 0.8 0.8  shi 4  tr
 OBJECT world
 kids 35
 OBJECT poly
-name "Cylinder.003"
+name "endpod"
 loc 0 0 -0
 data 12
-Cylinder.003
-texture "ub-32.png"
+endpod
+texture "UB-32.png"
 texrep 1 1
 crease 30.000001
 numvert 3231
@@ -15905,7 +15905,7 @@ name "midpod"
 loc 0 0 -0
 data 6
 midpod
-texture "ub-32.png"
+texture "UB-32.png"
 texrep 1 1
 crease 30.000001
 numvert 286
@@ -38181,7 +38181,7 @@ name "tippod"
 loc 0 0 -0
 data 6
 tippod
-texture "ub-32.png"
+texture "UB-32.png"
 texrep 1 1
 crease 30.000001
 numvert 1329

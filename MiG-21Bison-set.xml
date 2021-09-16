@@ -8,7 +8,7 @@
     
 		<description>Mikoyan-Gurevich MiG-21 BISON (YASIM)</description>
 		<author>Petar Jedvaj, David Culp, Raptor, Stuart Cassie, Gary Brown, Brendan Black and Tomaskom, Sergei "Skydive" Solyshko</author>
-		<status>2.1.190206</status>
+		<status>2.1.200829</status>
 		<flight-model>yasim</flight-model>
 		<aero>MiG-21Bison-yasim</aero><!-- remove this line for FG versions earlier than 3.2 -->
 
@@ -22,10 +22,10 @@
 		<!-- System settings -->
     
 		<startup>
-			<splash-texture>Aircraft/MiG-21UPG/Splash1.png</splash-texture>
-      <splash-texture>Aircraft/MiG-21UPG/Splash2.png</splash-texture>
-      <splash-texture>Aircraft/MiG-21UPG/Splash3.png</splash-texture>
-      <splash-texture>Aircraft/MiG-21UPG/Splash4.png</splash-texture>
+			      <splash-texture>Aircraft/MiG-21UPG/Splash1.png</splash-texture>
+            <splash-texture>Aircraft/MiG-21UPG/Splash2.png</splash-texture>
+            <splash-texture>Aircraft/MiG-21UPG/Splash3.png</splash-texture>
+            <splash-texture>Aircraft/MiG-21UPG/Splash4.png</splash-texture>
 		</startup>
 
     <gui>
@@ -586,10 +586,47 @@
       <sound>
         <click-switch type="bool">false</click-switch>
         <click-latch type="bool">false</click-latch>
+        <click-detach1 type="bool">false</click-detach1>
+        <click-detach2 type="bool">false</click-detach2>
+        <click-detach3 type="bool">false</click-detach3>
+        <click-attach1 type="bool">false</click-attach1>
+        <click-attach2 type="bool">false</click-attach2>
+        <click-attach3 type="bool">false</click-attach3>
+        <click-attach4 type="bool">false</click-attach4>
         <pulup-alert type="bool">true</pulup-alert> 
       </sound>
       
     </power>
+
+    <rfc-card>
+      <rfc-card-show type="bool">false</rfc-card-show>
+    </rfc-card>
+
+    <sound>
+      <comms>
+        <gc-msg1 type="bool">false</gc-msg1>
+        <gc-msg2 type="bool">false</gc-msg2>
+        <gc-msg3 type="bool">false</gc-msg3>
+        <gc-msg4 type="bool">false</gc-msg4>
+        <gc-msg5 type="bool">false</gc-msg5>
+        <gc-msg6 type="bool">false</gc-msg6>
+        <gc-msg7 type="bool">false</gc-msg7>
+        <gc-msg8 type="bool">false</gc-msg8>
+        <gc-msg9 type="bool">false</gc-msg9>
+        <gc-msg10 type="bool">false</gc-msg10>
+        <gc-msg11 type="bool">false</gc-msg11>
+        <gc-msg12 type="bool">false</gc-msg12>
+        <gc-msg13 type="bool">false</gc-msg13>
+        <gc-msg14 type="bool">false</gc-msg14>
+        <gc-msg15 type="bool">false</gc-msg15>
+        <gc-msg16 type="bool">false</gc-msg16>
+        <gc-msg17 type="bool">false</gc-msg17>
+        <gc-msg18 type="bool">false</gc-msg18>
+        <gc-msg19 type="bool">false</gc-msg19>
+        <gc-msg20 type="bool">false</gc-msg20>
+        <gc-msg21 type="bool">false</gc-msg21>
+      </comms>
+    </sound>
 
     <ventilation>
       <windshield-antiice-lever type="bool">false</windshield-antiice-lever>
@@ -604,8 +641,8 @@
     
     <lighting>
       <instruments-norm>0.3</instruments-norm>
-      <navlights-switch>0.3</navlights-switch>
-      <beacon-switch type="bool">true</beacon-switch>
+      <navlights-switch>0.0</navlights-switch>
+      <beacon-switch type="bool">false</beacon-switch>
     </lighting>
 
     <hud>
@@ -615,6 +652,10 @@
     <mfd>
       <mfdpage type="double">0</mfdpage>
       <hdgbugset type="double">0</hdgbugset>
+      <displays>
+        <live-map type="bool">true</live-map>
+        <scale type="int">0</scale>
+      </displays>
     </mfd>
  
 		<armament>
@@ -641,6 +682,7 @@
         <b2jettison type="bool">false</b2jettison>
         <m1jettison type="bool">false</m1jettison>
         <m2jettison type="bool">false</m2jettison>
+        <r1jettison type="bool">false</r1jettison>
         <tjettison type="bool">false</tjettison>
       </station>
 			<station n="1">
@@ -654,6 +696,7 @@
         <b2jettison type="bool">false</b2jettison>
         <m1jettison type="bool">false</m1jettison>
         <m2jettison type="bool">false</m2jettison>
+        <r1jettison type="bool">false</r1jettison>
         <tjettison type="bool">false</tjettison>
 			</station>
 			<station n="2">
@@ -667,6 +710,7 @@
         <b2jettison type="bool">false</b2jettison>
         <m1jettison type="bool">false</m1jettison>
         <m2jettison type="bool">false</m2jettison>
+        <r1jettison type="bool">false</r1jettison>
         <tjettison type="bool">false</tjettison>
 			</station>
 			<station n="3">
@@ -680,6 +724,7 @@
         <b2jettison type="bool">false</b2jettison>
         <m1jettison type="bool">false</m1jettison>
         <m2jettison type="bool">false</m2jettison>
+        <r1jettison type="bool">false</r1jettison>
         <tjettison type="bool">false</tjettison>
 			</station>
 			<station n="4">
@@ -693,6 +738,7 @@
         <b2jettison type="bool">false</b2jettison>
         <m1jettison type="bool">false</m1jettison>
         <m2jettison type="bool">false</m2jettison>
+        <r1jettison type="bool">false</r1jettison>
         <tjettison type="bool">false</tjettison>
 			</station>
 
@@ -1338,6 +1384,9 @@
     <engine n="0">
       <running>false</running>
     </engine>
+    <engine n="0">
+      <spooldown>false</spooldown>
+    </engine>
   </engines>
 
   <rotors>
@@ -1365,12 +1414,6 @@
   </rotors>
     
 	<!-- Effects -->
-    
-	<!--<environment>
-		<turbulence>
-			<use-cloud-turbulence>true</use-cloud-turbulence>
-		</turbulence>
-	</environment>-->
 
   <environment>
     <damage type="bool">false</damage>
@@ -1470,6 +1513,10 @@
       <file>Aircraft/MiG-21UPG/Nasal/switchclicksound.nas</file>
     </switchclicksound>
 
+    <commsound>
+      <file>Aircraft/MiG-21UPG/Nasal/commsound.nas</file>
+    </commsound>
+
     <matchheadingbug>
       <file>Aircraft/MiG-21UPG/Nasal/matchheadingbug.nas</file>
     </matchheadingbug>
@@ -1486,9 +1533,9 @@
 			<file>Aircraft/MiG-21UPG/Nasal/dmesw.nas</file>
 		</dmesw>
     
-		<terrain-map>        
+		<!-- <terrain-map>        
 			<file>Aircraft/MiG-21UPG/Nasal/terrain-map.nas</file>        
-		</terrain-map>
+		</terrain-map> -->
     
 		<lights>
 			<file>Aircraft/MiG-21UPG/Nasal/lights.nas</file>
@@ -1505,7 +1552,7 @@
     <engines>
       <file>Aircraft/MiG-21UPG/Nasal/generic-yasim-engine.nas</file>
       <script>
-        var engine1 = engines.Jet.new(0, 0, 0.01, 5.21, 3, 5, 1, 6);
+        var engine1 = engines.Jet.new(0, 0, 0.01, 5.21, 3, 5, 1, 23);
         setlistener("sim/signals/fdm-initialized", func
         {
         engine1.init();
@@ -1577,13 +1624,17 @@
       <file>Aircraft/MiG-21UPG/Nasal/nd.nas</file>
     </nd>
 
+    <rfc-card>
+      <file>Aircraft/MiG-21UPG/Nasal/rfc-card.nas</file>
+    </rfc-card>
+
     <sau>
       <file>Aircraft/MiG-21UPG/Nasal/sau.nas</file>
     </sau>
 
-    <guidedmissiles>
-      <file>Aircraft/MiG-21bis/Nasal/guided-missiles.nas</file>
-    </guidedmissiles>
+    <!-- <guidedmissiles>
+      <file>Aircraft/MiG-21UPG/Nasal/guided-missiles.nas</file>
+    </guidedmissiles> -->
 
     <launchauthorizer>
       <file>Aircraft/MiG-21UPG/Nasal/launchauthorizer.nas</file>
@@ -1596,6 +1647,10 @@
 		<MpEncode>
 			<file>Aircraft/MiG-21UPG/Nasal/MpEncode.nas</file>
 		</MpEncode>
+
+    <mm>
+      <file>Aircraft/MiG-21UPG/Nasal/moving-map.nas</file>
+    </mm>
     
 	
 </nasal>

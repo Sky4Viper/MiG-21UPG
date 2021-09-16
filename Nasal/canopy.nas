@@ -30,24 +30,29 @@ var move_canopy = func()
     if(position <= 0.000)
     {
         # it's closed let's half open :
-        interpolate("/sim/model/door-positions/canopy/position-norm", 0.100, 2);
+        interpolate("/sim/model/door-positions/canopy/position-norm", 0.100, 0.2);
     }
     elsif(position > 0.098 and position <= 0.102)
     {
         # it's half-opened let's open :
-        interpolate("/sim/model/door-positions/canopy/position-norm", 1.000, 2);
+        interpolate("/sim/model/door-positions/canopy/position-norm", 1.000, 1);
     }
     elsif(position >= 1)
     {
         # it's opened let's half open :
-        interpolate("/sim/model/door-positions/canopy/position-norm", 0.095, 2);
+        interpolate("/sim/model/door-positions/canopy/position-norm", 0.095, 1);
     }
     else
     {
         # let's close :
-        interpolate("/sim/model/door-positions/canopy/position-norm", 0.000, 2);
+        interpolate("/sim/model/door-positions/canopy/position-norm", 0.000, 0.2);
     }
 
+}
+
+var canopy_move = func()
+{
+setprop("/sim/model/door-positions/canopy/position-norm", );
 }
 
 

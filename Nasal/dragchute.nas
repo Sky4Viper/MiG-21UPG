@@ -6,7 +6,7 @@
 var reload = func {
 	if( getprop("/gear/gear[0]/wow") and getprop("/gear/gear[1]/wow") and getprop("/gear/gear[2]/wow") and (getprop("/velocities/groundspeed-kt") < 2) ) {
 		setprop("/controls/flight/chute_loaded", 1);
-		screen.log.write("Dragchute reloaded", 1, 0.6, 0.1);
+		#screen.log.write("Ground Crew: Brake chute re-packed...............", 1, 0.6, 0.1);
 	}
 	else {
 		screen.log.write("You must be still on the ground to reload dragchute! ", 1, 0.6, 0.1);

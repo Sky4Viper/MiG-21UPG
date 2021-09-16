@@ -82,7 +82,7 @@
         <property>/controls/lighting/taxi-light-switch</property>
       </binding>
       <!--temp switch for nav lights-->
-      <binding>
+      <!--<binding>
         <command>property-toggle</command>
         <property>lightpack/nav-lights-intensity</property>
       </binding>
@@ -93,7 +93,7 @@
       <binding>
         <command>property-toggle</command>
         <property>controls/lighting/beacon-switch</property>
-      </binding>
+      </binding>-->
       <binding>
         <command>nasal</command>
         <script>switchclicksound.click("switch")</script>

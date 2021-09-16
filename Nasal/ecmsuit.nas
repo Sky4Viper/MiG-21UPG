@@ -67,7 +67,7 @@ var ECM1 = maketimer (3, func()
 	ECMOFF.restart(0.25);
 	}
 	else {
-	#screen.log.write("Flares Out", 1, 0.6, 0.1);
+	screen.log.write("Flares Out", 1, 0.6, 0.1);
 	setprop("/controls/armament/ecm-on", 0);
 	switchclicksound.click("switch");
 	ECM1.stop();
@@ -84,7 +84,7 @@ var ECM2 = maketimer (6, func()
 	ECMOFF.restart(0.75);
 	}
 	else {
-	#screen.log.write("Flares Out", 1, 0.6, 0.1);
+	screen.log.write("Flares Out", 1, 0.6, 0.1);
 	setprop("/controls/armament/ecm-on", 0);
 	switchclicksound.click("switch");
 	ECM2.stop();
@@ -101,7 +101,7 @@ var ECM3 = maketimer (9, func()
 	ECMOFF.restart(1.5);
 	}
 	else {
-	#screen.log.write("Flares Out", 1, 0.6, 0.1);
+	screen.log.write("Flares Out", 1, 0.6, 0.1);
 	setprop("/controls/armament/ecm-on", 0);
 	switchclicksound.click("switch");
 	ECM3.stop();

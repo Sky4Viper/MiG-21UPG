@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+	
+<model>
+	<path>MFD-2movmap.ac</path>
+</model>
+ 
+ 
+<animation>
+<type>select</type>
+<object-name>MFD.screen</object-name>
+  <condition>
+    <property>/controls/power/battery</property>
+    <equals>
+      <property>controls/mfd/mfdpage</property>
+      <value>2</value>
+    </equals>
+  </condition>
+</animation>
+ 
+ 
+</PropertyList>
+

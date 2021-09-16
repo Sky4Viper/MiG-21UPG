@@ -97,7 +97,7 @@ var fuelTanks = func {
 			}
 		}
 	} 
-	settimer(fuelTanks, 0.3);
+	settimer(fuelTanks, 0.2);
 }
 
 setlistener("/sim/signals/fdm-initialized", fuelTanks);

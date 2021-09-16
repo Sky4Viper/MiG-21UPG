@@ -116,5 +116,23 @@
     </action>
   </animation>-->
 
+  <animation>
+    <type>pick</type>
+    <object-name>RFCtbl1</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/rfc-card/rfc-card-show</property>
+      </binding>
+      <!--<binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>-->
+    </action>
+  </animation>
+
 
 </PropertyList>

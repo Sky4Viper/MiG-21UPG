@@ -1464,6 +1464,11 @@
         <script>engines.engine1.autostart();</script>
       </binding>
       <mod-up>
+        <!--<binding>
+          <command>property-assign</command>
+          <property>engines/engine[0]/spooldown</property>
+          <value type="bool">1</value>
+        </binding>-->
         <binding>
         <command>property-toggle</command>
         <property>controls/flight/eng_start_btn</property>

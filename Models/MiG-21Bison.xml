@@ -385,7 +385,7 @@
     <texture>Aircraft/MiG-21UPG/Models/Liveries/Tank21-93.png</texture>
   </animation>-->
 	
-	<!-- Shaders -->
+  <!-- Shaders -->
 
   <!-- Bumpmap -->
 
@@ -650,11 +650,13 @@
     <object-name>MirrorL.K</object-name>
     <object-name>MirrorR.K</object-name>
     <object-name>RFCtbl1</object-name>
+    <object-name>RFCleft</object-name>
+    <object-name>RFCright</object-name>
 		<!--<property>canopy/position-norm</property>
 		<factor>-80.00</factor>-->
     <property>sim/model/door-positions/canopy/position-norm</property>
     <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
+      <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>1</ind><dep>-80</dep></entry>
     </interpolation>
 		<axis>
@@ -666,6 +668,19 @@
 			<z2-m>  0.7607</z2-m>
 		</axis>
 	</animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>RFCleft</object-name>
+    <object-name>RFCright</object-name>
+    <condition>
+      <property>controls/rfc-card/rfc-card-show</property>
+      <!--<equals>
+        <property>controls/mfd/mfdpage</property>
+        <value>0</value>
+      </equals>-->
+    </condition>
+  </animation>
 
   <animation>
     <type>spin</type>
@@ -1874,5 +1889,23 @@
       <z2-m>0.87725</z2-m>
     </axis>
   </animation>
+
+  <!--<animation>
+    <type>pick</type>
+    <object-name>RFCtbl1</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/rfc-card/rfc-card-show</property>
+      </binding>
+      --><!--<binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>--><!--
+    </action>
+  </animation>-->
 	
 </PropertyList>

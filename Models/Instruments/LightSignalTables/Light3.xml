@@ -244,10 +244,12 @@
       <property>/controls/power/battery</property>
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
+
         <less-than>
           <property>/engines/engine[0]/oilp-norm</property>
           <value>0.05</value>
         </less-than>
+
       </or>
     </condition>
   </animation>
@@ -305,7 +307,7 @@
       <or>
         <property>mig21/controls/buttons/lightstest3</property>
         <greater-than>
-          <property>/engines/engine/n2</property>
+          <property>/engines/engine[0]/n2</property>
           <value>89</value>
         </greater-than>
       </or>
