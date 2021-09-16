@@ -8,7 +8,7 @@
     
 		<description>Mikoyan-Gurevich MiG-21 BISON (YASIM)</description>
 		<author>Petar Jedvaj, David Culp, Raptor, Stuart Cassie, Gary Brown, Brendan Black and Tomaskom, Sergei "Skydive" Solyshko</author>
-		<status>2.1.200829</status>
+		<status>2.1.210916</status>
 		<flight-model>yasim</flight-model>
 		<aero>MiG-21Bison-yasim</aero><!-- remove this line for FG versions earlier than 3.2 -->
 
