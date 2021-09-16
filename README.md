@@ -95,6 +95,6 @@ Experimental examples of the MiG-21UPG tactical fighter, intended for the Indian
 
 ## Videos
 
-Ground Crew Comms: https://www.youtube.com/watch?v=xlKz8UAd0ps&t=94s
+Ground Crew Comms: https://youtu.be/xlKz8UAd0ps
 
-Loadout: https://www.youtube.com/watch?v=mFf1BlCkaqY
+Loadout: https://youtu.be/mFf1BlCkaqY
