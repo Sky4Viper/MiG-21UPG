@@ -1177,6 +1177,10 @@
           <property>controls/flight/chute_loaded</property>
           <value type="bool">0</value>
         </binding>
+        <binding>
+          <command>nasal</command>
+          <script>dragchute.chute_deployed()</script>
+        </binding>
       </key>
        
 			<key n="113">
