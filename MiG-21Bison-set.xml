@@ -271,7 +271,7 @@
 						</binding>
 					</item>
           <item>
-            <label>Fast Payload</label>
+            <label>Preset Payloads</label>
             <name>config</name>
             <binding>
               <command>dialog-show</command>
