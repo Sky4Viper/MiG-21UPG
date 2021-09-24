@@ -418,8 +418,8 @@
 
 <animation>
  <type>pick</type>
- <object-name>PNP.cz1</object-name>
- <visible>false</visible>
+ <object-name>PNP.Button</object-name>
+ <!-- <visible>false</visible> -->
  <action>
   <button>0</button>
   <repeatable>false</repeatable>
@@ -438,7 +438,7 @@
  </action>
 </animation>
 
-<animation>
+<!-- <animation>
  <type>pick</type>
  <object-name>PNP.cz2</object-name>
  <visible>false</visible>
@@ -455,6 +455,7 @@
   </binding>
  </action>
 </animation>
+
 <animation>
  <type>pick</type>
  <object-name>PNP.cz3</object-name>
@@ -471,8 +472,55 @@
     <wrap>true</wrap>
   </binding>
  </action>
+</animation> -->
+
+<animation>
+ <type>knob</type>
+ <object-name>PNP.heading_bg</object-name>
+ <action>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/heading-bug-deg</property>
+          <factor>1.0</factor>
+          <!-- <step>1</step> -->
+          <min>1</min>
+          <max>361</max>
+          <wrap>true</wrap>
+        </binding>
+  </action>
+  <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>course-adj</tooltip-id>
+                <label>Set heading</label>
+        </binding>
+  </hovered>
 </animation>
-  <animation>
+
+<animation>
+ <type>knob</type>
+ <object-name>PNP.knobSetPathAngle</object-name>
+ <action>
+        <binding>
+          <command>property-adjust</command>
+          <property>instrumentation/nav/radials/selected-deg</property>
+          <factor>1.0</factor>
+          <!-- <step>1</step> -->
+          <min>1</min>
+          <max>361</max>
+          <wrap>true</wrap>
+        </binding>
+  </action>
+  <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>course-adj</tooltip-id>
+                <label>Set course</label>
+        </binding>
+  </hovered>
+</animation>
+
+ <!--  <animation>
     <type>pick</type>
     <object-name>PNP.cz4</object-name>
     <visible>false</visible>
@@ -505,6 +553,6 @@
         <wrap>true</wrap>
       </binding>
     </action>
-  </animation>
+  </animation> -->
 
 </PropertyList>
